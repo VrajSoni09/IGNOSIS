@@ -1,0 +1,5 @@
+{
+  "input": "A particle of mass 0.3 kg is subjected to a force F = -kx with k = 15 N/m. What will be its initial acceleration if it is released from a point x = 20 cm?",
+  "thinking": "UNDERSTAND THE PROBLEM:\n\nA 0.3 kg particle is subjected to a restoring force F = -kx (k = 15 N/m). It is released from x = 20 cm. Find its initial acceleration.\nIDENTIFY RELEVANT CONCEPTS:\n\n- Hooke's Law: F = -kx\n- Newton's Second Law: F = ma\n- Acceleration: a = F / m\nPLAN THE APPROACH:\n\n1. Calculate F using F = -kx.\n2. Use a = F / m to find acceleration.\nEXECUTE THE SOLUTION:\n\nk = 15 N/m, x = 20 cm = 0.2 m, m = 0.3 kg\nF = -kx = -15 × 0.2 = -3 N\na = F / m = -3 / 0.3 = -10 m/s²\nVERIFY THE ANSWER:\n\n- Acceleration: -10 m/s²\n- Matches the solution in the image.\n**Answer:** The initial acceleration is **-10 m/s²** (opposite to displacement).",
+  "output": "k = 15 N/m, x = 20 cm = 0.2 m, m = 0.3 kg\nF = -kx = -15 × 0.2 = -3 N\na = F / m = -3 / 0.3 = -10 m/s²\n\n\n**Answer:**\nThe initial acceleration is **-10 m/s²** (opposite to displacement)."
+}

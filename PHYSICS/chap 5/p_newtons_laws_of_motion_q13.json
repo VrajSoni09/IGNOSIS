@@ -1,0 +1,5 @@
+{
+  "input": "The elevator shown in figure is descending with an acceleration of 2 m/s². The mass of the block A is 0.5 kg. What force is exerted by the block A on the block B?",
+  "thinking": "UNDERSTAND THE PROBLEM:\n\nAn elevator descends with 2 m/s². Block A (0.5 kg) is on block B. What force does A exert on B?\nIDENTIFY RELEVANT CONCEPTS:\n\n- Apparent weight in non-inertial frames\n- Newton's Second Law: F = ma\n- Effective gravity: g' = g - a (downward acceleration)\nPLAN THE APPROACH:\n\n1. Find the effective acceleration (g - a) due to elevator's motion.\n2. Calculate the normal force (reaction) between A and B.\nEXECUTE THE SOLUTION:\n\nm = 0.5 kg, g = 10 m/s², a = 2 m/s² (downward)\nApparent weight = m (g - a) = 0.5 × (10 - 2) = 0.5 × 8 = 4 N\nVERIFY THE ANSWER:\n\n- Force: 4 N (downward)\n- Matches the solution in the image (with sign convention)\n**Answer:** The force exerted by block A on block B is **4 N** (downward).",
+  "output": "m = 0.5 kg, g = 10 m/s², a = 2 m/s² (downward)\nApparent weight = m (g - a) = 0.5 × (10 - 2) = 0.5 × 8 = 4 N\n\n\n**Answer:**\nThe force exerted by block A on block B is **4 N** (downward)."
+}
