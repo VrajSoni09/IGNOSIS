@@ -1,0 +1,54 @@
+{
+  "input": "The co-ordinates of the points on the line 2x - y = 5 which are the distance of 1 unit from the line 3x + 4y = 5 are \n\nOptions:\nA. (30/11, -5/11), (20/11, 15/11)\nB. (-30/11, 5/11), (-20/11, 15/11)\nC. (30/11, 5/11), (20/11, -15/11)\nD. (-30/11, 5/11), (-20/11, -15/11)",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Find the coordinates of points that lie on the line $2x - y = 5$ and maintain a perpendicular distance of exactly 1 unit from the line $3x + 4y = 5$.",
+      "given_information": {
+        "line_of_points": "2x - y = 5",
+        "target_distance_line": "3x + 4y = 5",
+        "distance": "1 unit"
+      },
+      "to_find": "Coordinate pairs (x, y)"
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Perpendicular Distance from a Point to a Line",
+        "System of Linear Equations",
+        "Parametric Point representation"
+      ],
+      "key_formulas": {
+        "perpendicular_distance": "$d = \\\\frac{|ax_1 + by_1 + c|}{\\\\sqrt{a^2 + b^2}}$"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Express y in terms of x using the first line, substitute this into the distance formula for the second line, and solve the absolute value equation for x.",
+      "logical_steps": [
+        "Step 1: Express y from the first line: $y = 2x - 5$.",
+        "Step 2: Set up the distance formula $|3x + 4y - 5| / \\\\sqrt{3^2 + 4^2} = 1$.",
+        "Step 3: Substitute $y = 2x - 5$ into the distance equation.",
+        "Step 4: Solve the resulting absolute value equation $|11x - 25| = 5$.",
+        "Step 5: Find corresponding y-values for each x."
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_substitute_points": {
+        "substitution": "$|3x + 4(2x - 5) - 5| / 5 = 1$",
+        "simplification": "$|3x + 8x - 20 - 5| = 5$\n$|11x - 25| = 5$"
+      },
+      "step_2_solve_case_1": {
+        "equation": "11x - 25 = 5",
+        "result_x": "x = 30/11",
+        "result_y": "$y = 2(30/11) - 5 = 60/11 - 55/11 = 5/11$"
+      },
+      "step_3_solve_case_2": {
+        "equation": "11x - 25 = -5",
+        "result_x": "x = 20/11",
+        "result_y": "$y = 2(20/11) - 5 = 40/11 - 55/11 = -15/11$"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "C. (30/11, 5/11), (20/11, -15/11)",
+      "verification": "The points (30/11, 5/11) and (20/11, -15/11) satisfy both the condition of lying on 2x - y = 5 and being distance 1 from 3x + 4y = 5. Matches Option C."
+    }
+  }
+}

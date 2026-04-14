@@ -1,0 +1,68 @@
+{
+  "input": "Two adjacent sides of a parallelogram ABCD are given by $\\\\vec{AB} = 2\\\\hat{i} + 10\\\\hat{j} + 11\\\\hat{k}$ and $\\\\vec{AD} = -\\\\hat{i} + 2\\\\hat{j} + 2\\\\hat{k}$. The side AD is rotated by an acute angle $\\\\alpha$ in the plane of parallelogram so that AD becomes AD'. If AD' makes a right angle with side AB, then the cosine of the angle $\\\\alpha$ is given by \n\nOptions:\nA. 8/9\nB. \\\\sqrt{17}/9\nC. 1/9\nD. 4\\\\sqrt{5}/9",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Determine the cosine of the rotation angle $\\\\alpha$ required to make side AD perpendicular to side AB, given their initial vector representations.",
+      "given_information": {
+        "vector_AB": "2i + 10j + 11k",
+        "vector_AD": "-i + 2j + 2k",
+        "condition_1": "AD is rotated by angle \\\\alpha in the plane of the parallelogram to AD'.",
+        "condition_2": "AD' is perpendicular to AB."
+      },
+      "to_find": "cos(\\\\alpha)"
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Angle between two vectors",
+        "Rotation in a plane",
+        "Perpendicularity condition (Dot product = 0)",
+        "Trigonometric identities"
+      ],
+      "key_formulas": {
+        "cos_theta": "$\\\\cos(\\\\theta) = \\\\frac{\\\\vec{u} \\\\cdot \\\\vec{v}}{|\\\\vec{u}||\\\\vec{v}|}$",
+        "sin_theta": "$\\\\sin(\\\\theta) = \\\\sqrt{1 - \\\\cos^2(\\\\theta)}$",
+        "complementary_angle": "If $\\\\theta + \\\\alpha = 90^\\\\circ$, then $\\\\cos(\\\\alpha) = \\\\sin(\\\\theta)$"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "First, calculate the initial angle $\\\\theta$ between AB and AD. Since AD is rotated in the same plane to become perpendicular to AB, the rotation angle $\\\\alpha$ must be the difference between $90^\\\\circ$ and $\\\\theta$.",
+      "logical_steps": [
+        "Step 1: Calculate the dot product $\\\\vec{AB} \\\\cdot \\\\vec{AD}$.",
+        "Step 2: Calculate the magnitudes $|\\\\vec{AB}|$ and $|\\\\vec{AD}|$.",
+        "Step 3: Find the initial cosine of the angle $\\\\theta$ between them.",
+        "Step 4: Determine $\\\\sin(\\\\theta)$.",
+        "Step 5: Relate the rotation angle $\\\\alpha$ to $\\\\theta$ (since $\\\\alpha + \\\\theta = 90^\\\\circ$ for perpendicularity).",
+        "Step 6: Solve for $\\\\cos(\\\\alpha)$."
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_dot_product": {
+        "calculation": "$(2)(-1) + (10)(2) + (11)(2) = -2 + 20 + 22$",
+        "result": "40"
+      },
+      "step_2_magnitudes": {
+        "mag_AB": "$\\\\sqrt{2^2 + 10^2 + 11^2} = \\\\sqrt{4 + 100 + 121} = \\\\sqrt{225} = 15$",
+        "mag_AD": "$\\\\sqrt{(-1)^2 + 2^2 + 2^2} = \\\\sqrt{1 + 4 + 4} = \\\\sqrt{9} = 3$"
+      },
+      "step_3_calculate_cos_theta": {
+        "formula": "$\\\\cos(\\\\theta) = \\\\frac{40}{15 \\\\cdot 3} = \\\\frac{40}{45}$",
+        "result": "$\\\\cos(\\\\theta) = \\\\frac{8}{9}$"
+      },
+      "step_4_calculate_sin_theta": {
+        "formula": "$\\\\sin(\\\\theta) = \\\\sqrt{1 - (\\\\frac{8}{9})^2} = \\\\sqrt{\\\\frac{81 - 64}{81}}$",
+        "result": "$\\\\sin(\\\\theta) = \\\\frac{\\\\sqrt{17}}{9}$"
+      },
+      "step_5_relate_alpha_to_theta": {
+        "logic": "The side AD is rotated to AD' such that AD' $\\\\perp$ AB. In the plane of the parallelogram, this means the total angle becomes $90^\\\\circ$. So, $\\\\alpha + \\\\theta = 90^\\\\circ$ or $\\\\alpha = 90^\\\\circ - \\\\theta$.",
+        "formula": "$\\\\cos(\\\\alpha) = \\\\cos(90^\\\\circ - \\\\theta) = \\\\sin(\\\\theta)$"
+      },
+      "step_6_final_calculation": {
+        "result": "$\\\\cos(\\\\alpha) = \\\\frac{\\\\sqrt{17}}{9}$"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "B. \\\\sqrt{17}/9",
+      "verification": "The transition from $\\\\cos(\\\\alpha) = \\\\sin(\\\\theta)$ is standard for orthogonalization by plane rotation. All intermediate calculations for magnitudes and dot products are consistent."
+    }
+  }
+}

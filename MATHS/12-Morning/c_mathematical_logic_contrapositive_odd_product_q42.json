@@ -1,0 +1,45 @@
+{
+  "input": "The contrapositive of \"If x and y are integers such that xy is odd, then both x and y are odd\" is \n\nOptions:\nA. If both x and y are odd integers, then xy is odd.\nB. If both x and y are even integers, then xy is even.\nC. If x or y is an odd integer, then xy is odd.\nD. If both x and y are not odd integers, then the product xy is not odd.",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Identify the contrapositive of the given conditional statement involving integer properties.",
+      "given_information": {
+        "statement": "If xy is odd (p), then both x and y are odd (q)."
+      },
+      "to_find": "Contrapositive statement (\u223cq \u2192 \u223cp)"
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Mathematical Logic",
+        "Conditional Statements",
+        "Contrapositive logic"
+      ],
+      "key_formulas": {
+        "contrapositive_definition": "$\\\\neg q \\\\implies \\\\neg p$"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Break the statement into the hypothesis (p) and the conclusion (q), negate both, and reassemble them in reverse order.",
+      "logical_steps": [
+        "Step 1: Identify p: 'xy is odd'.",
+        "Step 2: Identify q: 'Both x and y are odd'.",
+        "Step 3: Negate p: 'xy is not odd'.",
+        "Step 4: Negate q: 'Both x and y are not odd' (Note: usually 'at least one is even', but we follow the phrasing in the options).",
+        "Step 5: Construct 'If not q, then not p'."
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_components": {
+        "negation_q": "Both x and y are not odd",
+        "negation_p": "xy is not odd"
+      },
+      "step_2_reassemble": {
+        "result": "If both x and y are not odd integers, then the product xy is not odd."
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "D. If both x and y are not odd integers, then the product xy is not odd.",
+      "verification": "The logic of contrapositive is $\\\\neg q \\\\implies \\\\neg p$. Although the natural language negation of 'both are odd' is usually more precisely 'at least one is not odd', Option D follows the formal symbolic negation pattern provided in the test format. Match found with Option D."
+    }
+  }
+}

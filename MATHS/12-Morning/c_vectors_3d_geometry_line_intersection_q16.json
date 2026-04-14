@@ -1,0 +1,58 @@
+{
+  "input": "Let $\\\\vec{A}$ be a vector parallel to line of intersection of planes $P_1$ and $P_2$ through origin. $P_1$ is parallel to the vectors $2\\\\hat{j} + 3\\\\hat{k}$ and $4\\\\hat{j} - 3\\\\hat{k}$ and $P_2$ is parallel to $\\\\hat{j} - \\\\hat{k}$ and $3\\\\hat{i} + 3\\\\hat{j}$, then the angle between $\\\\vec{A}$ and $2\\\\hat{i} + \\\\hat{j} - 2\\\\hat{k}$ is \n\nOptions:\nA. $\\\\pi/3$\nB. $\\\\pi/2$\nC. $\\\\pi/6$\nD. $3\\\\pi/4$",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Find the angle between a vector $\\vec{A}$ and the vector $2\\hat{i} + \\hat{j} - 2\\hat{k}$, where $\\vec{A}$ is defined by the intersection of two planes $P_1$ and $P_2$ passing through the origin.",
+      "given_information": {
+        "plane_1": "Parallel to $2j+3k$ and $4j-3k$.",
+        "plane_2": "Parallel to $j-k$ and $3i+3j$.",
+        "target_vector": "$2i + j - 2k$"
+      },
+      "to_find": "Angle \\\\theta"
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Normal vectors to planes",
+        "Line of intersection of two planes",
+        "Cross Product",
+        "Angle between two vectors (Dot Product)"
+      ],
+      "key_formulas": {
+        "normal_vector": "$\\\\vec{n} = \\\\vec{v}_1 \\\\times \\\\vec{v}_2$",
+        "line_of_intersection": "$\\\\vec{d} = \\\\vec{n}_1 \\\\times \\\\vec{n}_2$",
+        "angle_between_vectors": "$\\\\cos \\\\theta = \\\\frac{\\\\vec{u} \\\\cdot \\\\vec{v}}{|\\\\vec{u}||\\\\vec{v}|}$"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Find the normals to both planes, determine the direction of their intersection (vector $\\vec{A}$) using a cross product, and then find the angle with the target vector using the dot product formula.",
+      "logical_steps": [
+        "Step 1: Compute normal $\\\\vec{n}_1$ to $P_1$.",
+        "Step 2: Compute normal $\\\\vec{n}_2$ to $P_1$.",
+        "Step 3: Find vector $\\\\vec{A}$ as $\\\\vec{n}_1 \\\\times \\\\vec{n}_2$.",
+        "Step 4: Use the dot product between $\\\\vec{A}$ and $2i + j - 2k$ to find $\\\\theta$."
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_find_normals": {
+        "n1": "$(2\\\\hat{j} + 3\\\\hat{k}) \\\\times (4\\\\hat{j} - 3\\\\hat{k}) = -6\\\\hat{i} - 12\\\\hat{i} = -18\\\\hat{i}$",
+        "n2": "$(\\\\hat{j} - \\\\hat{k}) \\\\times (3\\\\hat{i} + 3\\\\hat{j}) = 3\\\\hat{k} - 3\\\\hat{j} - 3\\\\hat{i} = 3\\\\hat{i} - 3\\\\hat{j} - 3\\\\hat{k}$? Wait, calculation correction: $j \\\\times 3i = -3k$, $j \\\\times 3j = 0$, $-k \\\\times 3i = -3j$, $-k \\\\times 3j = 3i. So 3i - 3j - 3k.$"
+      },
+      "step_2_find_A": {
+        "cross_product": "$\\\\vec{A} = (-18\\\\hat{i}) \\\\times (3\\\\hat{i} - 3\\\\hat{j} - 3\\\\hat{k}) = 54\\\\hat{k} - 54\\\\hat{j}$",
+        "simplification": "$\\\\vec{A} = 54(-\\\\hat{j} + \\\\hat{k})$"
+      },
+      "step_3_find_angle": {
+        "dot_product": "$54(0(2) + (-1)(1) + (1)(-2)) = -162$",
+        "magnitudes": "$|\\\\vec{A}| = 54\\\\sqrt{2}, |\\\\text{target}| = \\\\sqrt{4+1+4} = 3$",
+        "cos_theta": "$\\\\cos \\\\theta = \\\\frac{-162}{162\\\\sqrt{2}} = -\\\\frac{1}{\\\\sqrt{2}}$"
+      },
+      "step_4_final_result": {
+        "theta": "$3\\\\pi/4$ (since $\\\\cos \\\\theta = -1/\\\\sqrt{2}$)"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "D. 3\\pi/4",
+      "verification": "The normals are correctly identified, and the vector A properly represents the line of intersection. The dot product correctly leads to -1/\u221a2, which corresponds to 135 degrees or 3\u03c0/4."
+    }
+  }
+}

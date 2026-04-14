@@ -1,0 +1,54 @@
+{
+  "input": "A ladder 5 meters long rests against a vertical wall. If its top slides downwards at the rate of 10 cm/s, then the angle between the ladder and the floor is decreasing at the rate of ________ rad/s when its lower end is 4 m away from the wall.\n\nOptions:\nA. -0.1\nB. -0.025\nC. 0.1\nD. 0.025",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "A 5m ladder is leaning against a wall. The top is sliding down at a constant rate. Find the rate at which the angle $\\\\theta$ between the ladder and the floor changes when the base is 4m from the wall.",
+      "given_information": {
+        "ladder_length": "L = 5 m",
+        "top_slide_rate": "dy/dt = -10 cm/s = -0.1 m/s (negative because y is decreasing)",
+        "base_distance": "x = 4 m"
+      },
+      "to_find": "Rate of decrease of angle \u03b8 (i.e., -d\u03b8/dt)"
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Related Rates",
+        "Trigonometric relations in right triangles",
+        "Differentiation with respect to time"
+      ],
+      "key_formulas": {
+        "pythagorean_theorem": "$x^2 + y^2 = L^2$",
+        "trig_relation": "$y = L \\\\sin \\\\theta$",
+        "derivative": "$\\\\frac{dy}{dt} = L \\\\cos \\\\theta \\\\frac{d\\\\theta}{dt}$"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Express the height 'y' in terms of the angle $\\\\theta$. Differentiate this relationship with respect to time to relate dy/dt and d\u03b8/dt. Evaluate all terms at the specific instant when x = 4m.",
+      "logical_steps": [
+        "Step 1: Relate y and $\\\\theta$ using $y = 5 \\\\sin \\\\theta$.",
+        "Step 2: Differentiate with respect to time: $\\\\frac{dy}{dt} = 5 \\\\cos \\\\theta \\\\frac{d\\\\theta}{dt}$.",
+        "Step 3: At $x = 4$, find $\\\\cos \\\\theta$ and the height y using the Pythagorean theorem.",
+        "Step 4: Substitute the values into the differentiated equation and solve for $d\\\\theta/dt$.",
+        "Step 5: State the rate of decrease."
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_instantaneous_values": {
+        "height_y": "At $x = 4$, $y = \\\\sqrt{5^2 - 4^2} = \\\\sqrt{25 - 16} = 3$ m",
+        "cosine_theta": "$\\\\cos \\\\theta = \\\\frac{x}{L} = \\\\frac{4}{5} = 0.8$"
+      },
+      "step_2_rates_equation": {
+        "substitution": "$-0.1 = 5(0.8) \\\\cdot \\\\frac{d\\\\theta}{dt}$",
+        "simplification": "$-0.1 = 4 \\\\cdot \\\\frac{d\\\\theta}{dt}$",
+        "result_dt": "$\\\\frac{d\\\\theta}{dt} = -\\\\frac{0.1}{4} = -0.025 \\\\text{ rad/s}$"
+      },
+      "step_3_conclusion": {
+        "decrease_rate": "The angle is decreasing at a rate of 0.025 rad/s."
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "D. 0.025",
+      "verification": "The negative sign in d\u03b8/dt indicates the angle is decreasing. The question asks for the 'rate of decrease', which is the magnitude 0.025. The trigonometric relationship used ($y=5 \\\\sin \\\\theta$) is correct for the angle with the floor. Option D matches."
+    }
+  }
+}

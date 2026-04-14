@@ -1,0 +1,50 @@
+{
+  "input": "$\\\\lim_{x \\\\to 0} \\\\frac{\\\\cos 7x^\\\\circ - \\\\cos 2x^\\\\circ}{x^2}$ is \n\nOptions:\nA. $\\\\frac{-45}{2} \\\\pi^2$\nB. $\\\\frac{-45}{2} \\\\pi$\nC. $\\\\frac{-\\\\pi^2}{1440}$\nD. $\\\\frac{-\\\\pi^2}{2880}$",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Evaluate the limit of a trigonometric difference as x approaches zero, where the angles in the cosine functions are in degrees.",
+      "given_information": {
+        "limit": "$\\\\lim_{x \\\\to 0} \\\\frac{\\\\cos 7x^\\\\circ - \\\\cos 2x^\\\\circ}{x^2}$"
+      },
+      "to_find": "Exact numerical value of the limit"
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Limits of trigonometric functions",
+        "Degree to Radian conversion",
+        "Standard limit forms for cosine differences"
+      ],
+      "key_formulas": {
+        "conversion": "$1^\\\\circ = \\\\frac{\\\\pi}{180} \\\\text{ radians}$",
+        "standard_limit": "$\\\\lim_{x \\\\to 0} \\\\frac{\\\\cos nx - \\\\cos mx}{x^2} = \\\\frac{m^2 - n^2}{2}$"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Convert the angles from degrees to radians. Use the standard limit formula $\\\\lim_{x \\\\to 0} \\\\frac{\\\\cos Ax - \\\\cos Bx}{x^2} = \\\\frac{B^2 - A^2}{2}$ where A and B are the coefficients in radians.",
+      "logical_steps": [
+        "Step 1: Write the argument in radians: $7x^\\\\circ = \\\\frac{7\\\\pi}{180}x$ and $2x^\\\\circ = \\\\frac{2\\\\pi}{180}x$.",
+        "Step 2: Identify A = $7\\\\pi/180$ and B = $2\\\\pi/180$.",
+        "Step 3: Apply the formula $\\\\frac{B^2 - A^2}{2}$.",
+        "Step 4: Perform arithmetic simplification to match the options."
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_setup": {
+        "formula": "$L = \\\\frac{(2\\\\pi/180)^2 - (7\\\\pi/180)^2}{2}$"
+      },
+      "step_2_numerator_simplification": {
+        "calculation": "Numerator = $\\\\frac{\\\\pi^2}{180^2}(4 - 49) = \\\\frac{-45\\\\pi^2}{32400}$"
+      },
+      "step_3_final_division": {
+        "result": "Limit = $\\\\frac{-45\\\\pi^2}{32400 \\\\times 2} = \\\\frac{-45\\\\pi^2}{64800}$"
+      },
+      "step_4_simplification": {
+        "result": "$\\\\frac{-45}{64800} = -\\\\frac{1}{1440} \\\\implies \\\\text{Limit} = -\\\\frac{\\\\pi^2}{1440}$"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "C. \\\\frac{-\\\\pi^2}{1440}",
+      "verification": "The formula $(B^2-A^2)/2$ for $\\\\frac{\\\\cos Ax - \\\\cos Bx}{x^2}$ correctly yields $(2^2-7^2)/2 \\\\cdot (\\\\pi/180)^2 = -45/2 \\\\cdot \\\\pi^2/32400 = -45\\\\pi^2/64800 = -\\\\pi^2/1440$. Option C is correct."
+    }
+  }
+}

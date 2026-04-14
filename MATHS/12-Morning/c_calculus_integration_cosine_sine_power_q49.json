@@ -1,0 +1,51 @@
+{
+  "input": "If $\\\\int \\\\cos^{\\\\frac{3}{5}} x \\\\cdot \\\\sin^3 x dx = \\\\frac{-1}{m} \\\\cos^m x + \\\\frac{1}{n} \\\\cos^n x + c$, (where c is the constant of integration), then (m, n) = \n\nOptions:\nA. (18/5, 8/5)\nB. (-8/5, 18/5)\nC. (8/5, 18/5)\nD. (-18/5, -8/5)",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Integrate the given trigonometric expression and identify the exponents m and n by comparing the result with the provided standard form.",
+      "given_information": {
+        "integrand": "$\\\\cos^{3/5} x \\\\cdot \\\\sin^3 x$",
+        "result_form": "$\\\\frac{-1}{m} \\\\cos^m x + \\\\frac{1}{n} \\\\cos^n x + c$"
+      },
+      "to_find": "Tuple (m, n)"
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Integration by Substitution",
+        "Trigonometric Identities",
+        "Power rule for integration"
+      ],
+      "key_formulas": {
+        "substitution": "$u = \\\\cos x \\\\implies du = -\\\\sin x dx$",
+        "trig_identity": "$\\\\sin^2 x = 1 - \\\\cos^2 x$",
+        "power_rule": "$\\\\int u^k du = \\\\frac{u^{k+1}}{k+1}$"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Express $\\\\sin^3 x$ as $(1 - \\\\cos^2 x) \\\\sin x$. Use the substitution $u = \\\\cos x$, integrate the resulting polynomial in terms of u, and then compare the exponents with m and n.",
+      "logical_steps": [
+        "Step 1: Rewrite the integral as $\\\\int \\\\cos^{3/5} x (1 - \\\\cos^2 x) \\\\sin x dx$.",
+        "Step 2: Let $u = \\\\cos x$. Then $du = -\\\\sin x dx$.",
+        "Step 3: Transform the integral to $-\\\\int u^{3/5} (1 - u^2) du$.",
+        "Step 4: Integrate the terms individually.",
+        "Step 5: Compare the exponents in the result with the given form."
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_substitution": {
+        "integral_form": "$-\\\\int (u^{3/5} - u^{13/5}) du$"
+      },
+      "step_2_integration": {
+        "result": "$- (\\\\frac{u^{8/5}}{8/5} - \\\\frac{u^{18/5}}{18/5}) = -\\\\frac{5}{8} u^{8/5} + \\\\frac{5}{18} u^{18/5}$"
+      },
+      "step_3_comparison": {
+        "first_term": "$\\\\frac{-1}{m} \\\\cos^m x = -\\\\frac{5}{8} \\\\cos^{8/5} x \\\\implies m = 8/5$",
+        "second_term": "$\\\\frac{1}{n} \\\\cos^n x = \\\\frac{5}{18} \\\\cos^{18/5} x \\\\implies n = 18/5$"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "C. (8/5, 18/5)",
+      "verification": "The substitution $u=\\\\cos x$ is correctly chosen as the derivative $\\\\sin x$ is present. The terms integrate to $u^{8/5}/(8/5)$ and $u^{18/5}/(18/5)$. The coefficients in the problem are $1/m$ and $1/n$ which perfectly match $8/5$ and $18/5$ respectively. Option C is correct."
+    }
+  }
+}

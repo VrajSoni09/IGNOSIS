@@ -1,0 +1,53 @@
+{
+  "input": "If $\\\\tan \\\\theta = \\\\frac{\\\\sin \\\\alpha - \\\\cos \\\\alpha}{\\\\sin \\\\alpha + \\\\cos \\\\alpha}$, $0 \\\\le \\\\alpha \\\\le \\\\frac{\\\\pi}{2}$, then the value of $\\\\cos 2\\\\theta$ is \n\nOptions:\nA. $\\\\cos 2\\\\alpha$\nB. $\\\\sin \\\\alpha$\nC. $\\\\cos \\\\alpha$\nD. $\\\\sin 2\\\\alpha$",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Given an expression for $\\\\tan \\\\theta$ in terms of $\\\\alpha$, find the value of $\\\\cos 2\\\\theta$.",
+      "given_information": {
+        "expression": "$\\\\tan \\\\theta = \\\\frac{\\\\sin \\\\alpha - \\\\cos \\\\alpha}{\\\\sin \\\\alpha + \\\\cos \\\\alpha}$",
+        "domain": "$0 \\\\le \\\\alpha \\\\le \\\\pi/2$"
+      },
+      "to_find": "$\\\\cos 2\\\\theta$"
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Trigonometric Compound Angle Identities",
+        "Double Angle Identities",
+        "Trigonometric Simplification"
+      ],
+      "key_formulas": {
+        "tan_reduction": "$\\\\frac{\\\\tan A - 1}{\\\\tan A + 1} = \\\\tan(A - 45^\\\\circ)$",
+        "cos_double_angle": "$\\\\cos 2\\\\theta = \\\\frac{1 - \\\\tan^2 \\\\theta}{1 + \\\\tan^2 \\\\theta}$",
+        "cos_reduction": "$\\\\cos(90^\\\\circ - A) = \\\\sin A$"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Simplify the target expression for $\\\\tan \\\\theta$ by dividing the numerator and denominator by $\\\\cos \\\\alpha$, express $\\\\theta$ in terms of $\\\\alpha$, then evaluate $\\\\cos 2\\\\theta$.",
+      "logical_steps": [
+        "Step 1: Simplify the given $\\\\tan \\\\theta$ by dividing by $\\\\cos \\\\alpha$.",
+        "Step 2: Recognize the formula for $\\\\tan(\\\\alpha - \\\\pi/4)$.",
+        "Step 3: Calculate $2\\\\theta$.",
+        "Step 4: Use trigonometric reduction to find $\\\\cos 2\\\\theta$."
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_simplify_tan": {
+        "calculation": "$\\\\tan \\\\theta = \\\\frac{\\\\tan \\\\alpha - 1}{1 + \\\\tan \\\\alpha}$",
+        "formula": "Since $\\\\tan(\\\\pi/4) = 1$, $\\\\tan \\\\theta = \\\\frac{\\\\tan \\\\alpha - \\\\tan(\\\\pi/4)}{1 + \\\\tan \\\\alpha \\\\tan(\\\\pi/4)}$",
+        "result": "$\\\\tan \\\\theta = \\\\tan(\\\\alpha - \\\\pi/4) \\\\implies \\\\theta = \\\\alpha - \\\\pi/4$"
+      },
+      "step_2_calculate_2_theta": {
+        "calculation": "$2\\\\theta = 2(\\\\alpha - \\\\pi/4) = 2\\\\alpha - \\\\pi/2$"
+      },
+      "step_3_find_cos_2_theta": {
+        "formula": "$\\\\cos 2\\\\theta = \\\\cos(2\\\\alpha - \\\\pi/2)$",
+        "symmetry": "$\\\\cos(2\\\\alpha - \\\\pi/2) = \\\\cos(\\\\pi/2 - 2\\\\alpha)$",
+        "result": "$\\\\cos 2\\\\theta = \\\\sin 2\\\\alpha$"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "D. sin 2 alpha",
+      "verification": "Testing with $\\\\alpha = \\\\pi/2$: $\\\\tan \\\\theta = (1-0)/(1+0) = 1 \\\\implies \\\\theta = \\\\pi/4$. Then $\\\\cos 2\\\\theta = \\\\cos(\\\\pi/2) = 0$. Using the formula $\\\\sin(2 \\\\cdot \\\\pi/2) = \\\\sin \\\\pi = 0$. Matches. Testing with $\\\\alpha = 0$: $\\\\tan \\\\theta = (0-1)/(0+1) = -1 \\\\implies \\\\theta = -\\\\pi/4$. Then $\\\\cos 2\\\\theta = \\\\cos(-\\\\pi/2) = 0$. Formula $\\\\sin(0) = 0$. Matches Option D."
+    }
+  }
+}

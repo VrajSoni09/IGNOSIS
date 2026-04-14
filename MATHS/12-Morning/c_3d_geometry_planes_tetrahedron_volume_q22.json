@@ -1,0 +1,62 @@
+{
+  "input": "A plane is parallel to two lines whose direction ratios are 1, 0, -1 and -1, 1, 0 and it contains the point (1, 1, 1). If it cuts the co-ordinate axes at A, B, C, then the volume of the tetrahedron OABC (in cubic units) is \n\nOptions:\nA. 9/4\nB. 9/2\nC. 9\nD. 27",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Find the volume of the tetrahedron formed by the origin and the intercepts of a plane that is parallel to two given direction vectors and passes through (1, 1, 1).",
+      "given_information": {
+        "direction_ratios": [
+          "L1: (1, 0, -1)",
+          "L2: (-1, 1, 0)"
+        ],
+        "point_on_plane": "(1, 1, 1)",
+        "vertices": "O(0,0,0), A, B, C (intercepts)"
+      },
+      "to_find": "Volume of OABC"
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Equation of a Plane",
+        "Normal Vector calculation (Cross Product)",
+        "Intercept form of a plane",
+        "Volume of a Tetrahedron"
+      ],
+      "key_formulas": {
+        "plane_norm": "$\\\\vec{n} = \\\\vec{d}_1 \\\\times \\\\vec{d}_2$",
+        "plane_eq": "$a(x-x_1) + b(y-y_1) + c(z-z_1) = 0$",
+        "volume_tetrahedron": "V = $\\\\frac{1}{6} |abc|$ where a, b, c are intercepts"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Find the normal vector to the plane using the cross product of the two direction vectors. Write the equation of the plane using the given point. Find the x, y, and z intercepts and use the volume formula for a tetrahedron.",
+      "logical_steps": [
+        "Step 1: Calculate the normal vector $\\\\vec{n}$.",
+        "Step 2: Write the plane equation passing through (1, 1, 1).",
+        "Step 3: Convert the equation to intercept form to find A, B, and C.",
+        "Step 4: Calculate the volume using the intercepts."
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_find_normal": {
+        "cross_product": "$\\\\vec{n} = \\\\begin{vmatrix} \\\\hat{i} & \\\\hat{j} & \\\\hat{k} \\\\\\\\ 1 & 0 & -1 \\\\\\\\ -1 & 1 & 0 \\\\end{vmatrix}$",
+        "calculation": "$\\\\hat{i}(1) - \\\\hat{j}(-1) + \\\\hat{k}(1) = \\\\hat{i} + \\\\hat{j} + \\\\hat{k}$",
+        "result": "DRs are (1, 1, 1)"
+      },
+      "step_2_plane_equation": {
+        "substitution": "$1(x - 1) + 1(y - 1) + 1(z - 1) = 0$",
+        "simplified": "$x + y + z = 3$"
+      },
+      "step_3_intercepts": {
+        "intercept_form": "$\\\\frac{x}{3} + \\\\frac{y}{3} + \\\\frac{z}{3} = 1$",
+        "values": "a = 3, b = 3, c = 3"
+      },
+      "step_4_volume_calculation": {
+        "formula": "V = $\\\\frac{1}{6} |3 \\\\cdot 3 \\\\cdot 3|$",
+        "result": "27/6 = 9/2"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "B. 9/2",
+      "verification": "The normal vector calculation $\\\\vec{n}=(1,1,1)$ is correct. The plane equation $x+y+z=3$ correctly passes through $(1,1,1)$ and is parallel to both lines ($1-1=0$, $-1+1=0$). The volume $1/6 \\\\cdot 27 = 4.5$ is correctly matched with Option B."
+    }
+  }
+}

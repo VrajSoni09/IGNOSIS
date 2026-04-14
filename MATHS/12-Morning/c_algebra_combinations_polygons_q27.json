@@ -1,0 +1,52 @@
+{
+  "input": "If $T_n$ denotes the number of triangles which can be formed using the vertices of regular polygon of n sides and $T_{n+1} - T_n = 21$, then n = \n\nOptions:\nA. 5\nB. 7\nC. 6\nD. 4",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Determine the number of sides 'n' of a regular polygon where the difference between triangles formed by its vertices and triangles formed by the vertices of an (n+1)-sided polygon is 21.",
+      "given_information": {
+        "definition": "$T_n$ is the number of triangles from n vertices",
+        "condition": "$T_{n+1} - T_n = 21$"
+      },
+      "to_find": "n"
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Combinations",
+        "Number of triangles from vertices",
+        "Pascal's Identity"
+      ],
+      "key_formulas": {
+        "triangles_count": "$T_n = \\\\binom{n}{3} = \\\\frac{n(n-1)(n-2)}{6}$",
+        "pascal_identity": "$\\\\binom{n+1}{3} - \\\\binom{n}{3} = \\\\binom{n}{2}$"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Express the given condition using the combination formula, simplify the equation to a quadratic in n, and solve for the positive integer solution.",
+      "logical_steps": [
+        "Step 1: Write $T_n$ as $\\\\binom{n}{3}$.",
+        "Step 2: Apply the identity $\\\\binom{n+1}{3} - \\\\binom{n}{3} = \\\\binom{n}{2}$.",
+        "Step 3: Set $\\\\binom{n}{2} = 21$.",
+        "Step 4: Solve the quadratic equation $n(n-1) = 42$.",
+        "Step 5: Identify the valid value of n."
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_formula_simplification": {
+        "logic": "$\\\\binom{n+1}{3} = \\\\binom{n}{3} + \\\\binom{n}{2}$",
+        "substitution": "$(\\\\binom{n}{3} + \\\\binom{n}{2}) - \\\\binom{n}{3} = 21 \\\\implies \\\\binom{n}{2} = 21$"
+      },
+      "step_2_solve_quadratic": {
+        "expansion": "$\\\\frac{n(n-1)}{2} = 21$",
+        "equation": "$n^2 - n - 42 = 0$",
+        "factoring": "$(n - 7)(n + 6) = 0$"
+      },
+      "step_3_result": {
+        "value": "n = 7 (since n must be positive)"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "B. 7",
+      "verification": "If n=7, $T_7 = \\\\binom{7}{3} = 35$. For n+1=8, $T_8 = \\\\binom{8}{3} = 56$. Difference $56 - 35 = 21$. The condition is satisfied. Option B is correct."
+    }
+  }
+}

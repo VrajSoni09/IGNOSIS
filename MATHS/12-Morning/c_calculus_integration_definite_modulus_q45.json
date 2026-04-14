@@ -1,0 +1,51 @@
+{
+  "input": "$\\\\int_0^4 |2x - 5| dx =$\n\nOptions:\nA. 13/2\nB. 15/2\nC. 17/4\nD. 17/2",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Evaluate the definite integral of the absolute value function over the interval [0, 4].",
+      "given_information": {
+        "integral": "$\\\\int_0^4 |2x - 5| dx$"
+      },
+      "to_find": "Numerical value of the integral"
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Definite Integration",
+        "Modulus (Absolute Value) functions",
+        "Additivity property of integrals"
+      ],
+      "key_formulas": {
+        "modulus_definition": "$|f(x)| = f(x)$ where $f(x) \\\\ge 0$ and $-f(x)$ where $f(x) < 0$",
+        "integral_sum": "$\\\\int_a^c |f(x)| dx = \\\\int_a^b -f(x) dx + \\\\int_b^c f(x) dx$"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Find the critical point where the expression inside the modulus becomes zero. Split the integral into two parts based on this point and integrate separately.",
+      "logical_steps": [
+        "Step 1: Solve $2x - 5 = 0$ to find the point where the function changes sign.",
+        "Step 2: Split the interval [0, 4] at $x = 2.5$.",
+        "Step 3: Define the function in both intervals: $-(2x-5)$ for $[0, 2.5]$ and $(2x-5)$ for $[2.5, 4]$.",
+        "Step 4: Integrate each part and evaluate the limits.",
+        "Step 5: Sum the results."
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_split_integral": {
+        "intervals": "$\\\\int_0^{2.5} (5 - 2x) dx + \\\\int_{2.5}^4 (2x - 5) dx$"
+      },
+      "step_2_part_1": {
+        "calculation": "$[5x - x^2]_0^{2.5} = (12.5 - 6.25) - 0 = 6.25 = 25/4$"
+      },
+      "step_3_part_2": {
+        "calculation": "$[x^2 - 5x]_{2.5}^4 = (16 - 20) - (6.25 - 12.5) = -4 + 6.25 = 2.25 = 9/4$"
+      },
+      "step_4_final_sum": {
+        "calculation": "$25/4 + 9/4 = 34/4 = 17/2$"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "D. 17/2",
+      "verification": "The critical point x=2.5 is correct. The integration of linear terms is standard. Summing 6.25 and 2.25 gives 8.5, which is exactly 17/2. Matches Option D."
+    }
+  }
+}

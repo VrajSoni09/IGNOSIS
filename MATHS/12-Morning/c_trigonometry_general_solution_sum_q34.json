@@ -1,0 +1,61 @@
+{
+  "input": "If general solution of $\\\\cos^2 \\\\theta - 2 \\\\sin \\\\theta + \\\\frac{1}{4} = 0$ is $\\\\theta = \\\\frac{n\\\\pi}{A} + (-1)^n \\\\frac{\\\\pi}{B}$, n \u2208 Z, then A + B has the value \n\nOptions:\nA. 7\nB. 6\nC. 1\nD. -7",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Solve the given trigonometric equation to find the general expression for $\\\\theta$, identify the constants A and B, and calculate their sum.",
+      "given_information": {
+        "equation": "$\\\\cos^2 \\\\theta - 2 \\\\sin \\\\theta + 1/4 = 0$",
+        "general_form": "$\\\\theta = n\\\\pi/A + (-1)^n \\\\pi/B$"
+      },
+      "to_find": "A + B"
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Quadratic equations in sin \u03b8",
+        "Trigonometric Identities",
+        "General solutions of sin \u03b8 = sin \u03b1"
+      ],
+      "key_formulas": {
+        "pythagorean_identity": "$\\\\cos^2 \\\\theta = 1 - \\\\sin^2 \\\\theta$",
+        "general_solution_sin": "If $\\\\sin \\\\theta = \\\\sin \\\\alpha$, then $\\\\theta = n\\\\pi + (-1)^n \\\\alpha$"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Convert the entire equation to a quadratic in terms of sin \u03b8. Solve the quadratic equation to find the value of sin \u03b8. Determine the principal solution \u03b1 and write the general solution in the standard form to identify A and B.",
+      "logical_steps": [
+        "Step 1: Substitute $\\\\cos^2 \\\\theta = 1 - \\\\sin^2 \\\\theta$ into the equation.",
+        "Step 2: Rearrange and multiply by 4 to get a clear quadratic equation.",
+        "Step 3: Solve the quadratic $4\\\\sin^2 \\\\theta + 8\\\\sin \\\\theta - 5 = 0$.",
+        "Step 4: Identify the valid root for $\\\\sin \\\\theta$ (within [-1, 1]).",
+        "Step 5: Find the principal value $\\\\alpha$ such that $\\\\sin \\\\alpha$ equals the root.",
+        "Step 6: Match the general solution with the given form to find A and B.",
+        "Step 7: Sum A and B."
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_quadratic_setup": {
+        "substitution": "$1 - \\\\sin^2 \\\\theta - 2\\\\sin \\\\theta + 1/4 = 0$",
+        "result": "$4\\\\sin^2 \\\\theta + 8\\\\sin \\\\theta - 5 = 0$"
+      },
+      "step_2_find_roots": {
+        "factoring": "$4\\\\sin^2 \\\\theta + 10\\\\sin \\\\theta - 2\\\\sin \\\\theta - 5 = 0$",
+        "result": "$(2\\\\sin \\\\theta - 1)(2\\\\sin \\\\theta + 5) = 0$"
+      },
+      "step_3_solve_sin": {
+        "sin_theta": "$\\\\sin \\\\theta = 1/2$ or $\\\\sin \\\\theta = -5/2$ (Ignore, as $|\\\\sin\\\\theta| \\\\le 1$)"
+      },
+      "step_4_general_solution": {
+        "principal_value": "$\\\\sin \\\\theta = \\\\sin(\\\\pi/6)$",
+        "solution": "$\\\\theta = n\\\\pi + (-1)^n \\\\frac{\\\\pi}{6}$",
+        "identify_constants": "By comparison: $A = 1$ and $B = 6$"
+      },
+      "step_5_final_sum": {
+        "calculation": "$A + B = 1 + 6 = 7$"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "A. 7",
+      "verification": "The equation $sin \\\\theta = 1/2$ is correctly derived from the quadratic. The general solution for sin x = sin a is indeed $n\\\\pi + (-1)^n a$. This leads directly to A=1 and B=6. Sum is 7. Matches Option A."
+    }
+  }
+}

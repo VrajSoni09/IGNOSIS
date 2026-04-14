@@ -1,0 +1,59 @@
+{
+  "input": "$\\\\vec{u}, \\\\vec{v}, \\\\vec{w}$ are three vectors such that $|\\\\vec{u}| = 1, |\\\\vec{v}| = 2, |\\\\vec{w}| = 3$. If the projection of $\\\\vec{v}$ along $\\\\vec{u}$ is equal to projection of $\\\\vec{w}$ along $\\\\vec{u}$ and $\\\\vec{v}, \\\\vec{w}$ are perpendicular to each other, then $|\\\\vec{u} - \\\\vec{v} + \\\\vec{w}| =$\n\nOptions:\nA. 4\nB. $\\\\sqrt{7}$\nC. $\\\\sqrt{14}$\nD. 2",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Find the magnitude of the vector resulting from the linear combination $\\\\vec{u} - \\\\vec{v} + \\\\vec{w}$, given information about individual magnitudes, projections, and orthogonality.",
+      "given_information": {
+        "magnitudes": "$|u|=1, |v|=2, |w|=3$",
+        "projections": "Projection of v on u = Projection of w on u",
+        "orthogonality": "v \u22a5 w \u21d2 v \u00b7 w = 0"
+      },
+      "to_find": "$|\\\\vec{u} - \\\\vec{v} + \\\\vec{w}|$"
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Vector Magnitude and Dot Product",
+        "Vector Projections",
+        "Orthogonality"
+      ],
+      "key_formulas": {
+        "magnitude_squared": "$|\\\\vec{A}|^2 = \\\\vec{A} \\\\cdot \\\\vec{A}$",
+        "projection_formula": "$\\\\text{Proj}_{\\\\vec{u}} \\\\vec{v} = \\\\frac{\\\\vec{v} \\\\cdot \\\\vec{u}}{|\\\\vec{u}|}$",
+        "expansion": "$|\\\\vec{a} + \\\\vec{b} + \\\\vec{c}|^2 = |a|^2 + |b|^2 + |c|^2 + 2(a\\\\cdot b + b\\\\cdot c + c\\\\cdot a)$"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Square the magnitude expression we need to find, expand it using dot products, and substitute the given values and conditions to simplify.",
+      "logical_steps": [
+        "Step 1: Simplify the projection condition to $\\\\vec{v} \\\\cdot \\\\vec{u} = \\\\vec{w} \\\\cdot \\\\vec{u}$.",
+        "Step 2: Express the condition as $\\\\vec{u} \\\\cdot (\\\\vec{w} - \\\\vec{v}) = 0$.",
+        "Step 3: Square the target expression $|\\\\vec{u} - (\\\\vec{v} - \\\\vec{w})|^2$.",
+        "Step 4: Expand the squared magnitude.",
+        "Step 5: Substitute the dot product values ($v\\\\cdot w = 0$ and $u\\\\cdot w - u\\\\cdot v = 0$).",
+        "Step 6: Evaluate the final magnitude."
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_projection_condition": {
+        "logic": "$\\\\frac{\\\\vec{v} \\\\cdot \\\\vec{u}}{|u|} = \\\\frac{\\\\vec{w} \\\\cdot \\\\vec{u}}{|u|} \\\\implies \\\\vec{v} \\\\cdot \\\\vec{u} = \\\\vec{w} \\\\cdot \\\\vec{u}$",
+        "result": "$\\\\vec{u} \\\\cdot \\\\vec{w} - \\\\vec{u} \\\\cdot \\\\vec{v} = 0$"
+      },
+      "step_2_magnitude_expansion": {
+        "setup": "$|\\\\vec{u} - \\\\vec{v} + \\\\vec{w}|^2 = |\\\\vec{u}|^2 + |-\\\\vec{v} + \\\\vec{w}|^2 + 2\\\\vec{u} \\\\cdot (-\\\\vec{v} + \\\\vec{w})$",
+        "substitution": "$|\\\\vec{u}|^2 + (|\\\\vec{v}|^2 + |\\\\vec{w}|^2 - 2\\\\vec{v} \\\\cdot \\\\vec{w}) + 2(\\\\vec{u} \\\\cdot \\\\vec{w} - \\\\vec{u} \\\\cdot \\\\vec{v})$"
+      },
+      "step_3_value_substitution": {
+        "magnitudes": "$1^2 + (2^2 + 3^2)$",
+        "dot_products": "$- 2(0) + 2(0)$",
+        "result_squared": "$1 + 4 + 9 = 14$"
+      },
+      "step_4_final_result": {
+        "magnitude": "$\\\\sqrt{14}$"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "C. \\\\sqrt{14}",
+      "verification": "The property $(\\\\vec{w}-\\\\vec{v}) \\\\cdot \\\\vec{u} = 0$ ensures the cross-term in the expansion is zero. Since v and w are perpendicular, their dot product is zero. The sum of squared magnitudes $1+4+9$ gives 14. Correct. Matches Option C."
+    }
+  }
+}

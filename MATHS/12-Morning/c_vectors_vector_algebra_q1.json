@@ -1,0 +1,78 @@
+{
+  "input": "If $\\vec{a}, \\vec{b}, \\vec{c}$ are three vectors, $|\\vec{a}| = 2, |\\vec{b}| = 4, |\\vec{c}| = 1, |\\vec{b} \\times \\vec{c}| = \\sqrt{15}$ and $\\vec{b} = 2\\vec{c} + \\lambda \\vec{a}$, then the value of $\\lambda$ is \n\nOptions:\nA. 2\nB. 2√2\nC. 1\nD. 4",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Determine the scalar value of $\\lambda$ given the magnitudes of three vectors $\\vec{a}, \\vec{b}, \\vec{c}$, the magnitude of the cross product $\\vec{b} \\times \\vec{c}$, and a linear vector equation relating them.",
+      "given_information": {
+        "magnitudes": {
+          "|a|": 2,
+          "|b|": 4,
+          "|c|": 1
+        },
+        "cross_product_magnitude": "|b \\\\times c| = \\\\sqrt{15}",
+        "vector_equation": "b = 2c + \\\\lambda a"
+      },
+      "to_find": "The value of \\\\lambda"
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Magnitude of Cross Product",
+        "Trigonometric Identity (sin to cos conversion)",
+        "Dot Product definition",
+        "Vector Squaring Property"
+      ],
+      "key_formulas": {
+        "cross_product_magnitude": "$|\\\\vec{u} \\\\times \\\\vec{v}| = |\\\\vec{u}||\\\\vec{v}|\\\\sin(\\\\theta)$",
+        "trig_identity": "$\\\\cos^2(\\\\theta) + \\\\sin^2(\\\\theta) = 1$",
+        "dot_product": "$\\\\vec{u} \\\\cdot \\\\vec{v} = |\\\\vec{u}||\\\\vec{v}|\\\\cos(\\\\theta)$",
+        "vector_square": "$|\\\\vec{u} + \\\\vec{v}|^2 = |\\\\vec{u}|^2 + |\\\\vec{v}|^2 + 2(\\\\vec{u} \\\\cdot \\\\vec{v})$"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Use the cross product magnitude to find the angle between $\\vec{b}$ and $\\vec{c}$, convert to a dot product, and then square the given vector equation to solve for $\\lambda$.",
+      "logical_steps": [
+        "Step 1: Use the cross product magnitude formula to find $\\sin(\\alpha)$, where $\\alpha$ is the angle between $\\vec{b}$ and $\\vec{c}$.",
+        "Step 2: Calculate $\\cos(\\alpha)$ using the identity $\\cos(\\alpha) = \\sqrt{1 - \\sin^2(\\alpha)}$.",
+        "Step 3: Calculate the dot product $\\vec{b} \\cdot \\vec{c}$.",
+        "Step 4: Rearrange the given equation $\\vec{b} = 2\\vec{c} + \\lambda \\vec{a}$ to isolate the term with $\\lambda$: $\\vec{b} - 2\\vec{c} = \\lambda \\vec{a}$.",
+        "Step 5: Square both sides of the rearranged equation to convert vector terms into magnitudes and dot products.",
+        "Step 6: Substitute known values and solve for $\\lambda$."
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_find_sine_of_angle": {
+        "formula": "$|\\\\vec{b} \\\\times \\\\vec{c}| = |\\\\vec{b}||\\\\vec{c}|\\\\sin(\\\\alpha)$",
+        "substitution": "$\\\\sqrt{15} = 4 \\\\cdot 1 \\\\cdot \\\\sin(\\\\alpha)$",
+        "result": "$\\\\sin(\\\\alpha) = \\\\frac{\\\\sqrt{15}}{4}$"
+      },
+      "step_2_find_cosine_of_angle": {
+        "formula": "$\\\\cos(\\\\alpha) = \\\\sqrt{1 - \\\\sin^2(\\\\alpha)}$",
+        "calculation": "$\\\\cos(\\\\alpha) = \\\\sqrt{1 - (\\\\frac{\\\\sqrt{15}}{4})^2} = \\\\sqrt{1 - \\\\frac{15}{16}} = \\\\sqrt{\\\\frac{1}{16}}$",
+        "result": "$\\\\cos(\\\\alpha) = \\\\frac{1}{4}$"
+      },
+      "step_3_find_dot_product": {
+        "formula": "$\\\\vec{b} \\\\cdot \\\\vec{c} = |\\vec{b}||\\vec{c}|\\\\cos(\\\\alpha)$",
+        "substitution": "$\\\\vec{b} \\\\cdot \\\\vec{c} = 4 \\\\cdot 1 \\\\cdot \\\\frac{1}{4}$",
+        "result": "$\\\\vec{b} \\cdot \\vec{c} = 1$"
+      },
+      "step_4_square_the_vector_relation": {
+        "rearranged_equation": "$\\\\vec{b} - 2\\\\vec{c} = \\\\lambda \\\\vec{a}$",
+        "squaring_both_sides": "$|\\\\vec{b} - 2\\\\vec{c}|^2 = |\\\\lambda \\\\vec{a}|^2$",
+        "expansion": "$|\\\\vec{b}|^2 + 4|\\\\vec{c}|^2 - 4(\\\\vec{b} \\\\cdot \\\\vec{c}) = \\\\lambda^2 |\\\\vec{a}|^2$"
+      },
+      "step_5_solve_for_lambda": {
+        "substitution": "$4^2 + 4(1)^2 - 4(1) = \\\\lambda^2 (2^2)$",
+        "simplification": "$16 + 4 - 4 = 4\\\\lambda^2$",
+        "calculation": "$16 = 4\\\\lambda^2 \n \\\\lambda^2 = 4$",
+        "result": "$\\\\lambda = \\\\pm 2$"
+      },
+      "step_6_final_selection": {
+        "matching_option": "Since Option A is 2, we select $\\\\lambda = 2$."
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "A. 2",
+      "verification": "The magnitude of the resultant vector $|\\\\vec{b} - 2\\\\vec{c}|$ is $\\\\sqrt{16} = 4$. Given $|\\\\vec{a}| = 2$, it follows that $4 = |\\\\lambda| \\\\cdot 2$, so $|\\\\lambda| = 2$. This is consistent with the value provided in the options."
+    }
+  }
+}

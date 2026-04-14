@@ -1,0 +1,49 @@
+{
+  "input": "The p.m.f of random variate X is \n\nP(X) = \\begin{cases} \\frac{2x}{n(n+1)}, & x = 1, 2, 3, \\dots, n \\\\ 0, & \\text{otherwise} \\end{cases} \n\nThen E(X) = \n\nOptions:\nA. \\frac{n+1}{3}\nB. \\frac{2n+1}{3}\nC. \\frac{n+2}{3}\nD. \\frac{2n-1}{3}",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Find the expected value (mean) of a discrete random variable X given its probability mass function (p.m.f) which is proportional to x.",
+      "given_information": {
+        "pmf": "P(x) = 2x / [n(n+1)] for x \u2208 {1, 2, ..., n}",
+        "domain": "Discrete values from 1 to n"
+      },
+      "to_find": "E(X)"
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Expected Value of a Discrete Random Variable",
+        "Sum of Squares of first n natural numbers"
+      ],
+      "key_formulas": {
+        "expected_value": "$E(X) = \\sum_{i=1}^{n} x_i P(x_i)$",
+        "sum_of_squares": "$\\\\sum_{x=1}^{n} x^2 = \\frac{n(n+1)(2n+1)}{6}$"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Apply the definition of expected value and use standard summation formulas to simplify the resulting expression.",
+      "logical_steps": [
+        "Step 1: Write the summation for $E(X)$ by substituting $P(x)$.",
+        "Step 2: Factor out constants from the summation.",
+        "Step 3: Replace the sum of squares with its standard formula.",
+        "Step 4: Cancel common terms to simplify the final result."
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_set_up_summation": {
+        "formula": "$E(X) = \\sum_{x=1}^{n} x \\cdot \\frac{2x}{n(n+1)}$",
+        "factoring": "$E(X) = \\frac{2}{n(n+1)} \\sum_{x=1}^{n} x^2$"
+      },
+      "step_2_substitute_sum_formula": {
+        "substitution": "$E(X) = \\frac{2}{n(n+1)} \\cdot \\frac{n(n+1)(2n+1)}{6}$"
+      },
+      "step_3_simplify": {
+        "cancellation": "The terms $n(n+1)$ cancel out, leaving $\\frac{2(2n+1)}{6}$.",
+        "result": "$E(X) = \\frac{2n+1}{3}$"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "B. \\frac{2n+1}{3}",
+      "verification": "Check for n=1: $P(X=1) = 2(1)/(1(2)) = 1$. $E(X)=1$. Formula gives $(2(1)+1)/3 = 3/3 = 1$. \nCheck for n=2: $P(X=1)=2/6, P(X=2)=4/6$. $E(X) = 1(2/6) + 2(4/6) = 10/6 = 5/3$. Formula gives $(2(2)+1)/3 = 5/3$. The formula is consistent."
+    }
+  }
+}

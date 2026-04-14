@@ -1,0 +1,48 @@
+{
+  "input": "The equation of the plane through (-1, 1, 2) whose normal makes equal acute angles with co-ordinate axes is \n\nOptions:\nA. x + y + z - 3 = 0\nB. x + y + z - 2 = 0\nC. x + y - z - 2 = 0\nD. x - y + z - 3 = 0",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Find the equation of a plane that passes through the point (-1, 1, 2) and has a normal vector that is equally inclined to the three positive coordinate axes.",
+      "given_information": {
+        "point": "(-1, 1, 2)",
+        "condition": "Normal makes equal acute angles with axes"
+      },
+      "to_find": "Plane Equation"
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Equation of a Plane",
+        "Direction Cosines",
+        "Normal Vector"
+      ],
+      "key_formulas": {
+        "plane_form": "$a(x-x_1) + b(y-y_1) + c(z-z_1) = 0$",
+        "direction_cosine_sum": "$l^2 + m^2 + n^2 = 1$"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Determine the direction ratios of the normal vector from the inclination condition, then use the point-normal form of the plane equation.",
+      "logical_steps": [
+        "Step 1: Identify that 'equal acute angles' means $l = m = n$.",
+        "Step 2: Choose direction ratios (1, 1, 1) for the normal since $l=m=n$.",
+        "Step 3: Substitute the point (-1, 1, 2) and the normal DRs into the plane equation formula.",
+        "Step 4: Simplify to standard form."
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_normal_vector": {
+        "logic": "Since the normal makes equal angles with the axes, its direction cosines are $l = m = n$. Therefore, the direction ratios are proportional and can be taken as (1, 1, 1).",
+        "result": "Normal vector $\\\\vec{n} = \\\\hat{i} + \\\\hat{j} + \\\\hat{k}$"
+      },
+      "step_2_plane_equation": {
+        "formula": "$1(x - (-1)) + 1(y - 1) + 1(z - 2) = 0$",
+        "calculation": "$(x + 1) + (y - 1) + (z - 2) = 0$",
+        "result": "$x + y + z - 2 = 0$"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "B. x + y + z - 2 = 0",
+      "verification": "Check the point (-1, 1, 2): $-1 + 1 + 2 - 2 = 0$. The normal vector (1, 1, 1) has direction cosines $1/\\\\sqrt{3}, 1/\\\\sqrt{3}, 1/\\\\sqrt{3}$, which means it makes equal angles with the axes. Result matches Option B."
+    }
+  }
+}
