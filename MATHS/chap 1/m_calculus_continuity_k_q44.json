@@ -1,5 +1,0 @@
-{
-  "input": "Let f(x) = (1 - cos(kx))/x^2 for x <= 0, and f(x) = sqrt(x)/(sqrt(16+sqrt(x)) - 4) for x > 0. If f is continuous at x = 0, the value of k is:",
-  "thinking": "Left-hand limit: as x -> 0-, (1 - cos(kx))/x^2 ≈ (1/2) k^2. Right-hand limit: as x -> 0+, compute sqrt(x)/(sqrt(16+sqrt(x)) - 4). Multiply numerator and denominator by (sqrt(16+sqrt(x)) + 4) to get numerator sqrt(x)*(sqrt(16+sqrt(x)) + 4) and denominator (16+sqrt(x) - 16) = sqrt(x). Cancel sqrt(x) to get sqrt(16+sqrt(x)) + 4 -> 4 + 4 = 8. Continuity gives (1/2) k^2 = 8 -> k^2 = 16 -> k = ±4. The multiple-choice options include 4 (Option A).",
-  "output": "4 (Option A). Note: continuity yields k = ±4, so 4 is the matching option."
-}

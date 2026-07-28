@@ -1,5 +1,0 @@
-{
-  "input": "Let A = [[1,1,1],[0,1,3],[1,-2,1]], B = [6,11,0]^T and X = [a,b,c]^T. If AX = B, then the value of 2a + b + 2c is:",
-  "thinking": "Write AX = B and expand to equations: (1) a + b + c = 6; (2) b + 3c = 11; (3) a - 2b + c = 0. From (3) get a + c = 2b. Substitute a = 2b - c into (1): (2b - c) + b + c = 6 => 3b = 6 => b = 2. Then from (2): 2 + 3c = 11 => c = 3. From (1): a + 2 + 3 = 6 => a = 1. Compute 2a + b + 2c = 2*1 + 2 + 2*3 = 10.",
-  "output": "10 (Option A)"
-}

@@ -1,5 +1,0 @@
-{
-  "input": "Let f(0) = -3 and f'(x) ≤ 5 for all real x. The maximum possible value of f(2) is:",
-  "thinking": "By the Mean Value Theorem there exists c in (0,2) with f(2)-f(0)=2 f'(c). Since f'(c) ≤ 5, f(2)-(-3) ≤ 2*5 = 10. Thus f(2) ≤ -3 + 10 = 7. Therefore the largest possible value is 7.",
-  "output": "7 (Option C)"
-}

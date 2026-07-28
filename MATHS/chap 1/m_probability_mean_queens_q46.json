@@ -1,5 +1,0 @@
-{
-  "input": "Two cards are drawn successively with replacement from a well-shuffled pack of 52 cards. What is the mean (expected number) of queens in the two draws?",
-  "thinking": "There are 4 queens in 52 cards, so p = 4/52 = 1/13 for each draw. With replacement, draws are independent. Let X = number of queens in 2 draws; X ~ Binomial(n=2,p). Expected value E[X] = n*p = 2*(1/13) = 2/13.",
-  "output": "2/13 (Option C)"
-}
