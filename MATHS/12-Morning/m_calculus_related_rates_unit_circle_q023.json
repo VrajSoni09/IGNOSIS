@@ -1,0 +1,56 @@
+{
+  "filename_suggestion": "m_calculus_related_rates_unit_circle_q023.json",
+  "input": "An object is moving in the clockwise direction around the unit circle x^2 + y^2 = 1. As it passes through the point (1/2, sqrt(3)/2), its y-coordinate is decreasing at the rate of 3 units per sec. The rate at which the x-coordinate changes at this point is\n\nOptions:\nA. 2 units/sec\nB. 3sqrt(3) units/sec\nC. sqrt(3) units/sec\nD. 2sqrt(3) units/sec",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Use related rates on x^2+y^2=1 to find dx/dt at a given point, given dy/dt.",
+      "given_information": {
+        "curve": "x^2 + y^2 = 1",
+        "point": "(1/2, sqrt(3)/2)",
+        "dy_dt": "-3 units/sec",
+        "to_find": "dx/dt"
+      },
+      "key_observation": "Differentiate the circle equation with respect to time."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Related rates",
+        "Implicit differentiation"
+      ],
+      "key_formulas": {
+        "differentiate_circle": "2x(dx/dt) + 2y(dy/dt) = 0",
+        "solve": "dx/dt = -(y/x)(dy/dt)"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Differentiate implicitly, substitute x, y, dy/dt, then simplify.",
+      "logical_steps": [
+        "Step 1: Differentiate x^2+y^2=1",
+        "Step 2: Rearrange for dx/dt",
+        "Step 3: Substitute point values and dy/dt",
+        "Step 4: Match option"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_differentiate": {
+        "equation": "2x(dx/dt) + 2y(dy/dt) = 0"
+      },
+      "step_2_solve_for_dxdt": {
+        "formula": "dx/dt = -(y/x)(dy/dt)"
+      },
+      "step_3_substitute_values": {
+        "x": "1/2",
+        "y": "sqrt(3)/2",
+        "dy_dt": "-3",
+        "calculation": "dx/dt = -[(sqrt(3)/2)/(1/2)](-3) = -(sqrt(3))(-3) = 3sqrt(3)"
+      },
+      "step_4_match_option": {
+        "matching_option": "B"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "B. 3sqrt(3) units/sec",
+      "verification": "Substitution in related-rate formula gives positive 3sqrt(3), consistent with clockwise motion at this point."
+    }
+  }
+}

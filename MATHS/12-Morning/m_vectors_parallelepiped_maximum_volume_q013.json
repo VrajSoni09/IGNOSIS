@@ -1,0 +1,62 @@
+{
+  "filename_suggestion": "m_vectors_parallelepiped_maximum_volume_q013.json",
+  "input": "The value of alpha, so that the volume of the parallelepiped formed by i + alpha j + k, j + alpha k and alpha i + k becomes maximum, is\n\nOptions:\nA. -1/sqrt(3)\nB. 1/sqrt(3)\nC. -sqrt(3)\nD. sqrt(3)",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Find alpha that maximizes the scalar triple product expression used for volume in the given solution.",
+      "given_information": {
+        "vector_1": "(1, alpha, 1)",
+        "vector_2": "(0, 1, alpha)",
+        "vector_3": "(alpha, 0, 1)",
+        "to_find": "alpha for maximum"
+      },
+      "key_observation": "Volume expression comes from determinant of the three vectors."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Scalar triple product",
+        "Determinant",
+        "Optimization using derivatives"
+      ],
+      "key_formulas": {
+        "volume_expression": "V(alpha) = det[[1, alpha, 1],[0,1,alpha],[alpha,0,1]]",
+        "critical_points": "dV/dalpha = 0",
+        "second_derivative_test": "d2V/dalpha2 decides local max/min"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Compute determinant, differentiate, find critical points, apply second derivative test.",
+      "logical_steps": [
+        "Step 1: Expand determinant for V(alpha)",
+        "Step 2: Differentiate V(alpha)",
+        "Step 3: Solve dV/dalpha = 0",
+        "Step 4: Use d2V/dalpha2 at critical points",
+        "Step 5: Match option"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_compute_determinant": {
+        "determinant": "V(alpha) = 1 + alpha^3 - alpha"
+      },
+      "step_2_first_derivative": {
+        "dV_dalpha": "3alpha^2 - 1"
+      },
+      "step_3_critical_points": {
+        "equation": "3alpha^2 - 1 = 0",
+        "solutions": "alpha = +/-1/sqrt(3)"
+      },
+      "step_4_second_derivative": {
+        "d2V_dalpha2": "6alpha",
+        "at_minus_1_by_sqrt3": "negative => local maximum",
+        "at_plus_1_by_sqrt3": "positive => local minimum"
+      },
+      "step_5_match_option": {
+        "matching_option": "A"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "A. -1/sqrt(3)",
+      "verification": "Second derivative is negative at alpha = -1/sqrt(3), giving the required maximum in the provided method."
+    }
+  }
+}

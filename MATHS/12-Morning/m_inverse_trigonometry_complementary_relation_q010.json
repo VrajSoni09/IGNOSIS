@@ -1,0 +1,53 @@
+{
+  "filename_suggestion": "m_inverse_trigonometry_complementary_relation_q010.json",
+  "input": "If sin^-1 x + cos^-1 y = 3pi/10, then the value of cos^-1 x + sin^-1 y is\n\nOptions:\nA. pi/10\nB. 7pi/10\nC. 9pi/10\nD. 3pi/10",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Given one sum of inverse trigonometric terms, find another related sum.",
+      "given_information": {
+        "given_relation": "sin^-1 x + cos^-1 y = 3pi/10",
+        "to_find": "cos^-1 x + sin^-1 y"
+      },
+      "key_observation": "Use identity sin^-1 t + cos^-1 t = pi/2 for valid t in [-1,1]."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Inverse trigonometric complementary identity",
+        "Algebraic rearrangement"
+      ],
+      "key_formulas": {
+        "complementary_identity": "sin^-1 u + cos^-1 u = pi/2",
+        "derived_forms": "cos^-1 x = pi/2 - sin^-1 x, sin^-1 y = pi/2 - cos^-1 y"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Rewrite the required expression using complementary forms and substitute the given sum.",
+      "logical_steps": [
+        "Step 1: Express cos^-1 x in terms of sin^-1 x",
+        "Step 2: Express sin^-1 y in terms of cos^-1 y",
+        "Step 3: Add and simplify",
+        "Step 4: Substitute given value"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_rewrite_terms": {
+        "cos_inverse_x": "cos^-1 x = pi/2 - sin^-1 x",
+        "sin_inverse_y": "sin^-1 y = pi/2 - cos^-1 y"
+      },
+      "step_2_add": {
+        "expression": "cos^-1 x + sin^-1 y = (pi/2 - sin^-1 x) + (pi/2 - cos^-1 y)",
+        "simplified": "cos^-1 x + sin^-1 y = pi - (sin^-1 x + cos^-1 y)"
+      },
+      "step_3_substitute_given": {
+        "substitution": "= pi - 3pi/10 = 7pi/10"
+      },
+      "step_4_match_option": {
+        "matching_option": "B"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "B. 7pi/10",
+      "verification": "The two sums are complementary to pi, so subtracting 3pi/10 from pi gives 7pi/10."
+    }
+  }
+}

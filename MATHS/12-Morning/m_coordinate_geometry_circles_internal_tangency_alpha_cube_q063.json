@@ -1,0 +1,76 @@
+{
+  "filename_suggestion": "m_coordinate_geometry_circles_internal_tangency_alpha_cube_q063.json",
+  "input": "If the circles x² + y² = 9 and x² + y² + 2αx + 2y + 1 = 0 touch each other internally, then the value of α³ is\n\nOptions:\nA. 27/64\nB. 125/27\nC. 27/125\nD. 64/27",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Two circles touch each other internally. Use the internal tangency condition to find α, then compute α³.",
+      "given_information": {
+        "circle_1": "x² + y² = 9",
+        "circle_2": "x² + y² + 2αx + 2y + 1 = 0",
+        "condition": "The two circles touch each other internally",
+        "to_find": "α³"
+      },
+      "key_observation": "For two circles touching internally, the distance between centres equals the absolute difference of their radii: C₁C₂ = |r₁ - r₂|."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Standard form of a circle",
+        "Centre and radius from general equation",
+        "Internal tangency condition",
+        "Distance between two points"
+      ],
+      "key_formulas": {
+        "general_circle": "x² + y² + 2gx + 2fy + c = 0 → centre (-g, -f), radius = √(g² + f² - c)",
+        "internal_tangency": "C₁C₂ = |r₁ - r₂|",
+        "distance_formula": "d = √((x₂ - x₁)² + (y₂ - y₁)²)"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Extract centre and radius of both circles, apply internal tangency distance condition, solve for α, then cube it.",
+      "logical_steps": [
+        "Step 1: Find centre and radius of circle 1",
+        "Step 2: Find centre and radius of circle 2 in terms of α",
+        "Step 3: Write the internal tangency condition C₁C₂ = |r₁ - r₂|",
+        "Step 4: Square both sides and solve for α",
+        "Step 5: Compute α³ and match with options"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_circle_1_parameters": {
+        "equation": "x² + y² = 9",
+        "centre_C1": "(0, 0)",
+        "radius_r1": "3"
+      },
+      "step_2_circle_2_parameters": {
+        "equation": "x² + y² + 2αx + 2y + 1 = 0",
+        "g": "α, f = 1, c = 1",
+        "centre_C2": "(-α, -1)",
+        "radius_r2": "√(α² + 1 - 1) = √(α²) = α  (assuming α > 0)"
+      },
+      "step_3_distance_between_centres": {
+        "C1": "(0, 0)",
+        "C2": "(-α, -1)",
+        "C1C2": "√(α² + 1)"
+      },
+      "step_4_apply_internal_tangency": {
+        "condition": "C₁C₂ = |r₁ - r₂|",
+        "substitute": "√(α² + 1) = |3 - α|",
+        "square_both_sides": "α² + 1 = (3 - α)² = 9 - 6α + α²",
+        "simplify": "1 = 9 - 6α",
+        "solve": "6α = 8",
+        "result": "α = 4/3"
+      },
+      "step_5_compute_alpha_cube": {
+        "α": "4/3",
+        "α³": "(4/3)³ = 64/27"
+      },
+      "step_6_match_option": {
+        "matching_option": "D"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "D. 64/27",
+      "verification": "With α = 4/3: r₂ = 4/3, C₁C₂ = √((4/3)² + 1) = √(16/9 + 9/9) = √(25/9) = 5/3. |r₁ - r₂| = |3 - 4/3| = 5/3. C₁C₂ = |r₁ - r₂| = 5/3 ✓. Hence α³ = 64/27."
+    }
+  }
+}

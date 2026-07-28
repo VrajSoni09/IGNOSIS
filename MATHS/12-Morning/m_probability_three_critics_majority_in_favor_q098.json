@@ -1,0 +1,75 @@
+{
+  "filename_suggestion": "m_probability_three_critics_majority_in_favor_q098.json",
+  "input": "Three critics review a book. For the three critics the odds in favor of the book are 2:5, 3:4 and 4:3 respectively. The probability that the majority is in favor of the book, is given by\n\nOptions:\nA. 183/343\nB. 160/343\nC. 209/343\nD. 134/343",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Given odds in favour for three independent critics A, B, C, find the probability that at least 2 critics favour the book (majority in favour).",
+      "given_information": {
+        "odds_A": "2:5  →  P(A) = 2/7",
+        "odds_B": "3:4  →  P(B) = 3/7",
+        "odds_C": "4:3  →  P(C) = 4/7",
+        "to_find": "P(majority in favour) = P(at least 2 out of 3 favour)"
+      },
+      "key_observation": "Majority means at least 2 critics favour: cases are (A∩B∩C'), (A∩B'∩C), (A'∩B∩C), and (A∩B∩C). Sum all four since critics are independent."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Odds in favour: a:b means P = a/(a+b)",
+        "Complementary probability: P(A') = 1-P(A)",
+        "Independence of events",
+        "Mutually exclusive cases for exactly 2 or 3 in favour"
+      ],
+      "key_formulas": {
+        "P_A": "2/(2+5) = 2/7,  P(A') = 5/7",
+        "P_B": "3/(3+4) = 3/7,  P(B') = 4/7",
+        "P_C": "4/(4+3) = 4/7,  P(C') = 3/7",
+        "majority": "P = P(A∩B∩C') + P(A∩B'∩C) + P(A'∩B∩C) + P(A∩B∩C)"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Convert odds to probabilities, find complements, enumerate all cases where at least 2 critics favour (using independence to multiply), and sum the probabilities.",
+      "logical_steps": [
+        "Step 1: Convert odds to probabilities P(A), P(B), P(C)",
+        "Step 2: Compute P(A'), P(B'), P(C')",
+        "Step 3: Compute each of the 4 cases",
+        "Step 4: Sum all cases",
+        "Step 5: Match with options"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_probabilities": {
+        "P_A": "2/7",
+        "P_B": "3/7",
+        "P_C": "4/7"
+      },
+      "step_2_complements": {
+        "P_A_prime": "5/7",
+        "P_B_prime": "4/7",
+        "P_C_prime": "3/7"
+      },
+      "step_3_case_AB_not_C": {
+        "P(A∩B∩C')": "(2/7)×(3/7)×(3/7) = 18/343"
+      },
+      "step_3_case_A_not_B_C": {
+        "P(A∩B'∩C)": "(2/7)×(4/7)×(4/7) = 32/343"
+      },
+      "step_3_case_not_A_BC": {
+        "P(A'∩B∩C)": "(5/7)×(3/7)×(4/7) = 60/343"
+      },
+      "step_3_case_ABC": {
+        "P(A∩B∩C)": "(2/7)×(3/7)×(4/7) = 24/343"
+      },
+      "step_4_total": {
+        "sum": "18/343 + 32/343 + 60/343 + 24/343",
+        "result": "134/343"
+      },
+      "step_5_match_option": {
+        "matching_option": "D"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "D. 134/343",
+      "verification": "18 + 32 + 60 + 24 = 134. All four cases of at least 2 critics favouring: 18/343 + 32/343 + 60/343 + 24/343 = 134/343 ✓"
+    }
+  }
+}

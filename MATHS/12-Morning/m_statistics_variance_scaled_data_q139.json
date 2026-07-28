@@ -1,0 +1,50 @@
+{
+  "filename_suggestion": "m_statistics_variance_scaled_data_q139.json",
+  "input": "If variance of x₁, x₂, ......, xₙ is σ_x², then the variance of λx₁, λx₂, ......, λxₙ(λ ≠ 0) is\n\nOptions:\nA. λ · σ_x\nB. λ · σ_x²\nC. λ² · σ_x\nD. λ² · σ_x²",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Find the variance of a dataset after multiplying every data point xᵢ by a non-zero scalar λ.",
+      "given_information": {
+        "original_data": "x₁, x₂, ..., xₙ",
+        "original_variance": "σ_x²",
+        "scaled_data": "λx₁, λx₂, ..., λxₙ",
+        "to_find": "Variance of scaled dataset"
+      },
+      "key_observation": "When each value in a dataset is multiplied by a constant λ, the variance is multiplied by λ²."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Property of variance under linear transformation: Var(aX + b) = a² Var(X)",
+        "Scaling property of variance"
+      ],
+      "key_formulas": {
+        "property": "Var(λX) = λ² Var(X) = λ² σ_x²"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Apply the scaling property of variance Var(λX) = λ² Var(X) directly.",
+      "logical_steps": [
+        "Step 1: Recall Var(X) = σ_x²",
+        "Step 2: Apply scaling property Var(λX) = λ² Var(X)",
+        "Step 3: Conclude new variance is λ² · σ_x²",
+        "Step 4: Match option D"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_property": {
+        "variance_definition": "Var(X) = (1/n) ∑ (xᵢ - x̄)² = σ_x²"
+      },
+      "step_2_scaled_data": {
+        "new_mean": "λx̄",
+        "new_variance": "Var(λX) = (1/n) ∑ (λxᵢ - λx̄)² = λ² · (1/n) ∑ (xᵢ - x̄)² = λ² σ_x²"
+      },
+      "step_3_match_option": {
+        "matching_option": "D"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "D. λ² · σ_x²",
+      "verification": "Var(λX) = λ² Var(X) = λ² σ_x² is a standard statistical property ✓"
+    }
+  }
+}

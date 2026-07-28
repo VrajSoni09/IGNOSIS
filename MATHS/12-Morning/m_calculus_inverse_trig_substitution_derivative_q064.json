@@ -1,0 +1,74 @@
+{
+  "filename_suggestion": "m_calculus_inverse_trig_substitution_derivative_q064.json",
+  "input": "If y = cos⁻¹(a²/√(x⁴+a⁴)), then dy/dx is\n\nOptions:\nA. 2a²x/(x⁴+a⁴)\nB. 2a²x²/√(x⁴+a⁴)\nC. a⁴x⁴/(x⁴+a⁴)\nD. a⁴x²/(2√(x⁴+a⁴))",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Differentiate y = cos⁻¹(a²/√(x⁴+a⁴)) with respect to x.",
+      "given_information": {
+        "function": "y = cos⁻¹(a²/√(x⁴+a⁴))",
+        "to_find": "dy/dx"
+      },
+      "key_observation": "Use the substitution x² = a² tan θ to simplify the complex expression inside cos⁻¹ into a recognisable form."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Trigonometric substitution",
+        "Inverse trigonometric simplification",
+        "Derivative of tan⁻¹(u)",
+        "Chain rule"
+      ],
+      "key_formulas": {
+        "substitution": "x² = a² tan θ  →  θ = tan⁻¹(x²/a²)",
+        "trig_identity": "1 + tan²θ = sec²θ",
+        "d(tan⁻¹u)/dx": "1/(1+u²) · du/dx",
+        "cos_inv_cos": "cos⁻¹(cos θ) = θ"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Substitute x² = a² tan θ to reduce the argument of cos⁻¹ to cos θ, simplify y to tan⁻¹(x²/a²), then differentiate.",
+      "logical_steps": [
+        "Step 1: Let x² = a² tan θ, so θ = tan⁻¹(x²/a²)",
+        "Step 2: Rewrite x⁴ + a⁴ using the substitution",
+        "Step 3: Simplify the expression inside cos⁻¹",
+        "Step 4: Reduce y = θ = tan⁻¹(x²/a²)",
+        "Step 5: Differentiate y = tan⁻¹(x²/a²) using chain rule",
+        "Step 6: Simplify and match with options"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_substitution": {
+        "let": "x² = a² tan θ",
+        "therefore": "θ = tan⁻¹(x²/a²)"
+      },
+      "step_2_rewrite_denominator": {
+        "x⁴": "a⁴ tan²θ",
+        "x⁴ + a⁴": "a⁴ tan²θ + a⁴ = a⁴(1 + tan²θ) = a⁴ sec²θ",
+        "√(x⁴+a⁴)": "a² sec θ"
+      },
+      "step_3_simplify_argument": {
+        "argument": "a²/√(x⁴+a⁴) = a²/(a² sec θ) = 1/sec θ = cos θ"
+      },
+      "step_4_reduce_y": {
+        "y": "cos⁻¹(cos θ) = θ = tan⁻¹(x²/a²)"
+      },
+      "step_5_differentiate": {
+        "y": "tan⁻¹(x²/a²)",
+        "let_u": "u = x²/a²",
+        "du/dx": "2x/a²",
+        "dy/dx": "1/(1 + (x²/a²)²) · (2x/a²)",
+        "simplify_denominator": "1 + x⁴/a⁴ = (a⁴ + x⁴)/a⁴"
+      },
+      "step_6_final_simplification": {
+        "expression": "dy/dx = (a⁴/(a⁴ + x⁴)) · (2x/a²)",
+        "result": "dy/dx = 2a²x/(x⁴ + a⁴)"
+      },
+      "step_7_match_option": {
+        "matching_option": "A"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "A. 2a²x/(x⁴+a⁴)",
+      "verification": "After substitution x² = a² tan θ, the argument simplifies to cos θ, giving y = θ = tan⁻¹(x²/a²). Differentiating using chain rule: dy/dx = [1/(1+x⁴/a⁴)] · (2x/a²) = 2a²x/(x⁴+a⁴), confirming option A."
+    }
+  }
+}

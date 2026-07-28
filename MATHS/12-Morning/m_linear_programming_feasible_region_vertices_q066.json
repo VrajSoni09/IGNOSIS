@@ -1,0 +1,76 @@
+{
+  "filename_suggestion": "m_linear_programming_feasible_region_vertices_q066.json",
+  "input": "The vertices of the feasible region for the constraints x + y ≤ 4, x ≤ 2, y ≤ 1, x + y ≥ 1, x ≥ 0, y ≥ 0 are\n\nOptions:\nA. (1, 0), (2, 0), (2, 1), (0, 4)\nB. (0, 1), (4, 0), (0, 4), (1, 0)\nC. (1, 0), (2, 0), (2, 1), (0, 1)\nD. (1, 0), (4, 0), (2, 1), (0, 4)",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Find all corner (vertex) points of the feasible region defined by six constraints in the first quadrant.",
+      "given_information": {
+        "constraints": [
+          "x + y ≤ 4",
+          "x ≤ 2",
+          "y ≤ 1",
+          "x + y ≥ 1",
+          "x ≥ 0",
+          "y ≥ 0"
+        ],
+        "to_find": "Vertices of the feasible region"
+      },
+      "key_observation": "The feasible region lies on the origin side of x+y=4, x=2, y=1, and the non-origin side of x+y=1, entirely in the first quadrant. Vertices occur at intersections of boundary lines within the feasible region."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Feasible region in linear programming",
+        "Corner point method",
+        "Intersection of boundary lines",
+        "Checking feasibility of intersection points"
+      ],
+      "key_formulas": {
+        "intersection": "Solve pairs of boundary equations simultaneously",
+        "feasibility_check": "A point is a vertex only if it satisfies all constraints"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Find all intersection points of boundary lines, check which satisfy all constraints, and identify the corners of the bounded feasible region.",
+      "logical_steps": [
+        "Step 1: List the boundary lines",
+        "Step 2: Find intersections of each relevant pair",
+        "Step 3: Check feasibility of each intersection point",
+        "Step 4: List valid vertices and match with options"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_boundary_lines": {
+        "L1": "x + y = 4",
+        "L2": "x = 2",
+        "L3": "y = 1",
+        "L4": "x + y = 1",
+        "L5": "x = 0",
+        "L6": "y = 0"
+      },
+      "step_2_find_intersections": {
+        "L4_and_L6_y_0": "x + 0 = 1 → point A(1, 0) ✓ feasible",
+        "L2_and_L6_y_0": "x = 2, y = 0 → point B(2, 0) ✓ feasible",
+        "L2_and_L3": "x = 2, y = 1 → point C(2, 1) ✓ feasible",
+        "L5_and_L3_x_0": "x = 0, y = 1 → point D(0, 1) ✓ feasible",
+        "L1_and_L2": "x = 2, y = 2 → but y ≤ 1 violated ✗ not feasible",
+        "L1_and_L3": "x + 1 = 4 → x = 3 → but x ≤ 2 violated ✗ not feasible"
+      },
+      "step_3_verify_all_vertices": {
+        "A(1,0)": "1+0=1≥1 ✓, 1≤2 ✓, 0≤1 ✓, 1+0=1≤4 ✓",
+        "B(2,0)": "2+0=2≥1 ✓, 2≤2 ✓, 0≤1 ✓, 2+0=2≤4 ✓",
+        "C(2,1)": "2+1=3≥1 ✓, 2≤2 ✓, 1≤1 ✓, 2+1=3≤4 ✓",
+        "D(0,1)": "0+1=1≥1 ✓, 0≤2 ✓, 1≤1 ✓, 0+1=1≤4 ✓"
+      },
+      "step_4_list_vertices": {
+        "feasible_region_vertices": "A(1,0), B(2,0), C(2,1), D(0,1)"
+      },
+      "step_5_match_option": {
+        "matching_option": "C"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "C. (1, 0), (2, 0), (2, 1), (0, 1)",
+      "verification": "The feasible region is bounded by x+y=1 (lower), x=2 (right), y=1 (top), and lies in the first quadrant. All four corner points A(1,0), B(2,0), C(2,1), D(0,1) satisfy all six constraints. Intersections L1∩L2 and L1∩L3 are outside due to y>1 or x>2 respectively."
+    }
+  }
+}

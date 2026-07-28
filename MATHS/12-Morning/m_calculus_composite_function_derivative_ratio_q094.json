@@ -1,0 +1,60 @@
+{
+  "filename_suggestion": "m_calculus_composite_function_derivative_ratio_q094.json",
+  "input": "If f(x) = eˣ, g(x) = sin⁻¹x and h(x) = f(g(x)), then h'(x)/h(x) is\n\nOptions:\nA. e^(sin⁻¹x)\nB. 1/√(1-x²)\nC. sin⁻¹x\nD. e^(sin⁻¹x)/√(1-x²)",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Given the composite function h(x) = f(g(x)) where f(x) = eˣ and g(x) = sin⁻¹x, find the ratio h'(x)/h(x).",
+      "given_information": {
+        "f(x)": "eˣ",
+        "g(x)": "sin⁻¹x",
+        "h(x)": "f(g(x))",
+        "to_find": "h'(x)/h(x)"
+      },
+      "key_observation": "h(x) = e^(sin⁻¹x). The ratio h'(x)/h(x) is the logarithmic derivative of h, i.e., d/dx[ln h(x)] = d/dx(sin⁻¹x) = 1/√(1-x²)."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Composition of functions",
+        "Chain rule: d/dx[f(g(x))] = f'(g(x))·g'(x)",
+        "d/dx(eˣ) = eˣ",
+        "d/dx(sin⁻¹x) = 1/√(1-x²)",
+        "Logarithmic derivative: h'/h = d/dx[ln h]"
+      ],
+      "key_formulas": {
+        "h(x)": "e^(sin⁻¹x)",
+        "chain_rule": "h'(x) = e^(sin⁻¹x) · 1/√(1-x²)",
+        "ratio": "h'(x)/h(x) = 1/√(1-x²)"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Write h(x) explicitly as e^(sin⁻¹x), differentiate using chain rule, then divide by h(x) to simplify.",
+      "logical_steps": [
+        "Step 1: Express h(x) = f(g(x)) = e^(sin⁻¹x)",
+        "Step 2: Differentiate h(x) using the chain rule",
+        "Step 3: Form the ratio h'(x)/h(x)",
+        "Step 4: Simplify and match option"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_express_h": {
+        "h(x)": "f(g(x)) = f(sin⁻¹x) = e^(sin⁻¹x)"
+      },
+      "step_2_differentiate": {
+        "chain_rule": "h'(x) = e^(sin⁻¹x) · d/dx(sin⁻¹x)",
+        "d_sin_inv": "d/dx(sin⁻¹x) = 1/√(1-x²)",
+        "h_prime": "h'(x) = e^(sin⁻¹x) / √(1-x²)"
+      },
+      "step_3_compute_ratio": {
+        "ratio": "h'(x)/h(x) = [e^(sin⁻¹x)/√(1-x²)] / e^(sin⁻¹x)",
+        "simplify": "= 1/√(1-x²)"
+      },
+      "step_4_match_option": {
+        "matching_option": "B"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "B. 1/√(1-x²)",
+      "verification": "h'(x)/h(x) is the logarithmic derivative: d/dx[ln h(x)] = d/dx[sin⁻¹x] = 1/√(1-x²) ✓. The e^(sin⁻¹x) cancels exactly."
+    }
+  }
+}

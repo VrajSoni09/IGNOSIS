@@ -1,0 +1,63 @@
+{
+  "filename_suggestion": "m_coordinate_geometry_tangents_quadrilateral_area_q020.json",
+  "input": "Two tangents to the circle x^2 + y^2 = 4 at the points A and B meet at the point P(-4,0). Then the area of the quadrilateral PAOB, O being the origin, is\n\nOptions:\nA. 2sqrt(3) sq. units\nB. 8sqrt(3) sq. units\nC. 4sqrt(3) sq. units\nD. 6sqrt(3) sq. units",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Find area of quadrilateral formed by external point P, tangent points A and B, and center O of circle x^2+y^2=4.",
+      "given_information": {
+        "circle": "x^2 + y^2 = 4",
+        "center": "O(0,0)",
+        "radius": "2",
+        "external_point": "P(-4,0)",
+        "to_find": "Area of PAOB"
+      },
+      "key_observation": "PAOB is composed of two congruent right triangles PAO and PBO."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Length of tangent from external point",
+        "Radius perpendicular to tangent",
+        "Area decomposition"
+      ],
+      "key_formulas": {
+        "OP": "distance between (-4,0) and (0,0) = 4",
+        "tangent_length": "PA = PB = sqrt(OP^2 - r^2)",
+        "triangle_area": "Area(PAO) = 1/2 * OA * AP"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Compute tangent length AP, area of one right triangle with OA, then double it.",
+      "logical_steps": [
+        "Step 1: Compute OP and radius",
+        "Step 2: Find AP using tangent-length formula",
+        "Step 3: Compute area of triangle PAO",
+        "Step 4: Double for quadrilateral PAOB",
+        "Step 5: Match option"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_lengths": {
+        "OP": "4",
+        "OA": "2"
+      },
+      "step_2_tangent_length": {
+        "calculation": "AP = sqrt(4^2 - 2^2) = sqrt(12) = 2sqrt(3)",
+        "PB": "2sqrt(3)"
+      },
+      "step_3_area_one_triangle": {
+        "reason": "OA is perpendicular to PA",
+        "area_PAO": "1/2 * OA * AP = 1/2 * 2 * 2sqrt(3) = 2sqrt(3)"
+      },
+      "step_4_total_area": {
+        "area_PAOB": "2 * area_PAO = 2 * 2sqrt(3) = 4sqrt(3)"
+      },
+      "step_5_match_option": {
+        "matching_option": "C"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "C. 4sqrt(3) sq. units",
+      "verification": "Both triangles PAO and PBO are congruent right triangles with area 2sqrt(3), so total is 4sqrt(3)."
+    }
+  }
+}

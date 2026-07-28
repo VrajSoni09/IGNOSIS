@@ -1,0 +1,61 @@
+{
+  "filename_suggestion": "m_calculus_monotonicity_interval_increasing_decreasing_q121.json",
+  "input": "If f(x) = x e^(x(1-x)), x ∈ R, then f(x) is\n\nOptions:\nA. increasing in [-1/2, 1]\nB. decreasing R\nC. increasing in R\nD. decreasing in [-1/2, 1]",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Determine the interval of monotonicity for f(x) = x e^(x - x²).",
+      "given_information": {
+        "function": "f(x) = x e^(x(1-x)) = x e^(x - x²)",
+        "domain": "x ∈ R",
+        "to_find": "Interval of increasing/decreasing behavior"
+      },
+      "key_observation": "Differentiate f(x) using the product rule. Since the exponential factor is always positive, the sign of f'(x) depends entirely on the polynomial factor."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Monotonicity: f is increasing when f'(x) ≥ 0, decreasing when f'(x) ≤ 0",
+        "Product rule: (uv)' = u'v + uv'",
+        "Sign of quadratic expressions"
+      ],
+      "key_formulas": {
+        "derivative": "f'(x) = 1·e^(x-x²) + x·(1-2x)e^(x-x²) = e^(x-x²)(1 + x - 2x²)",
+        "increasing_condition": "1 + x - 2x² ≥ 0  ⇒  2x² - x - 1 ≤ 0"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Compute f'(x), factor the polynomial part, determine the sign of f'(x), and find the interval where f'(x) ≥ 0.",
+      "logical_steps": [
+        "Step 1: Write f(x) = x e^(x-x²) and compute f'(x)",
+        "Step 2: Factor out e^(x-x²): f'(x) = e^(x-x²)(1 + x - 2x²)",
+        "Step 3: Set f'(x) ≥ 0 for increasing: 2x² - x - 1 ≤ 0",
+        "Step 4: Factor quadratic: (2x + 1)(x - 1) ≤ 0",
+        "Step 5: Solve inequality to get x ∈ [-1/2, 1]",
+        "Step 6: Match option"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_differentiate": {
+        "f_x": "x e^(x - x²)",
+        "product_rule": "f'(x) = 1 · e^(x - x²) + x · (1 - 2x) e^(x - x²)",
+        "factor_exp": "f'(x) = e^(x - x²) (1 + x - 2x²)"
+      },
+      "step_2_increasing_condition": {
+        "f_prime_ge_0": "e^(x - x²) (1 + x - 2x²) ≥ 0",
+        "exp_always_positive": "1 + x - 2x² ≥ 0",
+        "rearrange": "2x² - x - 1 ≤ 0"
+      },
+      "step_3_factor_quadratic": {
+        "factors": "(2x + 1)(x - 1) ≤ 0",
+        "roots": "x = -1/2, x = 1",
+        "solution": "-1/2 ≤ x ≤ 1  ⇒  x ∈ [-1/2, 1]"
+      },
+      "step_4_match_option": {
+        "matching_option": "A"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "A. increasing in [-1/2, 1]",
+      "verification": "f'(x) = e^(x-x²)(1+x-2x²). For x = 0 ∈ [-1/2, 1], f'(0) = 1 > 0 (increasing). For x = 2 ∉ [-1/2, 1], f'(2) = e⁻²(1+2-8) = -5e⁻² < 0 (decreasing). Thus f is increasing in [-1/2, 1] ✓"
+    }
+  }
+}

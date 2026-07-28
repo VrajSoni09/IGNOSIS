@@ -1,0 +1,56 @@
+{
+  "filename_suggestion": "m_trigonometry_identity_with_sin18_q032.json",
+  "input": "If sin 18 degree = (sqrt(5)-1)/4, then cos^2 48 degree - sin^2 12 degree has the value\n\nOptions:\nA. (-sqrt(5)+1)/8\nB. (sqrt(5)-1)/8\nC. (sqrt(5)+1)/8\nD. (-1-sqrt(5))/8",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Evaluate cos^2 48 degree - sin^2 12 degree using the given value of sin 18 degree.",
+      "given_information": {
+        "given": "sin 18 degree = (sqrt(5)-1)/4",
+        "to_find": "cos^2 48 degree - sin^2 12 degree"
+      },
+      "key_observation": "Use identity cos^2 A - sin^2 B = cos(A+B)cos(A-B)."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Product-to-sum style identity",
+        "Double-angle relation"
+      ],
+      "key_formulas": {
+        "main_identity": "cos^2 A - sin^2 B = cos(A+B)cos(A-B)",
+        "double_angle": "cos 36 degree = 1 - 2 sin^2 18 degree"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Convert expression to cos 60 degree cos 36 degree, then use given sin 18 degree.",
+      "logical_steps": [
+        "Step 1: Apply identity with A=48, B=12",
+        "Step 2: Simplify to (1/2)cos 36",
+        "Step 3: Express cos 36 via sin 18",
+        "Step 4: Substitute value and simplify",
+        "Step 5: Match option"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_identity": {
+        "expression": "cos^2 48 - sin^2 12 = cos(60)cos(36)"
+      },
+      "step_2_simplify": {
+        "value": "= (1/2)cos 36"
+      },
+      "step_3_use_given": {
+        "sin18": "(sqrt(5)-1)/4",
+        "cos36": "1 - 2sin^2 18"
+      },
+      "step_4_compute": {
+        "result": "(1/2)[1 - 2((sqrt(5)-1)/4)^2] = (sqrt(5)+1)/8"
+      },
+      "step_5_match_option": {
+        "matching_option": "C"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "C. (sqrt(5)+1)/8",
+      "verification": "Direct substitution into the transformed expression gives (sqrt(5)+1)/8."
+    }
+  }
+}

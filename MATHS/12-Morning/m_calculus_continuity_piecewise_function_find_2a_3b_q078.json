@@ -1,0 +1,79 @@
+{
+  "filename_suggestion": "m_calculus_continuity_piecewise_function_find_2a_3b_q078.json",
+  "input": "If the function f(x) is continuous in 0 ≤ x ≤ π, then the value of 2a + 3b is where\nf(x) = { x + a√2 sin x,       if 0 ≤ x < π/4\n        { 2x cot x + b,       if π/4 ≤ x ≤ π/2\n        { a cos 2x - b sin x, if π/2 < x ≤ π }\n\nOptions:\nA. π/12\nB. π/6\nC. π/4\nD. π/10",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Find constants a and b such that the piecewise function f(x) is continuous at the transition points x = π/4 and x = π/2, then compute 2a + 3b.",
+      "given_information": {
+        "f_piece_1": "x + a√2 sin x  for 0 ≤ x < π/4",
+        "f_piece_2": "2x cot x + b   for π/4 ≤ x ≤ π/2",
+        "f_piece_3": "a cos 2x - b sin x  for π/2 < x ≤ π",
+        "condition": "f is continuous on [0, π]",
+        "to_find": "2a + 3b"
+      },
+      "key_observation": "Continuity requires matching left-hand and right-hand limits at both x = π/4 and x = π/2. This gives two equations in a and b, which can be solved simultaneously."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Continuity of piecewise functions",
+        "Left-hand and right-hand limits",
+        "System of linear equations",
+        "Trigonometric values at π/4 and π/2"
+      ],
+      "key_formulas": {
+        "continuity_condition": "lim(x→c⁻) f(x) = lim(x→c⁺) f(x)",
+        "trig_values": "sin(π/4)=1/√2, cos(π/4)=1/√2, cot(π/4)=1, cot(π/2)=0, cos(π)=-1, sin(π/2)=1"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Apply continuity at x = π/4 (equate piece 1 limit and piece 2 value) and at x = π/2 (equate piece 2 limit and piece 3 limit) to get two linear equations; solve for a and b; compute 2a + 3b.",
+      "logical_steps": [
+        "Step 1: Apply continuity at x = π/4 using piece 1 and piece 2",
+        "Step 2: Simplify to get equation (i): a - b = π/4",
+        "Step 3: Apply continuity at x = π/2 using piece 2 and piece 3",
+        "Step 4: Simplify to get equation (ii): a = -2b",
+        "Step 5: Substitute (ii) into (i) and solve for b, then a",
+        "Step 6: Compute 2a + 3b and match option"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_continuity_at_pi_over_4": {
+        "LHL": "lim(x→π/4⁻) (x + a√2 sin x) = π/4 + a√2 · sin(π/4) = π/4 + a√2 · (1/√2) = π/4 + a",
+        "RHL": "lim(x→π/4⁺) (2x cot x + b) = 2(π/4)·cot(π/4) + b = (π/2)·1 + b = π/2 + b",
+        "equate": "π/4 + a = π/2 + b"
+      },
+      "step_2_equation_i": {
+        "simplify": "a - b = π/2 - π/4 = π/4",
+        "equation_i": "a - b = π/4"
+      },
+      "step_3_continuity_at_pi_over_2": {
+        "LHL": "lim(x→π/2⁻) (2x cot x + b) = 2(π/2)·cot(π/2) + b = π·0 + b = b",
+        "RHL": "lim(x→π/2⁺) (a cos 2x - b sin x) = a cos(π) - b sin(π/2) = a(-1) - b(1) = -a - b",
+        "equate": "b = -a - b"
+      },
+      "step_4_equation_ii": {
+        "simplify": "2b = -a",
+        "equation_ii": "a = -2b"
+      },
+      "step_5_solve_system": {
+        "substitute_a_into_i": "-2b - b = π/4",
+        "solve_b": "-3b = π/4  →  b = -π/12",
+        "solve_a": "a = -2(-π/12) = π/6"
+      },
+      "step_6_compute_expression": {
+        "a": "π/6",
+        "b": "-π/12",
+        "2a": "2(π/6) = π/3",
+        "3b": "3(-π/12) = -π/4",
+        "2a_plus_3b": "π/3 - π/4 = 4π/12 - 3π/12 = π/12"
+      },
+      "step_7_match_option": {
+        "matching_option": "A"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "A. π/12",
+      "verification": "With a = π/6, b = -π/12: At x=π/4: LHL = π/4+π/6 = 5π/12, RHL = π/2-π/12 = 5π/12 ✓. At x=π/2: LHL = -π/12, RHL = -π/6-(-π/12)(-1)... Actually: -a-b = -π/6+π/12 = -π/12 = b ✓. 2a+3b = π/3-π/4 = π/12 ✓"
+    }
+  }
+}

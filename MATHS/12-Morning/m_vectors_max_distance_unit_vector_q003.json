@@ -1,0 +1,69 @@
+{
+  "filename_suggestion": "m_vectors_max_distance_unit_vector_q003.json",
+  "input": "Let two non-collinear unit vectors a_hat and b_hat form an acute angle. A point P moves so that its position vector is OP = a_hat sin t + b_hat cos t. When P is farthest from origin O, let M = |OP| and u_hat be the unit vector along OP, then\n\nOptions:\nA. u_hat = (a_hat + b_hat)/|a_hat + b_hat| and M = sqrt(1 + a_hat dot b_hat)\nB. u_hat = (a_hat - b_hat)/|a_hat - b_hat| and M = sqrt(1 + a_hat dot b_hat)\nC. u_hat = (-a_hat + b_hat)/|a_hat + b_hat| and M = sqrt(1 + 2 a_hat dot b_hat)\nD. u_hat = (a_hat - b_hat)/|a_hat - b_hat| and M = sqrt(1 - 2 a_hat dot b_hat)",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Find the maximum possible length of OP and the corresponding unit direction vector when OP = a_hat sin t + b_hat cos t.",
+      "given_information": {
+        "vectors": "a_hat and b_hat are unit vectors with acute angle between them",
+        "position_vector": "OP = a_hat sin t + b_hat cos t",
+        "to_find": "M = max |OP| and u_hat = OP/|OP| at that instant"
+      },
+      "key_observation": "Maximizing |OP| is equivalent to maximizing |OP|^2, which simplifies using dot products."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Dot product expansion",
+        "Trigonometric identity sin^2 t + cos^2 t = 1",
+        "Max value of sin 2t",
+        "Unit vector along a vector"
+      ],
+      "key_formulas": {
+        "magnitude_square": "|v|^2 = v dot v",
+        "dot_unit_vectors": "a_hat dot a_hat = 1, b_hat dot b_hat = 1",
+        "sin2t_identity": "2 sin t cos t = sin 2t",
+        "unit_vector": "u_hat = OP/|OP|"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Compute |OP|^2 in terms of t, maximize it using sin 2t <= 1, then find OP direction at that t.",
+      "logical_steps": [
+        "Step 1: Expand |OP|^2 = (a_hat sin t + b_hat cos t) dot (a_hat sin t + b_hat cos t)",
+        "Step 2: Use unit-vector properties and combine terms",
+        "Step 3: Maximize expression using sin 2t",
+        "Step 4: Compute M from max |OP|^2",
+        "Step 5: Evaluate u_hat at maximizing t and match option"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_expand_magnitude_square": {
+        "expression": "|OP|^2 = sin^2 t + cos^2 t + 2(a_hat dot b_hat) sin t cos t"
+      },
+      "step_2_simplify": {
+        "using_identity": "sin^2 t + cos^2 t = 1",
+        "result": "|OP|^2 = 1 + (a_hat dot b_hat) sin 2t"
+      },
+      "step_3_maximize": {
+        "acute_angle_fact": "a_hat dot b_hat > 0",
+        "max_sin2t": "Maximum of sin 2t is 1",
+        "at_max": "2t = pi/2 (mod 2pi), e.g. t = pi/4"
+      },
+      "step_4_find_M": {
+        "max_value_square": "M^2 = 1 + a_hat dot b_hat",
+        "M": "M = sqrt(1 + a_hat dot b_hat)"
+      },
+      "step_5_find_direction": {
+        "at_t_pi_over_4": "sin t = cos t = 1/sqrt(2)",
+        "OP": "OP = (a_hat + b_hat)/sqrt(2)",
+        "unit_vector": "u_hat = OP/|OP| = (a_hat + b_hat)/|a_hat + b_hat|"
+      },
+      "step_6_match_option": {
+        "matching_option": "A"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "A",
+      "verification": "Both the maximum magnitude and direction match option A exactly: M = sqrt(1 + a_hat dot b_hat), u_hat = (a_hat + b_hat)/|a_hat + b_hat|."
+    }
+  }
+}

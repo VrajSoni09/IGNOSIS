@@ -1,0 +1,66 @@
+{
+  "filename_suggestion": "m_probability_binomial_distribution_find_p_q130.json",
+  "input": "A binomial random variable X satisfies 9.p(X = 4) = p(X = 2) when n = 6. Then p is equal to\n\nOptions:\nA. 1/4\nB. 1/2\nC. 1/8\nD. 1/5",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "For a binomial random variable X ~ B(n=6, p), find parameter p given that 9 P(X = 4) = P(X = 2).",
+      "given_information": {
+        "n": "6",
+        "relation": "9 P(X = 4) = P(X = 2)",
+        "q": "1 - p",
+        "to_find": "p"
+      },
+      "key_observation": "Use the binomial PMF P(X = k) = ⁿCₖ pᵏ qⁿ⁻ᵏ with n = 6. Note ⁶C₄ = ⁶C₂ = 15, which cancel out from both sides."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Binomial PMF formula: P(X = k) = ⁿCₖ pᵏ (1-p)ⁿ⁻ᵏ",
+        "Combination symmetry: ⁶C₄ = ⁶C₂ = 15",
+        "Relation between p and q: q = 1 - p"
+      ],
+      "key_formulas": {
+        "pmf_4": "P(X = 4) = ⁶C₄ p⁴ q² = 15 p⁴ q²",
+        "pmf_2": "P(X = 2) = ⁶C₂ p² q⁴ = 15 p² q⁴",
+        "equation": "9 (15 p⁴ q²) = 15 p² q⁴  ⇒  9 p² = q²"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Write expressions for P(X=4) and P(X=2), substitute into 9 P(X=4) = P(X=2), cancel common factors 15 p² q², take square root, replace q with 1-p, and solve for p.",
+      "logical_steps": [
+        "Step 1: Write P(X=4) = 15 p⁴ q² and P(X=2) = 15 p² q⁴",
+        "Step 2: Equate 9 (15 p⁴ q²) = 15 p² q⁴",
+        "Step 3: Divide by 15 p² q² (since 0 < p, q < 1) to get 9 p² = q²",
+        "Step 4: Take positive square root: 3p = q",
+        "Step 5: Substitute q = 1 - p: 3p = 1 - p ⇒ 4p = 1 ⇒ p = 1/4",
+        "Step 6: Match option"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_binomial_pmf": {
+        "P_X_4": "⁶C₄ p⁴ q² = 15 p⁴ q²",
+        "P_X_2": "⁶C₂ p² q⁴ = 15 p² q⁴"
+      },
+      "step_2_substitute_into_given": {
+        "equation": "9 × 15 p⁴ q² = 15 p² q⁴"
+      },
+      "step_3_cancel_factors": {
+        "cancel": "9 p² = q²"
+      },
+      "step_4_square_root": {
+        "since_p_q_positive": "3p = q"
+      },
+      "step_5_solve_for_p": {
+        "substitute_q": "3p = 1 - p",
+        "rearrange": "4p = 1",
+        "p": "1/4"
+      },
+      "step_6_match_option": {
+        "matching_option": "A"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "A. 1/4",
+      "verification": "For p = 1/4, q = 3/4: P(X=4) = 15 (1/4)⁴ (3/4)² = 15 * 9 / 4⁶ = 135 / 4096. P(X=2) = 15 (1/4)² (3/4)⁴ = 15 * 81 / 4⁶ = 1215 / 4096. 9 * P(X=4) = 9 * 135 / 4096 = 1215 / 4096 = P(X=2) ✓"
+    }
+  }
+}

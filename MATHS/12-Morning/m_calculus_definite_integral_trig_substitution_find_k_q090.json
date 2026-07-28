@@ -1,0 +1,76 @@
+{
+  "filename_suggestion": "m_calculus_definite_integral_trig_substitution_find_k_q090.json",
+  "input": "If ∫₀^(1/2) x²/(1-x²)^(3/2) dx = k/6, then the value of k is\n\nOptions:\nA. 2√3 - π\nB. 2√3 + π\nC. 3√2 + π\nD. 3√2 - π",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Evaluate the definite integral ∫₀^(1/2) x²/(1-x²)^(3/2) dx using trigonometric substitution and express it in the form k/6 to find k.",
+      "given_information": {
+        "integral": "∫₀^(1/2) x²/(1-x²)^(3/2) dx",
+        "given_form": "k/6",
+        "to_find": "Value of k"
+      },
+      "key_observation": "The integrand involves (1-x²)^(3/2), which suggests the substitution x = sin θ to simplify using the identity 1-sin²θ = cos²θ."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Trigonometric substitution x = sin θ",
+        "Identity: 1-sin²θ = cos²θ",
+        "tan²θ = sec²θ - 1",
+        "Integral: ∫(sec²θ-1)dθ = tan θ - θ + c"
+      ],
+      "key_formulas": {
+        "substitution": "x = sin θ  →  dx = cos θ dθ",
+        "(1-x²)^(3/2)": "(cos²θ)^(3/2) = cos³θ",
+        "tan_to_sec": "∫tan²θ dθ = ∫(sec²θ-1) dθ = tan θ - θ + c",
+        "limits": "x=0 → θ=0;  x=1/2 → θ=π/6"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Substitute x = sin θ, change the limits, simplify the integrand to tan²θ, integrate using sec²θ-1, and evaluate at the new limits to get I, then multiply by 6 to find k.",
+      "logical_steps": [
+        "Step 1: Substitute x = sin θ, dx = cos θ dθ",
+        "Step 2: Change limits: x=0→θ=0, x=1/2→θ=π/6",
+        "Step 3: Simplify (1-x²)^(3/2) = cos³θ",
+        "Step 4: Simplify integrand to tan²θ",
+        "Step 5: Integrate ∫₀^(π/6) tan²θ dθ = ∫(sec²θ-1)dθ",
+        "Step 6: Evaluate at limits and find k"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_substitution": {
+        "x": "sin θ",
+        "dx": "cos θ dθ",
+        "x²": "sin²θ",
+        "(1-x²)^(3/2)": "(1-sin²θ)^(3/2) = (cos²θ)^(3/2) = cos³θ"
+      },
+      "step_2_change_limits": {
+        "lower": "x=0 → sin θ=0 → θ=0",
+        "upper": "x=1/2 → sin θ=1/2 → θ=π/6"
+      },
+      "step_3_simplify_integrand": {
+        "I": "∫₀^(π/6) (sin²θ · cos θ)/cos³θ dθ",
+        "simplify": "= ∫₀^(π/6) sin²θ/cos²θ dθ = ∫₀^(π/6) tan²θ dθ"
+      },
+      "step_4_integrate": {
+        "identity": "tan²θ = sec²θ - 1",
+        "I": "∫₀^(π/6) (sec²θ - 1) dθ = [tan θ - θ]₀^(π/6)"
+      },
+      "step_5_evaluate": {
+        "at_pi_6": "tan(π/6) - π/6 = 1/√3 - π/6 = √3/3 - π/6",
+        "at_0": "0 - 0 = 0",
+        "I": "√3/3 - π/6 = (2√3 - π)/6"
+      },
+      "step_6_find_k": {
+        "equation": "(2√3-π)/6 = k/6",
+        "k": "2√3 - π"
+      },
+      "step_7_match_option": {
+        "matching_option": "A"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "A. 2√3 - π",
+      "verification": "tan(π/6) = 1/√3 = √3/3. So I = √3/3 - π/6 = 2√3/6 - π/6 = (2√3-π)/6. Setting equal to k/6 gives k = 2√3-π ✓"
+    }
+  }
+}

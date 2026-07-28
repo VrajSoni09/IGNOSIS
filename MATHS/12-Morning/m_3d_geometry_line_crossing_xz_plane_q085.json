@@ -1,0 +1,65 @@
+{
+  "filename_suggestion": "m_3d_geometry_line_crossing_xz_plane_q085.json",
+  "input": "The co-ordinates of the point, where the line through A(3, 4, 1) and B(5, 1, 6) crosses the XZ-plane, are\n\nOptions:\nA. (41/7, 0, 21/7)\nB. (17/3, 0, 23/3)\nC. (-11/3, 0, 21/7)\nD. (17/7, 0, -23/3)",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Find the point where the line through A(3,4,1) and B(5,1,6) intersects the XZ-plane (where y = 0).",
+      "given_information": {
+        "A": "(3, 4, 1)",
+        "B": "(5, 1, 6)",
+        "condition": "Line crosses XZ-plane, so y = 0",
+        "to_find": "Coordinates (x, 0, z) of the intersection point"
+      },
+      "key_observation": "Write the symmetric equation of the line through two points, set y = 0, and solve for the parameter to find x and z."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Equation of line through two points in 3D",
+        "Symmetric (Cartesian) form of a line",
+        "Setting y = 0 for XZ-plane intersection"
+      ],
+      "key_formulas": {
+        "line_two_points": "(x-x₁)/(x₂-x₁) = (y-y₁)/(y₂-y₁) = (z-z₁)/(z₂-z₁)",
+        "direction_ratios": "(x₂-x₁, y₂-y₁, z₂-z₁)"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Write the line equation through A and B, set y = 0 to find the parameter value, substitute back to get x and z.",
+      "logical_steps": [
+        "Step 1: Compute direction ratios of line AB",
+        "Step 2: Write symmetric form of the line",
+        "Step 3: Set y = 0 and solve for the parameter t",
+        "Step 4: Substitute t into x and z expressions",
+        "Step 5: Match with options"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_direction_ratios": {
+        "A": "(3, 4, 1)",
+        "B": "(5, 1, 6)",
+        "direction": "(5-3, 1-4, 6-1) = (2, -3, 5)"
+      },
+      "step_2_symmetric_form": {
+        "equation": "(x-3)/2 = (y-4)/(-3) = (z-1)/5 = t"
+      },
+      "step_3_set_y_zero": {
+        "y_expression": "y = 4 - 3t = 0",
+        "solve_t": "3t = 4  →  t = 4/3"
+      },
+      "step_4_find_x_z": {
+        "x": "3 + 2t = 3 + 2(4/3) = 3 + 8/3 = 9/3 + 8/3 = 17/3",
+        "z": "1 + 5t = 1 + 5(4/3) = 1 + 20/3 = 3/3 + 20/3 = 23/3"
+      },
+      "step_5_state_point": {
+        "point": "(17/3, 0, 23/3)"
+      },
+      "step_6_match_option": {
+        "matching_option": "B"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "B. (17/3, 0, 23/3)",
+      "verification": "At t = 4/3: x = 3+8/3 = 17/3, y = 4-4 = 0 ✓, z = 1+20/3 = 23/3. Check A to point direction: (17/3-3, 0-4, 23/3-1) = (8/3, -4, 20/3) = (4/3)(2,-3,5) ✓, parallel to AB direction."
+    }
+  }
+}

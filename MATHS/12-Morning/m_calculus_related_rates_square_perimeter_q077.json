@@ -1,0 +1,68 @@
+{
+  "filename_suggestion": "m_calculus_related_rates_square_perimeter_q077.json",
+  "input": "A square plate is contracting at the uniform rate 4 cm²/sec, then the rate at which the perimeter is decreasing, when side of the square is 20 cm, is\n\nOptions:\nA. (1/5) cm/sec.\nB. 4 cm/sec.\nC. 2 cm/sec.\nD. (2/5) cm/sec.",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Given that the area of a square is decreasing at 4 cm²/sec, find the rate of decrease of perimeter when the side length is 20 cm.",
+      "given_information": {
+        "dA/dt": "-4 cm²/sec  (area decreasing)",
+        "side_at_instant": "X = 20 cm",
+        "to_find": "|dP/dt| when X = 20 cm"
+      },
+      "key_observation": "Express perimeter in terms of area, then differentiate with respect to t. Or express dP/dt = (dP/dX)(dX/dt) and link dX/dt to dA/dt."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Related rates",
+        "Area and perimeter of a square",
+        "Chain rule of differentiation"
+      ],
+      "key_formulas": {
+        "area": "A = X²",
+        "perimeter": "P = 4X = 4√A",
+        "dP/dt_via_A": "dP/dt = (2/X) · dA/dt",
+        "chain_rule": "dP/dt = (dP/dX) · (dX/dt)"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Write P = 4√A, differentiate with respect to t using chain rule, substitute dA/dt = -4 and X = 20.",
+      "logical_steps": [
+        "Step 1: Express area A = X² and perimeter P = 4X",
+        "Step 2: Write P = 4√A",
+        "Step 3: Differentiate P with respect to t",
+        "Step 4: Substitute X = 20 and dA/dt = -4",
+        "Step 5: Compute |dP/dt| and match option"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_define_quantities": {
+        "A": "X²  (area of square with side X)",
+        "P": "4X  (perimeter)",
+        "given": "dA/dt = -4 cm²/sec"
+      },
+      "step_2_express_P_in_terms_of_A": {
+        "P": "4X = 4√A"
+      },
+      "step_3_differentiate_P_wrt_t": {
+        "dP/dt": "d/dt(4√A) = 4 · (1/(2√A)) · dA/dt = (2/√A) · dA/dt",
+        "since_X_equals_sqrt_A": "= (2/X) · dA/dt"
+      },
+      "step_4_substitute_values": {
+        "X": "20 cm",
+        "dA/dt": "-4 cm²/sec",
+        "dP/dt": "(2/20) × (-4) = (1/10) × (-4) = -2/5 cm/sec"
+      },
+      "step_5_interpret_result": {
+        "magnitude": "|dP/dt| = 2/5 cm/sec",
+        "meaning": "Perimeter is decreasing at 2/5 cm/sec"
+      },
+      "step_6_match_option": {
+        "matching_option": "D"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "D. (2/5) cm/sec.",
+      "verification": "dP/dt = (2/X)(dA/dt) = (2/20)(−4) = −2/5. The negative sign confirms perimeter is decreasing, and the magnitude is 2/5 cm/sec ✓"
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "filename_suggestion": "m_calculus_indefinite_integral_exp_substitution_cos_sq_q137.json",
+  "input": "∫ (eˣ (1 + x)) / cos²(eˣ · x) dx =\n\nOptions:\nA. -cot(eˣ) + c, where c is a constant of integration.\nB. tan(x · eˣ) + c, where c is a constant of integration.\nC. tan(eˣ) + c, where c is a constant of integration.\nD. -cot(x · eˣ) + c, where c is a constant of integration.",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Evaluate the indefinite integral ∫ (eˣ (1 + x)) / cos²(x eˣ) dx.",
+      "given_information": {
+        "integral": "I = ∫ (eˣ (1 + x)) / cos²(x eˣ) dx",
+        "to_find": "Antiderivative"
+      },
+      "key_observation": "Substitute t = x eˣ. Then dt = (x eˣ + eˣ) dx = eˣ (1 + x) dx, which matches the numerator exactly."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Integration by substitution: t = x eˣ",
+        "Product rule derivative: d/dx(x eˣ) = eˣ(1 + x)",
+        "Standard integral: ∫ sec²t dt = tan t + c"
+      ],
+      "key_formulas": {
+        "substitution": "t = x eˣ  ⇒  dt = eˣ(1 + x) dx",
+        "reduced_integral": "∫ 1 / cos²t dt = ∫ sec²t dt = tan t + c",
+        "final_result": "tan(x eˣ) + c"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Substitute t = x eˣ, convert the integral into ∫ sec²t dt, integrate to tan t + c, and replace t with x eˣ.",
+      "logical_steps": [
+        "Step 1: Let t = x eˣ ⇒ dt = eˣ(1 + x) dx",
+        "Step 2: Rewrite integral: I = ∫ 1/cos²t dt = ∫ sec²t dt",
+        "Step 3: Integrate: ∫ sec²t dt = tan t + c",
+        "Step 4: Substitute back t = x eˣ ⇒ I = tan(x eˣ) + c",
+        "Step 5: Match option B"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_substitute": {
+        "let": "t = x eˣ",
+        "dt": "d/dx(x eˣ) dx = (1·eˣ + x·eˣ) dx = eˣ(1 + x) dx"
+      },
+      "step_2_form_integral": {
+        "I": "∫ dt / cos²t = ∫ sec²t dt"
+      },
+      "step_3_evaluate": {
+        "antiderivative": "tan t + c"
+      },
+      "step_4_substitute_back": {
+        "result": "tan(x eˣ) + c"
+      },
+      "step_5_match_option": {
+        "matching_option": "B"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "B. tan(x · eˣ) + c, where c is a constant of integration.",
+      "verification": "Differentiating tan(x eˣ): sec²(x eˣ) · d/dx(x eˣ) = sec²(x eˣ) · eˣ(1 + x) = eˣ(1 + x) / cos²(x eˣ) ✓"
+    }
+  }
+}

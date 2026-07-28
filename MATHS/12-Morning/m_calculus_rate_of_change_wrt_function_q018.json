@@ -1,0 +1,59 @@
+{
+  "filename_suggestion": "m_calculus_rate_of_change_wrt_function_q018.json",
+  "input": "The rate of change of sqrt(x^2 + 16) with respect to x/(x-1) at x = 5 is\n\nOptions:\nA. -80/sqrt(41)\nB. 80/sqrt(41)\nC. 12/5\nD. -12/5",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Find dy/dz at x=5 where y=sqrt(x^2+16) and z=x/(x-1).",
+      "given_information": {
+        "y": "sqrt(x^2+16)",
+        "z": "x/(x-1)",
+        "point": "x=5"
+      },
+      "key_observation": "Use dy/dz = (dy/dx)/(dz/dx)."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Chain rule for parametric dependence",
+        "Derivative of square-root function",
+        "Quotient rule"
+      ],
+      "key_formulas": {
+        "rate_relation": "dy/dz = (dy/dx)/(dz/dx)",
+        "dy_dx": "d/dx[sqrt(x^2+16)] = x/sqrt(x^2+16)",
+        "dz_dx": "d/dx[x/(x-1)] = ((x-1)-x)/(x-1)^2"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Differentiate y and z with respect to x, evaluate at x=5, then divide.",
+      "logical_steps": [
+        "Step 1: Compute dy/dx",
+        "Step 2: Compute dz/dx",
+        "Step 3: Evaluate both at x=5",
+        "Step 4: Calculate dy/dz",
+        "Step 5: Match option"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_derivative_of_y": {
+        "dy_dx": "x/sqrt(x^2+16)"
+      },
+      "step_2_derivative_of_z": {
+        "dz_dx": "((x-1)-x)/(x-1)^2 = -1/(x-1)^2"
+      },
+      "step_3_evaluate_at_5": {
+        "dy_dx_at_5": "5/sqrt(41)",
+        "dz_dx_at_5": "-1/16"
+      },
+      "step_4_compute_dy_dz": {
+        "calculation": "(5/sqrt(41))/(-1/16) = -80/sqrt(41)"
+      },
+      "step_5_match_option": {
+        "matching_option": "A"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "A. -80/sqrt(41)",
+      "verification": "The denominator derivative is negative at x=5, so dy/dz is negative with magnitude 80/sqrt(41)."
+    }
+  }
+}

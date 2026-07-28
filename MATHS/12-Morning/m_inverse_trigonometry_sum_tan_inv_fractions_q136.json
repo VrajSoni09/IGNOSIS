@@ -1,0 +1,62 @@
+{
+  "filename_suggestion": "m_inverse_trigonometry_sum_tan_inv_fractions_q136.json",
+  "input": "The value of 2 tan⁻¹(1/2) + tan⁻¹(1/7) is\n\nOptions:\nA. tan⁻¹(17/31)\nB. tan⁻¹(19/31)\nC. tan⁻¹(31/17)\nD. tan⁻¹(31/19)",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Evaluate the expression 2 tan⁻¹(1/2) + tan⁻¹(1/7).",
+      "given_information": {
+        "expression": "2 tan⁻¹(1/2) + tan⁻¹(1/7)",
+        "to_find": "Single arctan expression"
+      },
+      "key_observation": "First use 2 tan⁻¹(x) = tan⁻¹(2x / (1 - x²)) for x = 1/2 to get tan⁻¹(4/3), then apply tan⁻¹(u) + tan⁻¹(v) = tan⁻¹((u+v)/(1-uv))."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Double angle arctan identity: 2 tan⁻¹(x) = tan⁻¹(2x / (1 - x²)) for |x| < 1",
+        "Addition formula for arctan: tan⁻¹(u) + tan⁻¹(v) = tan⁻¹((u+v)/(1 - uv)) for uv < 1"
+      ],
+      "key_formulas": {
+        "double_angle": "2 tan⁻¹(1/2) = tan⁻¹( 2(1/2) / (1 - (1/2)²) ) = tan⁻¹( 1 / (3/4) ) = tan⁻¹(4/3)",
+        "sum_formula": "tan⁻¹(4/3) + tan⁻¹(1/7) = tan⁻¹( (4/3 + 1/7) / (1 - (4/3)(1/7)) )"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Simplify 2 tan⁻¹(1/2) to tan⁻¹(4/3), then add tan⁻¹(1/7) using the arctan sum formula.",
+      "logical_steps": [
+        "Step 1: Compute 2 tan⁻¹(1/2) = tan⁻¹( 1 / (1 - 1/4) ) = tan⁻¹(4/3)",
+        "Step 2: Apply sum formula: tan⁻¹(4/3) + tan⁻¹(1/7) = tan⁻¹( (4/3 + 1/7) / (1 - 4/21) )",
+        "Step 3: Numerator = 28/21 + 3/21 = 31/21",
+        "Step 4: Denominator = 21/21 - 4/21 = 17/21",
+        "Step 5: Fraction = (31/21) / (17/21) = 31/17",
+        "Step 6: Result = tan⁻¹(31/17) and match option C"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_double_angle": {
+        "x": "1/2",
+        "formula": "2 tan⁻¹(1/2) = tan⁻¹(2(1/2) / (1 - 1/4))",
+        "result": "tan⁻¹(1 / (3/4)) = tan⁻¹(4/3)"
+      },
+      "step_2_sum_formula": {
+        "u": "4/3",
+        "v": "1/7",
+        "formula": "tan⁻¹((4/3 + 1/7) / (1 - (4/3)(1/7)))"
+      },
+      "step_3_simplify": {
+        "num": "4/3 + 1/7 = (28 + 3) / 21 = 31 / 21",
+        "den": "1 - 4/21 = 17 / 21",
+        "fraction": "(31/21) / (17/21) = 31/17"
+      },
+      "step_4_final_expression": {
+        "result": "tan⁻¹(31/17)"
+      },
+      "step_5_match_option": {
+        "matching_option": "C"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "C. tan⁻¹(31/17)",
+      "verification": "2 tan⁻¹(1/2) = tan⁻¹(4/3). tan⁻¹(4/3) + tan⁻¹(1/7) = tan⁻¹((4/3+1/7)/(1-4/21)) = tan⁻¹((31/21)/(17/21)) = tan⁻¹(31/17) ✓"
+    }
+  }
+}

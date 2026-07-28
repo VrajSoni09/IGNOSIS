@@ -1,0 +1,62 @@
+{
+  "filename_suggestion": "m_calculus_integral_trig_substitution_constants_q034.json",
+  "input": "If I = integral((sin x + sin^3 x)/cos 2x) dx = P cos x + Q log|sqrt(2 cos x - 1)/sqrt(2 cos x + 1)| (where c is a constant of integration), then values of P and Q are respectively\n\nOptions:\nA. 1/2, 3/(4sqrt(2))\nB. 1/2, -3/(4sqrt(2))\nC. 1/2, 3/(2sqrt(2))\nD. 1/2, -3/(2sqrt(2))",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Integrate the expression and identify constants P and Q in the given final form.",
+      "given_information": {
+        "integral": "I = integral((sin x + sin^3 x)/cos 2x) dx",
+        "target_form": "P cos x + Q log|sqrt(2 cos x - 1)/sqrt(2 cos x + 1)| + c"
+      },
+      "key_observation": "Substitute t = cos x and convert denominator using cos 2x = 2cos^2 x - 1."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Trigonometric substitution",
+        "Rational integration",
+        "Logarithmic form matching"
+      ],
+      "key_formulas": {
+        "substitution": "t = cos x, -sin x dx = dt",
+        "identity": "cos 2x = 2t^2 - 1"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Transform to t-integral, split into simpler fractions, integrate, then compare coefficients.",
+      "logical_steps": [
+        "Step 1: Convert integrand in t",
+        "Step 2: Simplify rational expression",
+        "Step 3: Integrate and back-substitute",
+        "Step 4: Match with P and Q form",
+        "Step 5: Select option"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_substitute": {
+        "from": "I = integral[sin x(1+sin^2 x)/(2cos^2 x -1)]dx",
+        "to": "I = -integral[(2-t^2)/(2t^2-1)]dt"
+      },
+      "step_2_split": {
+        "rewrite": "(2-t^2)/(2t^2-1) = 1/2 + (3/2)/(2t^2-1)",
+        "integral": "I = -t/2 - (3/2)integral dt/(2t^2-1)"
+      },
+      "step_3_integrate_log_part": {
+        "result": "integral dt/(2t^2-1) = (1/(2sqrt(2))) log| (sqrt(2)t-1)/(sqrt(2)t+1) |",
+        "combine": "I = -t/2 - (3/(4sqrt(2))) log| (sqrt(2)t-1)/(sqrt(2)t+1) | + c"
+      },
+      "step_4_back_substitute": {
+        "t": "cos x",
+        "equivalent_form": "I = (1/2)cos x - (3/(4sqrt(2))) log|sqrt(2cos x-1)/sqrt(2cos x+1)| + c"
+      },
+      "step_5_match_option": {
+        "P": "1/2",
+        "Q": "-3/(4sqrt(2))",
+        "matching_option": "B"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "B. P=1/2, Q=-3/(4sqrt(2))",
+      "verification": "After substitution and simplification, coefficient comparison gives P and Q exactly as in option B."
+    }
+  }
+}

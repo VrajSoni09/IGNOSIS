@@ -1,0 +1,68 @@
+{
+  "filename_suggestion": "m_3d_geometry_skew_lines_intersection_check_q132.json",
+  "input": "The lines (x-1)/3 = (y+1)/2 = (z-1)/5 and (x+2)/4 = (y-1)/3 = (z+1)/2\n\nOptions:\nA. intersect each other and point of intersection is (2, 1, 3)\nB. intersect each other and point of intersection is (3, 2, 4)\nC. intersect each other and point of intersection is (-2, 3, 3)\nD. do not intersect.",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Determine whether the given 3D lines intersect and, if not, confirm they do not intersect.",
+      "given_information": {
+        "line_1": "(x-1)/3 = (y+1)/2 = (z-1)/5",
+        "line_2": "(x+2)/4 = (y-1)/3 = (z+1)/2",
+        "to_find": "Intersection status and point of intersection if applicable"
+      },
+      "key_observation": "Calculate shortest distance determinant |(x₂-x₁) (y₂-y₁) (z₂-z₁); a₁ b₁ c₁; a₂ b₂ c₂|. If non-zero, lines do not intersect."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Condition for intersection of two 3D lines: det([x₂-x₁, y₂-y₁, z₂-z₁; a₁, b₁, c₁; a₂, b₂, c₂]) = 0",
+        "Parametric representation of 3D lines"
+      ],
+      "key_formulas": {
+        "point_1": "(x₁, y₁, z₁) = (1, -1, 1)",
+        "point_2": "(x₂, y₂, z₂) = (-2, 1, -1)",
+        "d_vector": "(x₂-x₁, y₂-y₁, z₂-z₁) = (-3, 2, -2)",
+        "dir_1": "(a₁, b₁, c₁) = (3, 2, 5)",
+        "dir_2": "(a₂, b₂, c₂) = (4, 3, 2)"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Evaluate the 3×3 determinant formed by the difference vector and direction vectors. If non-zero, lines do not intersect.",
+      "logical_steps": [
+        "Step 1: Identify points (1, -1, 1) and (-2, 1, -1)",
+        "Step 2: Difference vector = (-3, 2, -2)",
+        "Step 3: Set up determinant: |-3 2 -2; 3 2 5; 4 3 2|",
+        "Step 4: Expand determinant: -3(4 - 15) - 2(6 - 20) - 2(9 - 8)",
+        "Step 5: Compute = -3(-11) - 2(-14) - 2(1) = 33 + 28 - 2 = 59 ≠ 0",
+        "Step 6: Conclude lines do not intersect and match option D"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_extract_values": {
+        "x1_y1_z1": "(1, -1, 1)",
+        "x2_y2_z2": "(-2, 1, -1)",
+        "a1_b1_c1": "(3, 2, 5)",
+        "a2_b2_c2": "(4, 3, 2)"
+      },
+      "step_2_diff_vector": {
+        "diff": "(-2 - 1, 1 - (-1), -1 - 1) = (-3, 2, -2)"
+      },
+      "step_3_determinant": {
+        "det_setup": "| -3  2 -2 |\n|  3  2  5 |\n|  4  3  2 |",
+        "expansion": "-3*(2*2 - 5*3) - 2*(3*2 - 5*4) + (-2)*(3*3 - 2*4)",
+        "term_1": "-3 * (4 - 15) = -3 * (-11) = 33",
+        "term_2": "-2 * (6 - 20) = -2 * (-14) = 28",
+        "term_3": "-2 * (9 - 8) = -2 * (1) = -2",
+        "det_value": "33 + 28 - 2 = 59"
+      },
+      "step_4_conclusion": {
+        "det_non_zero": "59 ≠ 0 ⇒ Lines do not intersect"
+      },
+      "step_5_match_option": {
+        "matching_option": "D"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "D. do not intersect.",
+      "verification": "The determinant of position difference and direction vectors is 59 ≠ 0. Therefore, the two lines are skew and do not intersect ✓"
+    }
+  }
+}

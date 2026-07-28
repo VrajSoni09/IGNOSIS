@@ -1,0 +1,71 @@
+{
+  "filename_suggestion": "m_3d_geometry_volume_tetrahedron_oabc_q119.json",
+  "input": "A plane is parallel to two lines, whose direction ratios are 1, 0, -1 and -1, 1, 0 and it contains the point (1, 1, 1). If it cuts co-ordinate axes (X, Y, Z - axes resp.) at A, B, C, then the volume of the tetrahedron OABC is ________ cu. units.\n\nOptions:\nA. 9\nB. 9/4\nC. 9/2\nD. 27",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Find the equation of the plane parallel to vectors (1, 0, -1) and (-1, 1, 0) passing through (1, 1, 1), find its x, y, z intercepts A, B, C, and calculate the volume of tetrahedron OABC.",
+      "given_information": {
+        "direction_1": "(1, 0, -1)",
+        "direction_2": "(-1, 1, 0)",
+        "point_on_plane": "(1, 1, 1)",
+        "to_find": "Volume of tetrahedron OABC where A, B, C are axis intercepts"
+      },
+      "key_observation": "The normal vector to the plane is n = d₁ × d₂. Once normal n = (a, b, c) is found, plane is a(x-1) + b(y-1) + c(z-1) = 0. Intercepts give A(a,0,0), B(0,b,0), C(0,0,c). Volume of tetrahedron = (1/6)|a·b·c|."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Normal vector via cross product: n = d₁ × d₂",
+        "Plane equation given normal and a point: a(x-x₀) + b(y-y₀) + c(z-z₀) = 0",
+        "Intercept form of plane: x/a + y/b + z/c = 1",
+        "Volume of tetrahedron with vertices at origin and intercepts: V = (1/6)|abc|"
+      ],
+      "key_formulas": {
+        "cross_product": "n = |i j k; 1 0 -1; -1 1 0| = (1, 1, 1)",
+        "plane_eq": "1(x-1) + 1(y-1) + 1(z-1) = 0 ⇒ x + y + z = 3",
+        "intercepts": "A=(3,0,0), B=(0,3,0), C=(0,0,3)",
+        "volume": "V = (1/6) * 3 * 3 * 3 = 27/6 = 9/2"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Find plane normal by taking cross product of direction ratios, write plane equation through (1,1,1), convert to intercept form, and compute tetrahedron volume.",
+      "logical_steps": [
+        "Step 1: Compute normal n = (1,0,-1) × (-1,1,0)",
+        "Step 2: Write plane equation: 1(x-1) + 1(y-1) + 1(z-1) = 0 ⇒ x + y + z = 3",
+        "Step 3: Find intercepts A(3,0,0), B(0,3,0), C(0,0,3)",
+        "Step 4: Compute volume V = (1/6) |3 × 3 × 3| = 27/6 = 9/2",
+        "Step 5: Match option"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_normal": {
+        "d1": "(1, 0, -1)",
+        "d2": "(-1, 1, 0)",
+        "n_x": "0*0 - (-1)*1 = 1",
+        "n_y": "(-1)*(-1) - 1*0 = 1",
+        "n_z": "1*1 - 0*(-1) = 1",
+        "n": "(1, 1, 1)"
+      },
+      "step_2_plane_eq": {
+        "equation": "1(x - 1) + 1(y - 1) + 1(z - 1) = 0",
+        "simplified": "x + y + z = 3",
+        "intercept_form": "x/3 + y/3 + z/3 = 1"
+      },
+      "step_3_intercepts": {
+        "A": "(3, 0, 0)",
+        "B": "(0, 3, 0)",
+        "C": "(0, 0, 3)"
+      },
+      "step_4_volume": {
+        "formula": "V = (1/6) * |det([3 0 0; 0 3 0; 0 0 3])|",
+        "compute": "V = (1/6) * 27 = 9/2"
+      },
+      "step_5_match_option": {
+        "matching_option": "C"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "C. 9/2",
+      "verification": "x+y+z=3 is parallel to both lines since (1,1,1)·(1,0,-1)=0 and (1,1,1)·(-1,1,0)=0. Intercepts are 3, 3, 3. Tetrahedron volume = (1/6)(3)(3)(3) = 27/6 = 9/2 ✓"
+    }
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "filename_suggestion": "m_probability_expected_defective_baskets_without_replacement_q103.json",
+  "input": "From a lot of 20 baskets, which includes 6 defective baskets, a sample of 2 baskets is drawn at random one by one without replacement. The expected value of number of defective basket is\n\nOptions:\nA. 0.6\nB. 0.06\nC. 0.006\nD. 1.07",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Find E(X) where X = number of defective baskets in a sample of 2, drawn without replacement from 20 baskets (6 defective, 14 non-defective).",
+      "given_information": {
+        "total_baskets": "20",
+        "defective": "6",
+        "non_defective": "14",
+        "sample_size": "2 (without replacement)",
+        "to_find": "E(X)"
+      },
+      "key_observation": "X ∈ {0, 1, 2}. Find each probability using sequential selection without replacement, then compute E(X) = Σ x·P(X=x)."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Sampling without replacement",
+        "Multiplicative rule for sequential selection",
+        "Expected value: E(X) = Σ x·P(X=x)"
+      ],
+      "key_formulas": {
+        "P_X0": "(14/20)×(13/19)",
+        "P_X1": "(14/20)×(6/19) + (6/20)×(14/19)",
+        "P_X2": "(6/20)×(5/19)",
+        "E_X": "0·P(X=0) + 1·P(X=1) + 2·P(X=2)"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Calculate P(X=0), P(X=1), P(X=2) using without-replacement sequential probabilities, then compute E(X).",
+      "logical_steps": [
+        "Step 1: Compute P(X=0) — both selected are non-defective",
+        "Step 2: Compute P(X=1) — exactly one defective (two orderings)",
+        "Step 3: Compute P(X=2) — both defective",
+        "Step 4: Compute E(X) = 0·P(0)+1·P(1)+2·P(2)",
+        "Step 5: Simplify and match option"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_P_X_0": {
+        "both_non_defective": "(14/20)×(13/19) = 182/380"
+      },
+      "step_2_P_X_1": {
+        "non_def_then_def": "(14/20)×(6/19) = 84/380",
+        "def_then_non_def": "(6/20)×(14/19) = 84/380",
+        "P_X_1": "168/380"
+      },
+      "step_3_P_X_2": {
+        "both_defective": "(6/20)×(5/19) = 30/380"
+      },
+      "step_4_verify_total": {
+        "sum": "182 + 168 + 30 = 380 ✓  (all probabilities sum to 1)"
+      },
+      "step_5_E_X": {
+        "formula": "0×(182/380) + 1×(168/380) + 2×(30/380)",
+        "compute": "0 + 168/380 + 60/380",
+        "result": "228/380 = 0.6"
+      },
+      "step_6_match_option": {
+        "matching_option": "A"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "A. 0.6",
+      "verification": "E(X) = (168+60)/380 = 228/380 = 0.6. Also by hypergeometric formula: E(X) = n·K/N = 2×6/20 = 0.6 ✓"
+    }
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "filename_suggestion": "m_differential_equation_population_zero_time_q065.json",
+  "input": "The population P = P(t) at time t of certain species follows the differential equation dP/dt = 0.5P - 450. If P(0) = 850, then the time at which population becomes zero is\n\nOptions:\nA. 2 log 18\nB. log 9\nC. (1/2) log 18\nD. log 18",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Solve the differential equation dP/dt = 0.5P - 450 with initial condition P(0) = 850, and find the time t when P = 0.",
+      "given_information": {
+        "differential_equation": "dP/dt = 0.5P - 450",
+        "initial_condition": "P(0) = 850",
+        "to_find": "t when P = 0"
+      },
+      "key_observation": "Rewrite dP/dt = (P - 900)/2 to get a separable ODE. Separate variables, integrate, apply initial condition to find the constant, then solve for t when P = 0."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Separable differential equation",
+        "Integration of 1/(P - k)",
+        "Applying initial conditions",
+        "Properties of logarithms"
+      ],
+      "key_formulas": {
+        "separation": "dP/(P - 900) = dt/2",
+        "integral": "∫ dP/(P-a) = log|P-a| + C",
+        "log_property": "log m - log n = log(m/n)"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Separate variables, integrate both sides, apply P(0) = 850 to find the constant, substitute P = 0 to find t.",
+      "logical_steps": [
+        "Step 1: Rewrite the ODE in separable form",
+        "Step 2: Separate variables and integrate both sides",
+        "Step 3: Apply initial condition P(0) = 850 to find constant c",
+        "Step 4: Write the general solution",
+        "Step 5: Substitute P = 0 and solve for t",
+        "Step 6: Simplify using log properties and match option"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_rewrite_ode": {
+        "given": "dP/dt = 0.5P - 450 = P/2 - 900/2",
+        "simplified": "dP/dt = (P - 900)/2"
+      },
+      "step_2_separate_and_integrate": {
+        "separated": "2dP/(P - 900) = dt",
+        "integrate_left": "2 log|P - 900|",
+        "integrate_right": "t + c",
+        "general_form": "2 log|P - 900| = t + c"
+      },
+      "step_3_apply_initial_condition": {
+        "at_t_0": "P = 850",
+        "|P - 900|": "|850 - 900| = 50",
+        "substitute": "2 log 50 = 0 + c",
+        "c": "c = 2 log 50"
+      },
+      "step_4_particular_solution": {
+        "equation": "2 log|P - 900| = t + 2 log 50"
+      },
+      "step_5_substitute_P_zero": {
+        "at_P_0": "|0 - 900| = 900",
+        "equation": "2 log 900 = t + 2 log 50",
+        "solve_t": "t = 2 log 900 - 2 log 50 = 2 log(900/50)"
+      },
+      "step_6_simplify": {
+        "expression": "t = 2 log(900/50) = 2 log 18",
+        "result": "t = 2 log 18"
+      },
+      "step_7_match_option": {
+        "matching_option": "A"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "A. 2 log 18",
+      "verification": "With c = 2 log 50 and P = 0: 2 log 900 = t + 2 log 50 → t = 2(log 900 - log 50) = 2 log(900/50) = 2 log 18 ✓"
+    }
+  }
+}

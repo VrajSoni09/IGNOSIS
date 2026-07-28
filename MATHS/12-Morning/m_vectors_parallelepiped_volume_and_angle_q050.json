@@ -1,0 +1,61 @@
+{
+  "filename_suggestion": "m_vectors_parallelepiped_volume_and_angle_q050.json",
+  "input": "The volume of parallelepiped, whose coterminous edges are u = i + j + lambda k, v = i + j + 3k, w = 2i + j + k is 1 cu. units. If theta is the angle between u and w, then the value of cos(theta) is\n\nOptions:\nA. 3/4\nB. 5/6\nC. 1/5\nD. 1/6",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Use volume condition to find lambda, then compute cosine between u and w.",
+      "given_information": {
+        "u": "(1,1,lambda)",
+        "v": "(1,1,3)",
+        "w": "(2,1,1)",
+        "volume": "|[u v w]|=1",
+        "to_find": "cos(theta) between u and w"
+      },
+      "key_observation": "Volume gives determinant equation in lambda."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Scalar triple product for volume",
+        "Dot product angle formula"
+      ],
+      "key_formulas": {
+        "volume": "|det[u v w]|=1",
+        "cos_formula": "cos(theta) = (u dot w)/(|u||w|)"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Compute determinant to determine lambda from volume, then use dot product formula.",
+      "logical_steps": [
+        "Step 1: Evaluate det[[1,1,lambda],[1,1,3],[2,1,1]]",
+        "Step 2: Use absolute value equals 1",
+        "Step 3: Select lambda consistent with options",
+        "Step 4: Compute cos(theta)",
+        "Step 5: Match option"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_determinant": {
+        "det": "3 - lambda"
+      },
+      "step_2_volume_condition": {
+        "equation": "|3-lambda|=1",
+        "solutions": "lambda=2 or 4"
+      },
+      "step_3_use_option_consistency": {
+        "with_lambda_2": "u=(1,1,2)",
+        "cos_value": "(1*2+1*1+2*1)/(sqrt(6)*sqrt(6))=5/6",
+        "with_lambda_4": "cos value not in options"
+      },
+      "step_4_final_cos": {
+        "result": "cos(theta)=5/6"
+      },
+      "step_5_match_option": {
+        "matching_option": "B"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "B. 5/6",
+      "verification": "Only lambda=2 yields the listed option after satisfying volume condition."
+    }
+  }
+}

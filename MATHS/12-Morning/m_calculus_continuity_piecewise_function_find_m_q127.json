@@ -1,0 +1,60 @@
+{
+  "filename_suggestion": "m_calculus_continuity_piecewise_function_find_m_q127.json",
+  "input": "If f(x) = { (√(1+mx) - √(1-mx))/x for -1 ≤ x < 0, (2x+1)/(x-2) for 0 ≤ x ≤ 1 } is continuous in the interval [-1, 1], then m is equal to\n\nOptions:\nA. 1/2\nB. -1/2\nC. -1\nD. -1/4",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Find m such that the piecewise function f(x) is continuous at x = 0.",
+      "given_information": {
+        "f_left": "(√(1+mx) - √(1-mx))/x for -1 ≤ x < 0",
+        "f_right": "(2x+1)/(x-2) for 0 ≤ x ≤ 1",
+        "condition": "f is continuous on [-1, 1]",
+        "to_find": "m"
+      },
+      "key_observation": "For continuity at x = 0, LHL (lim_{x→0⁻} f(x)) must equal RHL / f(0) (lim_{x→0⁺} f(x))."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Continuity condition: lim_{x→0⁻} f(x) = lim_{x→0⁺} f(x) = f(0)",
+        "Evaluating 0/0 limit using rationalization"
+      ],
+      "key_formulas": {
+        "RHL": "f(0) = (2(0) + 1)/(0 - 2) = -1/2",
+        "LHL_rationalization": "lim_{x→0} [(1+mx) - (1-mx)] / [x(√(1+mx) + √(1-mx))] = 2m / (1 + 1) = m"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Compute RHL at x=0, compute LHL at x=0 using rationalization of the numerator, and equate LHL = RHL to solve for m.",
+      "logical_steps": [
+        "Step 1: Compute RHL = f(0) = (2(0)+1)/(0-2) = -1/2",
+        "Step 2: Compute LHL = lim_{x→0⁻} [√(1+mx) - √(1-mx)]/x",
+        "Step 3: Multiply numerator and denominator by [√(1+mx) + √(1-mx)]",
+        "Step 4: Simplify LHL = 2m/2 = m",
+        "Step 5: Equate LHL = RHL ⇒ m = -1/2",
+        "Step 6: Match option"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_RHL": {
+        "limit": "lim_{x→0⁺} (2x+1)/(x-2) = (0+1)/(0-2) = -1/2"
+      },
+      "step_2_LHL": {
+        "limit": "lim_{x→0⁻} [√(1+mx) - √(1-mx)] / x",
+        "rationalize": "= lim_{x→0⁻} [(1+mx) - (1-mx)] / [x(√(1+mx) + √(1-mx))]",
+        "simplify_num": "= lim_{x→0⁻} 2mx / [x(√(1+mx) + √(1-mx))]",
+        "cancel_x": "= lim_{x→0⁻} 2m / [√(1+mx) + √(1-mx)]",
+        "evaluate": "= 2m / (1 + 1) = m"
+      },
+      "step_3_equate": {
+        "continuity_eq": "LHL = RHL",
+        "m_value": "m = -1/2"
+      },
+      "step_4_match_option": {
+        "matching_option": "B"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "B. -1/2",
+      "verification": "LHL at x=0: lim_{x→0} [√(1+mx)-√(1-mx)]/x = m. RHL at x=0: (0+1)/(0-2) = -1/2. LHL = RHL ⇒ m = -1/2 ✓"
+    }
+  }
+}

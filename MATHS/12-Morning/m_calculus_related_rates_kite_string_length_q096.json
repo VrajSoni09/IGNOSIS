@@ -1,0 +1,69 @@
+{
+  "filename_suggestion": "m_calculus_related_rates_kite_string_length_q096.json",
+  "input": "A kite is 120 m high and 130 m of string is out. If the kite is moving away horizontally at the rate of 39 m/sec, then the rate at which the string is being out, is\n\nOptions:\nA. 12 m/sec.\nB. 15 m/sec.\nC. 18 m/sec.\nD. 20 m/sec.",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "A kite at a fixed height of 120 m is moving horizontally. When 130 m of string is out and the horizontal distance is increasing at 39 m/sec, find the rate at which the string length is increasing.",
+      "given_information": {
+        "PQ_height": "120 m  (fixed vertical height)",
+        "PR_string": "y = 130 m  (current string length)",
+        "dx/dt": "39 m/sec  (horizontal speed of kite)",
+        "to_find": "dy/dt  (rate of string being let out)"
+      },
+      "key_observation": "Use Pythagoras: y² = (120)² + x². Differentiate implicitly with respect to t, then substitute known values to find dy/dt."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Pythagoras theorem for right triangle PQR",
+        "Implicit differentiation with respect to time",
+        "Related rates"
+      ],
+      "key_formulas": {
+        "pythagoras": "y² = (120)² + x²  →  PR² = PQ² + QR²",
+        "related_rates": "2y·(dy/dt) = 2x·(dx/dt)",
+        "simplified": "y·(dy/dt) = x·(dx/dt)"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Set up Pythagoras relation, find x when y=130, differentiate with respect to t, substitute values to solve for dy/dt.",
+      "logical_steps": [
+        "Step 1: Set up y² = (120)² + x²",
+        "Step 2: Find x when y = 130",
+        "Step 3: Differentiate y² = 14400 + x² with respect to t",
+        "Step 4: Substitute x = 50, y = 130, dx/dt = 39",
+        "Step 5: Solve for dy/dt and match option"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_pythagoras": {
+        "equation": "PR² = PQ² + QR²",
+        "y²": "(120)² + x² = 14400 + x²"
+      },
+      "step_2_find_x": {
+        "y": "130",
+        "x²": "(130)² - (120)² = 16900 - 14400 = 2500",
+        "x": "√2500 = 50 m"
+      },
+      "step_3_differentiate_wrt_t": {
+        "derivative": "2y·(dy/dt) = 2x·(dx/dt)",
+        "simplify": "y·(dy/dt) = x·(dx/dt)"
+      },
+      "step_4_substitute": {
+        "y": "130",
+        "x": "50",
+        "dx/dt": "39 m/sec",
+        "equation": "130·(dy/dt) = 50 × 39 = 1950"
+      },
+      "step_5_solve": {
+        "dy/dt": "1950/130 = 15 m/sec"
+      },
+      "step_6_match_option": {
+        "matching_option": "B"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "B. 15 m/sec.",
+      "verification": "x=50, y=130: 50²+120² = 2500+14400 = 16900 = 130² ✓. Rate equation: 130×15 = 50×39 = 1950 ✓. String is being let out at 15 m/sec."
+    }
+  }
+}

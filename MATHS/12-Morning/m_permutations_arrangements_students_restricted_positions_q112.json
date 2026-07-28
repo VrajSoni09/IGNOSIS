@@ -1,0 +1,61 @@
+{
+  "filename_suggestion": "m_permutations_arrangements_students_restricted_positions_q112.json",
+  "input": "Five students are to be arranged on a platform such that the boy B₁ occupies the second position and such that the girl G₁ is always adjacent to the girl G₂. Then, the number of such possible arrangements is\n\nOptions:\nA. 4\nB. 7\nC. 8\nD. 6",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "5 students (including B₁, G₁, G₂) are to be arranged in a line (positions 1 to 5). B₁ must be at position 2, and G₁ must be adjacent to G₂.",
+      "given_information": {
+        "total_students": "5 (B₁, G₁, G₂, and two others X, Y)",
+        "fixed_condition": "B₁ at 2nd position",
+        "adjacency_condition": "G₁ and G₂ must be together (adjacent)",
+        "to_find": "Number of valid arrangements"
+      },
+      "key_observation": "Since B₁ is at position 2, the available positions are 1, 3, 4, 5. G₁ and G₂ must be adjacent, so the pair {G₁, G₂} must occupy adjacent spots among {1, 3, 4, 5}. Since position 2 is blocked by B₁, position 1 cannot be adjacent to 3. Thus {G₁, G₂} can only occupy spots {3, 4} or {4, 5}."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Permutations with restriction",
+        "String/Block method for adjacent elements",
+        "Counting principle"
+      ],
+      "key_formulas": {
+        "block_internal_arrangements": "G₁ and G₂ can swap places in 2! = 2 ways",
+        "position_choices": "Available adjacent pairs: (3,4) or (4,5) → 2 choices",
+        "remaining_places": "2 remaining students X, Y in the remaining 2 empty spots → 2! = 2 ways"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Fix B₁ at position 2. Determine where the block (G₁G₂) can be placed among positions {1, 3, 4, 5}. Multiply choices for block positions, internal arrangements of G₁ and G₂, and permutations of the remaining 2 students.",
+      "logical_steps": [
+        "Step 1: Fix B₁ at spot 2 (1 way)",
+        "Step 2: Identify valid adjacent pairs for (G₁, G₂): spots (3,4) or (4,5) [2 choices]",
+        "Step 3: Arrange G₁ and G₂ within the block (2! = 2 ways)",
+        "Step 4: Arrange the remaining 2 students in the remaining 2 vacant spots (2! = 2 ways)",
+        "Step 5: Total arrangements = 1 × 2 × 2 × 2 = 8"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_fix_B1": {
+        "positions": "[ _ , B₁ , _ , _ , _ ]"
+      },
+      "step_2_block_placement": {
+        "case_1": "Block (G₁G₂) at spots 3 and 4: [ X , B₁ , G₁ , G₂ , Y ]",
+        "case_2": "Block (G₁G₂) at spots 4 and 5: [ X , B₁ , Y , G₁ , G₂ ]",
+        "note": "Block cannot use spot 1 because spot 2 is B₁ (spot 1 has no adjacent available spot in {1,3,4,5})"
+      },
+      "step_3_count": {
+        "block_positions": "2 ways",
+        "internal_order_G1_G2": "2! = 2 ways",
+        "remaining_students_order": "2! = 2 ways",
+        "total": "2 × 2 × 2 = 8"
+      },
+      "step_4_match_option": {
+        "matching_option": "C"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "C. 8",
+      "verification": "Positions are [1, 2, 3, 4, 5] with B₁ at 2. G₁, G₂ must be contiguous. Contiguous pairs not containing 2: (3,4) and (4,5). Number of ways = 2 (block positions) × 2! (G1, G2 arrangement) × 2! (other 2 students) = 8 ✓"
+    }
+  }
+}

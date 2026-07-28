@@ -1,0 +1,59 @@
+{
+  "filename_suggestion": "m_algebra_maximum_product_linear_constraint_q016.json",
+  "input": "The maximum value of xy when x + 2y = 8 is\n\nOptions:\nA. 20\nB. 16\nC. 24\nD. 8",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Find the maximum of the product xy under the linear relation x + 2y = 8.",
+      "given_information": {
+        "constraint": "x + 2y = 8",
+        "objective": "maximize xy"
+      },
+      "key_observation": "Express y in terms of x and reduce to a one-variable quadratic."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Optimization using derivatives",
+        "Quadratic objective under linear constraint"
+      ],
+      "key_formulas": {
+        "constraint_rearrangement": "y = (8 - x)/2",
+        "objective_function": "f(x) = x(8 - x)/2",
+        "critical_point": "f'(x) = 0"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Substitute y from the constraint into xy, differentiate, and evaluate at the critical point.",
+      "logical_steps": [
+        "Step 1: Write y = (8-x)/2",
+        "Step 2: Form f(x)=xy",
+        "Step 3: Differentiate and set f'(x)=0",
+        "Step 4: Compute product at critical point",
+        "Step 5: Match option"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_substitute": {
+        "y": "(8 - x)/2",
+        "f_x": "xy = x(8 - x)/2"
+      },
+      "step_2_differentiate": {
+        "f_prime": "f'(x) = (8 - 2x)/2 = 4 - x"
+      },
+      "step_3_find_critical_point": {
+        "equation": "4 - x = 0",
+        "x": "4"
+      },
+      "step_4_compute_maximum_value": {
+        "y_at_x_4": "(8 - 4)/2 = 2",
+        "xy": "4 * 2 = 8"
+      },
+      "step_5_match_option": {
+        "matching_option": "D"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "D. 8",
+      "verification": "At x=4, y=2 gives xy=8, and the quadratic objective is concave, so this is the maximum."
+    }
+  }
+}

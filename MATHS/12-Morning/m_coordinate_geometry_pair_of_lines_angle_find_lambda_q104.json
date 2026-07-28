@@ -1,0 +1,70 @@
+{
+  "filename_suggestion": "m_coordinate_geometry_pair_of_lines_angle_find_lambda_q104.json",
+  "input": "If the angle between the lines represented by the equation x² + λxy - y²tan²θ = 0 is 2θ, then the value of λ is\n\nOptions:\nA. 0\nB. 1\nC. tan θ\nD. 2",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Given the pair of lines x² + λxy - y²tan²θ = 0, the angle between them is 2θ. Use the formula for the angle between a pair of lines to find λ.",
+      "given_information": {
+        "equation": "x² + λxy - y²tan²θ = 0",
+        "angle_between_lines": "2θ",
+        "to_find": "λ"
+      },
+      "key_observation": "For ax²+2hxy+by²=0, the angle α between the lines satisfies tan α = |2√(h²-ab)|/(a+b). Identify a=1, 2h=λ, b=-tan²θ, then set tan(2θ) = the formula and solve for λ."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Pair of lines equation: ax²+2hxy+by²=0",
+        "Angle formula: tan α = |2√(h²-ab)/(a+b)|",
+        "tan(2θ) = 2tanθ/(1-tan²θ)"
+      ],
+      "key_formulas": {
+        "a_b_h": "a=1, b=-tan²θ, 2h=λ → h=λ/2",
+        "angle_formula": "tan(2θ) = |2√(h²-ab)/(a+b)|",
+        "h²_minus_ab": "λ²/4 - (1)(-tan²θ) = λ²/4 + tan²θ",
+        "a_plus_b": "1 - tan²θ",
+        "tan_2theta": "2tanθ/(1-tan²θ)"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Identify a, b, h from the equation, substitute into the angle formula, equate to tan(2θ), and solve for λ.",
+      "logical_steps": [
+        "Step 1: Identify a, b, h from x²+λxy-y²tan²θ=0",
+        "Step 2: Write tan(2θ) = 2√(h²-ab)/(a+b)",
+        "Step 3: Substitute and simplify",
+        "Step 4: Equate both sides to solve for λ",
+        "Step 5: Match with options"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_identify": {
+        "a": "1",
+        "2h": "λ  →  h = λ/2",
+        "b": "-tan²θ"
+      },
+      "step_2_angle_formula": {
+        "tan(2θ)": "2√(h²-ab) / (a+b)"
+      },
+      "step_3_compute_components": {
+        "h²-ab": "(λ/2)² - (1)(-tan²θ) = λ²/4 + tan²θ",
+        "a+b": "1 + (-tan²θ) = 1 - tan²θ"
+      },
+      "step_4_set_equal": {
+        "LHS": "tan(2θ) = 2tanθ/(1-tan²θ)",
+        "RHS": "2√(λ²/4 + tan²θ)/(1-tan²θ)",
+        "equate": "2tanθ/(1-tan²θ) = 2√(λ²/4 + tan²θ)/(1-tan²θ)"
+      },
+      "step_5_simplify": {
+        "cancel_denominator": "2tanθ = 2√(λ²/4 + tan²θ)",
+        "square_both_sides": "tan²θ = λ²/4 + tan²θ",
+        "result": "λ²/4 = 0  →  λ = 0"
+      },
+      "step_6_match_option": {
+        "matching_option": "A"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "A. 0",
+      "verification": "With λ=0: x²-y²tan²θ=0 → (x-y tanθ)(x+y tanθ)=0, lines y = x/tanθ and y = -x/tanθ. The angle between them: slopes are m₁=cotθ, m₂=-cotθ. tan(angle) = |2cotθ/(1-cot²θ)| = |2cosθsinθ/(cos²θ-sin²θ)| = |sin2θ/cos2θ| = |tan2θ| ✓, angle = 2θ ✓"
+    }
+  }
+}

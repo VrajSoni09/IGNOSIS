@@ -1,0 +1,70 @@
+{
+  "filename_suggestion": "m_vectors_unit_vector_cross_product_equations_q140.json",
+  "input": "If ā = î + ĵ, b̄ = 2ĵ - k̂ and r̄ × ā = b̄ × ā, r̄ × b̄ = ā × b̄, then the value r̄ / |r̄| is\n\nOptions:\nA. (î + 3ĵ + k̂)/√11\nB. (î - 3ĵ + k̂)/√11\nC. (î - 3ĵ - k̂)/√11\nD. (î + 3ĵ - k̂)/√11",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Find the unit vector r̄ / |r̄| given ā = î + ĵ, b̄ = 2ĵ - k̂, and cross product relations r̄ × ā = b̄ × ā and r̄ × b̄ = ā × b̄.",
+      "given_information": {
+        "ā": "î + ĵ",
+        "b̄": "2ĵ - k̂",
+        "relation_1": "r̄ × ā = b̄ × ā  ⇒  (r̄ - b̄) × ā = 0",
+        "relation_2": "r̄ × b̄ = ā × b̄  ⇒  (r̄ - ā) × b̄ = 0",
+        "to_find": "Unit vector r̄ / |r̄|"
+      },
+      "key_observation": "(r̄ - b̄) × ā = 0 means r̄ - b̄ is parallel to ā, so r̄ = b̄ + tā. Substitute into second relation to find t, determine r̄, and compute unit vector."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Parallel vectors cross product: u × v = 0 ⇒ u = t v",
+        "Unit vector formula: û = u / |u|"
+      ],
+      "key_formulas": {
+        "parallel_form": "r̄ = b̄ + t ā = (2ĵ - k̂) + t(î + ĵ) = tî + (2+t)ĵ - k̂",
+        "substitute_in_rel2": "(r̄ - ā) × b̄ = 0  ⇒  (t-1)î + (1+t)ĵ - k̂ is parallel to b̄ = 2ĵ - k̂"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Express r̄ = b̄ + tā, use the second condition to solve for t, write down r̄, compute its magnitude, and evaluate r̄ / |r̄|.",
+      "logical_steps": [
+        "Step 1: From (r̄ - b̄) × ā = 0, write r̄ = b̄ + tā = tî + (2+t)ĵ - k̂",
+        "Step 2: Compute r̄ - ā = (t-1)î + (1+t)ĵ - k̂",
+        "Step 3: From (r̄ - ā) × b̄ = 0, set cross product of (r̄ - ā) with (0, 2, -1) to 0",
+        "Step 4: Solve for t: x = 1, y = 3, z = -1 ⇒ r̄ = î + 3ĵ - k̂",
+        "Step 5: Compute |r̄| = √(1 + 9 + 1) = √11",
+        "Step 6: Unit vector = (î + 3ĵ - k̂)/√11 and match option D"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_r_expression": {
+        "ā": "(1, 1, 0)",
+        "b̄": "(0, 2, -1)",
+        "r_form": "r̄ = b̄ + tā = (t, 2+t, -1)"
+      },
+      "step_2_substitute_second_cond": {
+        "r_minus_a": "(t-1, 1+t, -1)",
+        "b": "(0, 2, -1)",
+        "cross": "|i j k; t-1 1+t -1; 0 2 -1| = 0",
+        "i_comp": "-(1+t) - (-2) = 1 - t = 0  ⇒  t = 1",
+        "j_comp": "-( (t-1)(-1) - 0 ) = t - 1 = 0  ⇒  t = 1",
+        "k_comp": "2(t-1) = 0  ⇒  t = 1"
+      },
+      "step_3_vector_r": {
+        "t": "1",
+        "r": "î + 3ĵ - k̂"
+      },
+      "step_4_magnitude": {
+        "mag_r": "√(1² + 3² + (-1)²) = √(1 + 9 + 1) = √11"
+      },
+      "step_5_unit_vector": {
+        "result": "(î + 3ĵ - k̂) / √11"
+      },
+      "step_6_match_option": {
+        "matching_option": "D"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "D. (î + 3ĵ - k̂)/√11",
+      "verification": "r̄ = (1,3,-1). r̄ × ā = |i j k; 1 3 -1; 1 1 0| = (1, -1, -2). b̄ × ā = |i j k; 0 2 -1; 1 1 0| = (1, -1, -2). Matches! |r̄| = √11 ✓"
+    }
+  }
+}

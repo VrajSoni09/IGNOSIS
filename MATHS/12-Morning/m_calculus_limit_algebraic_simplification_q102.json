@@ -1,0 +1,64 @@
+{
+  "filename_suggestion": "m_calculus_limit_algebraic_simplification_q102.json",
+  "input": "lim(x→2) [1/(x-2) - 2/(x³-3x²+2x)] is equal to\n\nOptions:\nA. 2/3\nB. -2/3\nC. 3/2\nD. -3/2",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Evaluate the limit as x→2 of [1/(x-2) - 2/(x³-3x²+2x)] by combining fractions and cancelling the common factor that causes indeterminate form.",
+      "given_information": {
+        "expression": "1/(x-2) - 2/(x³-3x²+2x)",
+        "limit_at": "x → 2",
+        "to_find": "Value of the limit"
+      },
+      "key_observation": "Factor the cubic denominator: x³-3x²+2x = x(x²-3x+2) = x(x-1)(x-2). Combine into a single fraction; the (x-2) factor cancels, resolving the indeterminate form 0/0."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Factoring cubic: x³-3x²+2x = x(x-1)(x-2)",
+        "Combining fractions with a common denominator",
+        "Cancellation of (x-2) before taking the limit"
+      ],
+      "key_formulas": {
+        "factored": "x³-3x²+2x = x(x-1)(x-2)",
+        "combined": "[x(x-1) - 2] / [x(x-1)(x-2)]",
+        "numerator_factored": "(x-2)(x+1)"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Factor the cubic, write both fractions over the common denominator x(x-1)(x-2), subtract, factor the numerator, cancel (x-2), and evaluate.",
+      "logical_steps": [
+        "Step 1: Factor x³-3x²+2x = x(x-1)(x-2)",
+        "Step 2: Rewrite with common denominator",
+        "Step 3: Compute the numerator: x(x-1) - 2 = x²-x-2",
+        "Step 4: Factor numerator: x²-x-2 = (x-2)(x+1)",
+        "Step 5: Cancel (x-2) and substitute x=2"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_factor_cubic": {
+        "x³-3x²+2x": "x(x²-3x+2) = x(x-1)(x-2)"
+      },
+      "step_2_common_denominator": {
+        "expression": "[1/(x-2)] - [2/(x(x-1)(x-2))]",
+        "combined": "[x(x-1) - 2] / [x(x-1)(x-2)]"
+      },
+      "step_3_numerator": {
+        "x(x-1)-2": "x²-x-2"
+      },
+      "step_4_factor_numerator": {
+        "x²-x-2": "(x-2)(x+1)"
+      },
+      "step_5_cancel_and_evaluate": {
+        "expression": "[(x-2)(x+1)] / [x(x-1)(x-2)]",
+        "cancel": "(x+1) / [x(x-1)]",
+        "at_x_2": "(2+1) / [2(2-1)] = 3/2"
+      },
+      "step_6_match_option": {
+        "matching_option": "C"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "C. 3/2",
+      "verification": "After cancellation: lim(x→2) (x+1)/(x(x-1)) = 3/(2×1) = 3/2. Both original terms were undefined at x=2 (0/0), but the simplified form gives a finite limit of 3/2 ✓"
+    }
+  }
+}

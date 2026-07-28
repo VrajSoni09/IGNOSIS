@@ -1,0 +1,58 @@
+{
+  "filename_suggestion": "m_calculus_limit_radical_ratio_q059.json",
+  "input": "The value of lim as x->a of (sqrt(a+2x)-sqrt(3x)) / (sqrt(3a+x)-2sqrt(x)) is\n\nOptions:\nA. 1/(3sqrt(3))\nB. 2/sqrt(3)\nC. 2/(3sqrt(3))\nD. 4/(3sqrt(3))",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Evaluate a 0/0 radical limit as x approaches a.",
+      "given_information": {
+        "limit": "L = lim_{x->a} [sqrt(a+2x)-sqrt(3x)]/[sqrt(3a+x)-2sqrt(x)]"
+      },
+      "key_observation": "Both numerator and denominator go to 0 at x=a, so use first-order expansion or rationalization."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Indeterminate form 0/0",
+        "Linearization of sqrt terms",
+        "Limit simplification"
+      ],
+      "key_formulas": {
+        "expansion": "sqrt(u+h) approx sqrt(u) + h/(2sqrt(u)) near h=0"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Set x=a+h and keep first-order terms in h for numerator and denominator.",
+      "logical_steps": [
+        "Step 1: Substitute x=a+h",
+        "Step 2: Expand each square root to first order in h",
+        "Step 3: Extract coefficients of h",
+        "Step 4: Take ratio and simplify",
+        "Step 5: Match option"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_substitute": {
+        "x": "a+h, h->0"
+      },
+      "step_2_numerator_first_order": {
+        "sqrt_a_plus_2x": "sqrt(3a+2h) approx sqrt(3a) + h/sqrt(3a)",
+        "sqrt_3x": "sqrt(3a+3h) approx sqrt(3a) + (3h)/(2sqrt(3a))",
+        "numerator": "approx h/sqrt(3a) - 3h/(2sqrt(3a)) = -h/(2sqrt(3a))"
+      },
+      "step_3_denominator_first_order": {
+        "sqrt_3a_plus_x": "sqrt(4a+h) approx 2sqrt(a) + h/(4sqrt(a))",
+        "2sqrt_x": "2sqrt(a+h) approx 2sqrt(a) + h/sqrt(a)",
+        "denominator": "approx h/(4sqrt(a)) - h/sqrt(a) = -3h/(4sqrt(a))"
+      },
+      "step_4_ratio": {
+        "L": "[-h/(2sqrt(3a))]/[-3h/(4sqrt(a))] = (2sqrt(a))/(3sqrt(3a)) = 2/(3sqrt(3))"
+      },
+      "step_5_match_option": {
+        "matching_option": "C"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "C. 2/(3sqrt(3))",
+      "verification": "First-order terms in h determine the limit and simplify to 2/(3sqrt(3))."
+    }
+  }
+}

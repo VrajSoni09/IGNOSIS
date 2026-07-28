@@ -1,0 +1,61 @@
+{
+  "filename_suggestion": "m_calculus_indefinite_integral_log_cot_x_over_sin_2x_q148.json",
+  "input": "∫ (log(cot x)) / sin 2x dx =\n\nOptions:\nA. -log(cot x)² + c, where c is constant of integration.\nB. 2(log(cot x))² + c, where c is constant of integration.\nC. (-1/4)(log(sin x))² + c, where c is constant of integration.\nD. (-1/4)(log(cot x))² + c, where c is constant of integration.",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Evaluate the indefinite integral ∫ (log(cot x)) / sin 2x dx.",
+      "given_information": {
+        "integral": "I = ∫ (log(cot x)) / sin 2x dx",
+        "to_find": "Antiderivative"
+      },
+      "key_observation": "Substitute t = log(cot x). Then dt = (1/cot x)(-cosec²x) dx = (-sin x / (sin²x cos x)) dx = -2 / (2 sin x cos x) dx = -2 / sin 2x dx. Thus dx / sin 2x = -dt / 2."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Integration by substitution: t = log(cot x)",
+        "Derivative of log(cot x): dt = -2 / sin 2x dx",
+        "Power rule for integration: ∫ t dt = t²/2 + c"
+      ],
+      "key_formulas": {
+        "dt_derivation": "d/dx[log(cot x)] = (1/cot x)(-cosec²x) = -1/(sin x cos x) = -2/sin 2x",
+        "substitution": "dx / sin 2x = -dt / 2",
+        "integral_eval": "I = ∫ t (-dt/2) = -1/2 (t²/2) + c = -1/4 t² + c"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Substitute t = log(cot x), express dx/sin 2x in terms of dt, evaluate ∫ t (-dt/2), and replace t with log(cot x).",
+      "logical_steps": [
+        "Step 1: Put t = log(cot x)",
+        "Step 2: Differentiate: dt = (1/cot x) · (-cosec²x) dx = -1/(sin x cos x) dx = -2/(sin 2x) dx",
+        "Step 3: Rearrange: dx / sin 2x = -dt / 2",
+        "Step 4: Rewrite integral: I = ∫ t · (-dt/2) = -1/2 ∫ t dt",
+        "Step 5: Integrate: -1/2 · (t²/2) + c = -1/4 t² + c = -1/4 (log(cot x))² + c",
+        "Step 6: Match option D"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_substitute": {
+        "let": "t = log(cot x)"
+      },
+      "step_2_differentiate": {
+        "dt": "1/cot x · (-cosec²x) dx = (sin x / cos x) · (-1 / sin²x) dx = -1 / (sin x cos x) dx",
+        "sin_2x_identity": "sin 2x = 2 sin x cos x  ⇒  sin x cos x = (sin 2x)/2",
+        "dt_simplified": "dt = -2 / sin 2x dx  ⇒  dx / sin 2x = -dt / 2"
+      },
+      "step_3_evaluate_integral": {
+        "I": "∫ t · (-dt/2) = -1/2 ∫ t dt",
+        "antiderivative": "-1/2 · (t² / 2) + c = -1/4 t² + c"
+      },
+      "step_4_substitute_back": {
+        "result": "-1/4 (log(cot x))² + c"
+      },
+      "step_5_match_option": {
+        "matching_option": "D"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "D. (-1/4)(log(cot x))² + c, where c is constant of integration.",
+      "verification": "Differentiating (-1/4)(log(cot x))²: (-1/4) · 2 log(cot x) · (1/cot x) · (-cosec²x) = (-1/2) log(cot x) · (-2/sin 2x) = log(cot x) / sin 2x ✓"
+    }
+  }
+}

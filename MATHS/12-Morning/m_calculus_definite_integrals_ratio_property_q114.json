@@ -1,0 +1,69 @@
+{
+  "filename_suggestion": "m_calculus_definite_integrals_ratio_property_q114.json",
+  "input": "Let f(x) be positive for all real x. If I₁ = ∫_{1-h}^h x f(x(1-x)) dx and I₂ = ∫_{1-h}^h f(x(1-x)) dx, where (2h-1) > 0, then I₁/I₂ is\n\nOptions:\nA. 2\nB. h\nC. 1/2\nD. 1",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Find the ratio I₁/I₂ of two definite integrals I₁ = ∫_{1-h}^h x f(x(1-x)) dx and I₂ = ∫_{1-h}^h f(x(1-x)) dx.",
+      "given_information": {
+        "I1": "∫_{1-h}^h x f(x(1-x)) dx",
+        "I2": "∫_{1-h}^h f(x(1-x)) dx",
+        "f_x": "Positive function for all real x",
+        "condition": "2h - 1 > 0",
+        "to_find": "I₁/I₂"
+      },
+      "key_observation": "Use King's property of definite integrals: ∫_a^b g(x) dx = ∫_a^b g(a+b-x) dx. Here a = 1-h and b = h, so a+b = (1-h) + h = 1. Replacing x by 1-x in I₁ allows expressing I₁ in terms of I₂."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "King's property: ∫_a^b g(x) dx = ∫_a^b g(a+b-x) dx",
+        "Symmetry of interval: (1-h) + h = 1",
+        "Symmetry of argument: (1-x)(1 - (1-x)) = (1-x)x = x(1-x)"
+      ],
+      "key_formulas": {
+        "kings_property": "∫_a^b g(x) dx = ∫_a^b g(a+b-x) dx",
+        "sum_of_limits": "a + b = (1-h) + h = 1",
+        "substitute_in_I1": "I₁ = ∫_{1-h}^h (1-x) f((1-x)(1-(1-x))) dx = ∫_{1-h}^h (1-x) f(x(1-x)) dx"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Apply King's property to I₁, split into two integrals to relate I₁ and I₂, solve for 2I₁ = I₂, then calculate I₁/I₂.",
+      "logical_steps": [
+        "Step 1: Note that lower limit + upper limit = (1-h) + h = 1",
+        "Step 2: Apply King's property: replace x with 1-x in I₁",
+        "Step 3: Simplify integrand: (1-x) f((1-x)x) = (1-x) f(x(1-x))",
+        "Step 4: Split integral: I₁ = ∫ f(x(1-x)) dx - ∫ x f(x(1-x)) dx = I₂ - I₁",
+        "Step 5: Rearrange to get 2I₁ = I₂ ⇒ I₁/I₂ = 1/2",
+        "Step 6: Match with options"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_identify_limits_sum": {
+        "a": "1-h",
+        "b": "h",
+        "a_plus_b": "(1-h) + h = 1"
+      },
+      "step_2_apply_property": {
+        "I1_original": "∫_{1-h}^h x f(x(1-x)) dx",
+        "replace_x": "x → 1-x",
+        "I1_transformed": "∫_{1-h}^h (1-x) f((1-x)(1-(1-x))) dx",
+        "simplify_argument": "(1-x)(x) = x(1-x)",
+        "I1_rewritten": "∫_{1-h}^h (1-x) f(x(1-x)) dx"
+      },
+      "step_3_split_integral": {
+        "expand": "∫_{1-h}^h f(x(1-x)) dx - ∫_{1-h}^h x f(x(1-x)) dx",
+        "substitute_I2_I1": "I₁ = I₂ - I₁"
+      },
+      "step_4_solve_ratio": {
+        "equation": "2I₁ = I₂",
+        "ratio": "I₁ / I₂ = 1/2"
+      },
+      "step_5_match_option": {
+        "matching_option": "C"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "C. 1/2",
+      "verification": "King's property yields I₁ = I₂ - I₁, hence 2I₁ = I₂, giving I₁/I₂ = 1/2. Independent of h and f(x) ✓"
+    }
+  }
+}

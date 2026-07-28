@@ -1,0 +1,70 @@
+{
+  "filename_suggestion": "m_calculus_definite_integral_sqrt_x_over_1_plus_x_sq_q107.json",
+  "input": "Let f(x) = ∫ √x/(1+x)² dx, x ≥ 0, then f(3) - f(1) is equal to\n\nOptions:\nA. -π/6 + 1/2 + √3/4\nB. -π/12 + 1/2 + √3/4\nC. π/6 + 1/2 - √3/4\nD. π/12 + 1/2 - √3/4",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Evaluate the definite integral f(3) - f(1) = ∫₁³ √x/(1+x)² dx.",
+      "given_information": {
+        "indefinite_integral": "f(x) = ∫ √x/(1+x)² dx",
+        "to_find": "f(3) - f(1) = ∫₁³ √x/(1+x)² dx"
+      },
+      "key_observation": "Substitute √x = tan θ (so x = tan²θ, dx = 2 tan θ sec²θ dθ). The denominator (1+x)² becomes (1+tan²θ)² = sec⁴θ. The integral simplifies nicely using basic trigonometric identities."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Substitution √x = tan θ",
+        "Limits change: x=1 → θ=π/4, x=3 → θ=π/3",
+        "Identity: 2 tan²θ / sec²θ = 2 sin²θ = 1 - cos(2θ)"
+      ],
+      "key_formulas": {
+        "substitution": "√x = tan θ  ⇒  dx = 2 tan θ sec²θ dθ",
+        "integrand": "(tan θ · 2 tan θ sec²θ dθ) / sec⁴θ = 2 tan²θ / sec²θ dθ = 2 sin²θ dθ",
+        "double_angle": "2 sin²θ = 1 - cos(2θ)"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Express f(3) - f(1) as a definite integral from 1 to 3, substitute √x = tan θ, change limits, convert to 1 - cos(2θ), integrate and evaluate.",
+      "logical_steps": [
+        "Step 1: Write f(3) - f(1) = ∫₁³ √x/(1+x)² dx",
+        "Step 2: Put √x = tan θ, dx = 2 tan θ sec²θ dθ",
+        "Step 3: Change limits: x=1 → θ=π/4; x=3 → θ=π/3",
+        "Step 4: Simplify integrand to 2 sin²θ = 1 - cos(2θ)",
+        "Step 5: Integrate [θ - (1/2)sin(2θ)] from π/4 to π/3",
+        "Step 6: Evaluate numerical result and match option"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_definite_integral": {
+        "I": "∫₁³ √x / (1+x)² dx"
+      },
+      "step_2_substitution": {
+        "let": "√x = tan θ",
+        "x": "tan²θ",
+        "dx": "2 tan θ sec²θ dθ",
+        "denominator": "(1+x)² = (1+tan²θ)² = sec⁴θ"
+      },
+      "step_3_limits": {
+        "lower": "x = 1 ⇒ tan θ = 1 ⇒ θ = π/4",
+        "upper": "x = 3 ⇒ tan θ = √3 ⇒ θ = π/3"
+      },
+      "step_4_simplify_integrand": {
+        "I": "∫_{π/4}^{π/3} (tan θ · 2 tan θ sec²θ) / sec⁴θ dθ",
+        "reduce": "= ∫_{π/4}^{π/3} (2 tan²θ / sec²θ) dθ = ∫_{π/4}^{π/3} 2 sin²θ dθ",
+        "identity": "= ∫_{π/4}^{π/3} (1 - cos 2θ) dθ"
+      },
+      "step_5_evaluate": {
+        "antiderivative": "[θ - (sin 2θ)/2]_{π/4}^{π/3}",
+        "upper_bound": "π/3 - (sin(2π/3))/2 = π/3 - (√3/2)/2 = π/3 - √3/4",
+        "lower_bound": "π/4 - (sin(π/2))/2 = π/4 - 1/2",
+        "difference": "(π/3 - √3/4) - (π/4 - 1/2) = (π/3 - π/4) + 1/2 - √3/4 = π/12 + 1/2 - √3/4"
+      },
+      "step_6_match_option": {
+        "matching_option": "D"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "D. π/12 + 1/2 - √3/4",
+      "verification": "θ limits: π/3 - π/4 = π/12. Trig term: -(√3/4) - (-1/2) = 1/2 - √3/4. Combined: π/12 + 1/2 - √3/4 ✓"
+    }
+  }
+}

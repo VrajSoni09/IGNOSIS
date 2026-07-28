@@ -1,0 +1,61 @@
+{
+  "filename_suggestion": "m_calculus_integral_function_product_q026.json",
+  "input": "If f(x) is a function satisfying f'(x) = f(x) with f(0) = 1 and g(x) is a function that satisfies f(x) + g(x) = x^2. Then the value of integral from 0 to 1 of f(x)g(x) dx is\n\nOptions:\nA. e - e^2/2 - 5/2\nB. e + e^2/2 - 3/2\nC. e - e^2/2 - 3/2\nD. e + e^2/2 + 5/2",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Use the differential condition for f and relation between f and g to evaluate integral of f(x)g(x).",
+      "given_information": {
+        "differential_condition": "f'(x)=f(x), f(0)=1",
+        "relation": "f(x)+g(x)=x^2",
+        "to_find": "integral from 0 to 1 of f(x)g(x) dx"
+      },
+      "key_observation": "From f'(x)=f(x), we get f(x)=e^x, then g(x)=x^2-e^x."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "First-order differential equation",
+        "Initial value condition",
+        "Definite integration"
+      ],
+      "key_formulas": {
+        "solution_form": "f(x)=Ce^x",
+        "initial_value": "f(0)=1 => C=1",
+        "product": "f(x)g(x)=e^x(x^2-e^x)"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Find explicit f and g, substitute into integrand, and integrate term-wise.",
+      "logical_steps": [
+        "Step 1: Solve f'(x)=f(x) with f(0)=1",
+        "Step 2: Compute g(x)=x^2-f(x)",
+        "Step 3: Form f(x)g(x)",
+        "Step 4: Integrate from 0 to 1",
+        "Step 5: Match option"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_find_f": {
+        "result": "f(x)=e^x"
+      },
+      "step_2_find_g": {
+        "from_relation": "g(x)=x^2-e^x"
+      },
+      "step_3_form_integrand": {
+        "product": "f(x)g(x)=e^x(x^2-e^x)=x^2e^x-e^{2x}"
+      },
+      "step_4_integrate": {
+        "integral": "I=integral_0^1 (x^2e^x-e^{2x}) dx",
+        "part_1": "integral_0^1 x^2e^x dx = [e^x(x^2-2x+2)]_0^1 = e-2",
+        "part_2": "integral_0^1 e^{2x} dx = [e^{2x}/2]_0^1 = (e^2-1)/2",
+        "combine": "I=(e-2)-((e^2-1)/2)=e-e^2/2-3/2"
+      },
+      "step_5_match_option": {
+        "matching_option": "C"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "C. e - e^2/2 - 3/2",
+      "verification": "Substituting f=e^x and g=x^2-e^x reduces the integral to standard forms and gives the stated value."
+    }
+  }
+}

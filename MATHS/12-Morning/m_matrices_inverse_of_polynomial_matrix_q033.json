@@ -1,0 +1,56 @@
+{
+  "filename_suggestion": "m_matrices_inverse_of_polynomial_matrix_q033.json",
+  "input": "If A = [[2, -1], [-1, 3]], then the inverse of (2A^2 + 5A) is\n\nOptions:\nA. (1/95)[[7,3],[3,4]]\nB. (1/95)[[-7,3],[3,-4]]\nC. (1/95)[[-7,-3],[3,4]]\nD. (1/95)[[4,3],[3,7]]",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Compute matrix M = 2A^2 + 5A and then find M inverse.",
+      "given_information": {
+        "A": "[[2,-1],[-1,3]]",
+        "to_find": "(2A^2 + 5A)^-1"
+      },
+      "key_observation": "First evaluate A^2, then use 2x2 inverse formula."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Matrix multiplication",
+        "Linear combination of matrices",
+        "Inverse of 2x2 matrix"
+      ],
+      "key_formulas": {
+        "inverse_2x2": "[[a,b],[c,d]]^-1 = 1/(ad-bc) * [[d,-b],[-c,a]]"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Find A^2, construct M, compute determinant and adjoint, then compare options.",
+      "logical_steps": [
+        "Step 1: Compute A^2",
+        "Step 2: Compute M=2A^2+5A",
+        "Step 3: Calculate det(M)",
+        "Step 4: Write M inverse",
+        "Step 5: Match option"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_A_square": {
+        "result": "A^2 = [[5,-5],[-5,10]]"
+      },
+      "step_2_form_M": {
+        "calculation": "2A^2 + 5A = [[20,-15],[-15,35]]"
+      },
+      "step_3_determinant": {
+        "det": "20*35 - (-15)(-15) = 700 - 225 = 475"
+      },
+      "step_4_inverse": {
+        "adjoint": "[[35,15],[15,20]]",
+        "result": "M^-1 = (1/475)[[35,15],[15,20]] = (1/95)[[7,3],[3,4]]"
+      },
+      "step_5_match_option": {
+        "matching_option": "A"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "A. (1/95)[[7,3],[3,4]]",
+      "verification": "Determinant is nonzero and simplification exactly matches option A."
+    }
+  }
+}

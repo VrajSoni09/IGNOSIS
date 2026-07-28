@@ -1,0 +1,76 @@
+{
+  "filename_suggestion": "m_trigonometry_solutions_tan_sec_equation_q089.json",
+  "input": "The number of solutions of tan x + sec x = 2cos x in [0, 2π] are\n\nOptions:\nA. 6\nB. 4\nC. 3\nD. 2",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Find the number of values of x in [0, 2π] satisfying tan x + sec x = 2cos x, excluding points where the equation is undefined.",
+      "given_information": {
+        "equation": "tan x + sec x = 2cos x",
+        "domain": "[0, 2π]",
+        "undefined_points": "x = π/2 and x = 3π/2 (where cos x = 0)",
+        "to_find": "Number of valid solutions"
+      },
+      "key_observation": "Multiply through by cos x to clear denominators, then use sin x + 1 = 2cos²x = 2(1-sin²x). Factor the resulting quadratic. Discard solutions where cos x = 0."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Clearing denominators: tan x + sec x → (sin x + 1)/cos x",
+        "Double angle: cos²x = 1-sin²x",
+        "Factoring quadratics in sin x",
+        "Excluding undefined points (cos x = 0)"
+      ],
+      "key_formulas": {
+        "tan_sec": "(sin x + 1)/cos x = 2cos x",
+        "sin_x_plus_1": "sin x + 1 = 2(1-sin²x) = 2-2sin²x",
+        "quadratic": "2sin²x + sin x - 1 = 0",
+        "factor": "(2sin x - 1)(sin x + 1) = 0"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Rewrite the equation, multiply by cos x, form a quadratic in sin x, factor and solve, then discard any solution where cos x = 0.",
+      "logical_steps": [
+        "Step 1: Rewrite tan x + sec x = (sin x + 1)/cos x",
+        "Step 2: Multiply both sides by cos x",
+        "Step 3: Use cos²x = 1 - sin²x to get a quadratic",
+        "Step 4: Factor and solve for sin x",
+        "Step 5: Find all x ∈ [0, 2π] for each valid sin x value",
+        "Step 6: Exclude solutions where cos x = 0 and count"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_rewrite": {
+        "LHS": "tan x + sec x = sin x/cos x + 1/cos x = (sin x + 1)/cos x",
+        "equation": "(sin x + 1)/cos x = 2cos x  (defined for cos x ≠ 0)"
+      },
+      "step_2_multiply_by_cos": {
+        "equation": "sin x + 1 = 2cos²x"
+      },
+      "step_3_use_identity": {
+        "cos²x": "1 - sin²x",
+        "equation": "sin x + 1 = 2(1-sin²x) = 2 - 2sin²x",
+        "rearrange": "2sin²x + sin x - 1 = 0"
+      },
+      "step_4_factor": {
+        "factored": "(2sin x - 1)(sin x + 1) = 0",
+        "case1": "sin x = 1/2",
+        "case2": "sin x = -1  →  x = 3π/2 (but cos(3π/2) = 0, equation undefined) ✗"
+      },
+      "step_5_solve_valid_case": {
+        "sin_x": "1/2",
+        "solutions_in_0_2pi": "x = π/6 and x = 5π/6",
+        "check_cos": "cos(π/6) = √3/2 ≠ 0 ✓, cos(5π/6) = -√3/2 ≠ 0 ✓"
+      },
+      "step_6_count": {
+        "valid_solutions": "{π/6, 5π/6}",
+        "total": "2"
+      },
+      "step_7_match_option": {
+        "matching_option": "D"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "D. 2",
+      "verification": "At x=π/6: tan(π/6)+sec(π/6) = 1/√3+2/√3 = 3/√3 = √3; 2cos(π/6) = √3 ✓. At x=5π/6: tan+sec = -1/√3-2/√3 = -√3; 2cos(5π/6) = -√3 ✓. Only 2 valid solutions."
+    }
+  }
+}

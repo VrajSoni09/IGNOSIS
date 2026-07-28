@@ -1,0 +1,75 @@
+{
+  "filename_suggestion": "m_calculus_implicit_log_differentiation_expression_q079.json",
+  "input": "For x > 1, if (2x)^(2y) = 4e^(2x-2y), then (1 + log 2x)² · dy/dx is equal to\n\nOptions:\nA. (x log 2x + log 2)/x\nB. (x log 2x - log 2)/x\nC. x log 2x\nD. log 2x",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Given the implicit relation (2x)^(2y) = 4e^(2x-2y) for x > 1, take the logarithm to express y explicitly, differentiate with respect to x, and find the value of (1 + log 2x)² · dy/dx.",
+      "given_information": {
+        "equation": "(2x)^(2y) = 4e^(2x-2y)",
+        "domain": "x > 1",
+        "to_find": "(1 + log 2x)² · dy/dx"
+      },
+      "key_observation": "Taking log on both sides linearises the exponents. After simplification, y can be expressed as y = (x + log 2)/(1 + log 2x), and then standard quotient rule gives dy/dx."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Logarithm of a power: log(A^n) = n log A",
+        "log 4 = 2 log 2",
+        "Quotient rule for differentiation",
+        "d/dx(log 2x) = 1/x"
+      ],
+      "key_formulas": {
+        "log_power": "log(A^n) = n log A",
+        "quotient_rule": "d/dx(u/v) = (v·u' - u·v') / v²",
+        "d_log_2x": "d/dx(log 2x) = 1/x"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Take logarithm of both sides, simplify to express y = (x + log 2)/(1 + log 2x), then differentiate using the quotient rule, and multiply both sides by (1 + log 2x)² to get the required expression.",
+      "logical_steps": [
+        "Step 1: Take log on both sides of (2x)^(2y) = 4e^(2x-2y)",
+        "Step 2: Expand and collect y terms",
+        "Step 3: Isolate y to get y = (x + log 2)/(1 + log 2x)",
+        "Step 4: Differentiate using quotient rule",
+        "Step 5: Multiply through by (1 + log 2x)² and simplify",
+        "Step 6: Match with options"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_take_log": {
+        "equation": "log[(2x)^(2y)] = log[4e^(2x-2y)]",
+        "expand_LHS": "2y log 2x",
+        "expand_RHS": "log 4 + (2x - 2y) = 2 log 2 + 2x - 2y"
+      },
+      "step_2_collect_y_terms": {
+        "equation": "2y log 2x = 2 log 2 + 2x - 2y",
+        "move_y": "2y log 2x + 2y = 2 log 2 + 2x",
+        "factor": "2y(1 + log 2x) = 2(x + log 2)",
+        "simplify": "y(1 + log 2x) = x + log 2"
+      },
+      "step_3_express_y": {
+        "y": "(x + log 2) / (1 + log 2x)"
+      },
+      "step_4_differentiate_quotient": {
+        "u": "x + log 2",
+        "v": "1 + log 2x",
+        "u_prime": "1",
+        "v_prime": "1/x",
+        "dy/dx": "[(1 + log 2x)(1) - (x + log 2)(1/x)] / (1 + log 2x)²"
+      },
+      "step_5_multiply_by_denominator_squared": {
+        "expression": "(1 + log 2x)² · dy/dx = (1 + log 2x) - (x + log 2)/x",
+        "expand": "= 1 + log 2x - 1 - log 2/x",
+        "simplify": "= log 2x - log 2/x",
+        "common_denominator": "= (x log 2x - log 2)/x"
+      },
+      "step_6_match_option": {
+        "matching_option": "B"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "B. (x log 2x - log 2)/x",
+      "verification": "y = (x+log2)/(1+log2x). By quotient rule, numerator of dy/dx = (1+log2x)·1 - (x+log2)·(1/x) = log2x - log2/x = (x log2x - log2)/x. Multiplying by (1+log2x)² gives the required expression ✓"
+    }
+  }
+}

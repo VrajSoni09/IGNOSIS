@@ -1,0 +1,58 @@
+{
+  "filename_suggestion": "m_calculus_evaporation_radius_model_q048.json",
+  "input": "A spherical raindrop evaporates at a rate proportional to its surface area. If initially its radius is 3 mm and 1 hour later it reduces to 2 mm, then the expression for the radius R at any time t is\n\nOptions:\nA. 6R = t + 2\nB. R(t + 2) = 6\nC. R = 6(t + 2)\nD. 6R = t",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Form and solve differential equation for radius based on given evaporation law and data points.",
+      "given_information": {
+        "law": "rate proportional to surface area",
+        "R_0": "R(0)=3",
+        "R_1": "R(1)=2",
+        "to_find": "R(t)"
+      },
+      "key_observation": "Using the provided solution pattern, model as dR/dt proportional to -R^2."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Separable differential equation",
+        "Initial condition fitting"
+      ],
+      "key_formulas": {
+        "model": "dR/dt = -kR^2",
+        "integrated_form": "1/R = kt + C"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Solve dR/dt=-kR^2, apply R(0)=3 and R(1)=2, then write final expression.",
+      "logical_steps": [
+        "Step 1: Separate variables and integrate",
+        "Step 2: Use first condition to find C",
+        "Step 3: Use second condition to find k",
+        "Step 4: Express R(t) and match option"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_integrate": {
+        "equation": "dR/dt = -kR^2 => dR/R^2 = -k dt",
+        "result": "-1/R = -kt + C1 => 1/R = kt + C"
+      },
+      "step_2_apply_R0": {
+        "at_t0": "1/3 = C"
+      },
+      "step_3_apply_R1": {
+        "at_t1": "1/2 = k + 1/3 => k = 1/6"
+      },
+      "step_4_final_expression": {
+        "derive": "1/R = t/6 + 1/3 = (t+2)/6",
+        "final": "R(t+2)=6"
+      },
+      "step_5_match_option": {
+        "matching_option": "B"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "B. R(t + 2) = 6",
+      "verification": "This gives R(0)=3 and R(1)=2 exactly."
+    }
+  }
+}

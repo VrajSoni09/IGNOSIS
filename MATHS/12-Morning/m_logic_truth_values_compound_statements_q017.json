@@ -1,0 +1,62 @@
+{
+  "filename_suggestion": "m_logic_truth_values_compound_statements_q017.json",
+  "input": "If truth values of statements p, q are true, and r, s are false, then the truth values of the following statement patterns are respectively\n\na : ~(p ^ ~r) v (~q v s)\nb : (~q ^ ~r) <-> (p v s)\nc : (~p v q) -> (r ^ ~s)\n\nOptions:\nA. T, F, F\nB. F, F, F\nC. F, T, T\nD. T, F, T",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Evaluate three compound logical statements for p=T, q=T, r=F, s=F.",
+      "given_information": {
+        "p": "T",
+        "q": "T",
+        "r": "F",
+        "s": "F"
+      },
+      "key_observation": "Compute each statement directly using truth rules for negation, conjunction, disjunction, implication, and biconditional."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Negation",
+        "Conjunction and disjunction",
+        "Implication",
+        "Biconditional"
+      ],
+      "key_formulas": {
+        "implication_rule": "T -> F is F; otherwise T",
+        "biconditional_rule": "A <-> B is T when A and B have same truth value"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Substitute the truth values and simplify each expression one-by-one.",
+      "logical_steps": [
+        "Step 1: Evaluate a",
+        "Step 2: Evaluate b",
+        "Step 3: Evaluate c",
+        "Step 4: Compare resulting tuple with options"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_evaluate_a": {
+        "expression": "a = ~(p ^ ~r) v (~q v s)",
+        "substitute": "~(T ^ T) v (F v F)",
+        "simplify": "~T v F = F v F = F"
+      },
+      "step_2_evaluate_b": {
+        "expression": "b = (~q ^ ~r) <-> (p v s)",
+        "substitute": "(F ^ T) <-> (T v F)",
+        "simplify": "F <-> T = F"
+      },
+      "step_3_evaluate_c": {
+        "expression": "c = (~p v q) -> (r ^ ~s)",
+        "substitute": "(F v T) -> (F ^ T)",
+        "simplify": "T -> F = F"
+      },
+      "step_4_result_tuple": {
+        "result": "(F, F, F)",
+        "matching_option": "B"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "B. F, F, F",
+      "verification": "Each expression evaluates to false under the given assignments."
+    }
+  }
+}

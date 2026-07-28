@@ -1,0 +1,61 @@
+{
+  "filename_suggestion": "m_differential_equation_particular_curve_type_q030.json",
+  "input": "The particular solution of the differential equation (1 + y^2)dx - xy dy = 0 at x = 1, y = 0, represents\n\nOptions:\nA. circle\nB. pair of straight lines\nC. hyperbola\nD. ellipse",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Solve the differential equation with the given point and identify the resulting curve type.",
+      "given_information": {
+        "equation": "(1+y^2)dx - xy dy = 0",
+        "point": "(1,0)",
+        "to_find": "type of particular solution curve"
+      },
+      "key_observation": "The equation is separable after rearranging terms in x and y."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Separable differential equations",
+        "Logarithmic integration",
+        "Conic identification"
+      ],
+      "key_formulas": {
+        "separation": "dx/x = y dy/(1+y^2)",
+        "integrals": "integral dx/x = ln|x|, integral y/(1+y^2)dy = (1/2)ln(1+y^2)"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Separate variables, integrate, use (1,0) to find constant, then rewrite algebraically.",
+      "logical_steps": [
+        "Step 1: Rearrange to separated form",
+        "Step 2: Integrate both sides",
+        "Step 3: Apply initial condition",
+        "Step 4: Convert to algebraic curve",
+        "Step 5: Identify conic type"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_separate_variables": {
+        "from_equation": "(1+y^2)dx = xy dy",
+        "separated": "dx/x = y dy/(1+y^2)"
+      },
+      "step_2_integrate": {
+        "result": "ln|x| = (1/2)ln(1+y^2) + c"
+      },
+      "step_3_apply_condition": {
+        "at_1_0": "0 = (1/2)ln(1) + c => c=0"
+      },
+      "step_4_algebraic_form": {
+        "equation": "ln|x| = (1/2)ln(1+y^2)",
+        "exponentiate": "x^2 = 1 + y^2",
+        "standard_form": "x^2 - y^2 = 1"
+      },
+      "step_5_identify_curve": {
+        "type": "rectangular hyperbola",
+        "matching_option": "C"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "C. hyperbola",
+      "verification": "Particular solution simplifies to x^2 - y^2 = 1, which is a hyperbola."
+    }
+  }
+}

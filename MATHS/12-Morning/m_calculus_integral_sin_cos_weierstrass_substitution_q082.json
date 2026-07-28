@@ -1,0 +1,74 @@
+{
+  "filename_suggestion": "m_calculus_integral_sin_cos_weierstrass_substitution_q082.json",
+  "input": "∫ dx/(sin x + cos x) =\n\nOptions:\nA. √2 log(x + π/4) + c, where c is a constant of integration.\nB. (1/√2) log(tan(x/2 + π/8)) + c, where c is a constant of integration.\nC. (1/√2) log((tan(x/2) - √2+1)/(tan(x/2) + √2+1)) + c, where c is a constant of integration.\nD. -(1/√2) log((tan(x/2) - (√2+1))/(tan(x/2) + √2-1)) + c, where c is a constant of integration.",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Evaluate ∫ dx/(sin x + cos x) using the Weierstrass half-angle substitution t = tan(x/2).",
+      "given_information": {
+        "integral": "∫ dx/(sin x + cos x)",
+        "to_find": "Antiderivative in closed form"
+      },
+      "key_observation": "Use the universal substitution t = tan(x/2): sin x = 2t/(1+t²), cos x = (1-t²)/(1+t²), dx = 2dt/(1+t²). This converts the integral to a rational function of t, which can be handled as a difference of squares."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Weierstrass half-angle substitution t = tan(x/2)",
+        "Rational integration of 1/(a² - u²) using partial fractions",
+        "Completing the square / factoring t² - 2t - 1"
+      ],
+      "key_formulas": {
+        "sin_x": "2t/(1+t²)",
+        "cos_x": "(1-t²)/(1+t²)",
+        "dx": "2/(1+t²) dt",
+        "standard_log_integral": "∫1/(u²-a²) du = (1/2a)log|(u-a)/(u+a)| + c"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Substitute t = tan(x/2), simplify sin x + cos x in terms of t, reduce to ∫ 2/(2t+1-t²) dt, rewrite as ∫ -2/(t²-2t-1) dt, complete the square in the denominator, and apply the standard formula.",
+      "logical_steps": [
+        "Step 1: Substitute t = tan(x/2), express sin x, cos x, dx",
+        "Step 2: Write sin x + cos x in terms of t",
+        "Step 3: Simplify the integral to ∫ 2/(2t+1-t²) dt",
+        "Step 4: Rewrite as -2∫ 1/(t²-2t-1) dt",
+        "Step 5: Complete the square: t²-2t-1 = (t-1)² - (√2)²",
+        "Step 6: Apply the log formula and substitute back t = tan(x/2)"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_substitute": {
+        "t": "tan(x/2)",
+        "sin_x": "2t/(1+t²)",
+        "cos_x": "(1-t²)/(1+t²)",
+        "dx": "2/(1+t²) dt"
+      },
+      "step_2_simplify_denominator": {
+        "sin_x_plus_cos_x": "(2t + 1 - t²)/(1+t²)"
+      },
+      "step_3_form_integral": {
+        "I": "∫ [1/((2t+1-t²)/(1+t²))] × (2/(1+t²)) dt",
+        "simplify": "= ∫ 2/(2t + 1 - t²) dt = -2∫ 1/(t²-2t-1) dt"
+      },
+      "step_4_complete_the_square": {
+        "t²-2t-1": "(t-1)² - 1 - 1 = (t-1)² - (√2)²",
+        "integral": "-2∫ 1/((t-1)² - (√2)²) dt"
+      },
+      "step_5_apply_log_formula": {
+        "formula": "∫ 1/(u²-a²) du = (1/2a)log|(u-a)/(u+a)| + c  with u=t-1, a=√2",
+        "result": "-2 × (1/(2√2)) log|(t-1-√2)/(t-1+√2)| + c",
+        "simplify": "-(1/√2) log|(t-(1+√2))/(t-(1-√2))| + c",
+        "rewrite_denominator": "t - (1-√2) = t + (√2-1)"
+      },
+      "step_6_substitute_back": {
+        "t": "tan(x/2)",
+        "result": "-(1/√2) log|(tan(x/2) - (√2+1))/(tan(x/2) + √2-1)| + c"
+      },
+      "step_7_match_option": {
+        "matching_option": "D"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "D. -(1/√2) log((tan(x/2) - (√2+1))/(tan(x/2) + √2-1)) + c",
+      "verification": "The Weierstrass substitution correctly reduces the integral to -(1/√2)∫1/((t-1)²-(√2)²)·2, applying the log formula and reverting t = tan(x/2) yields option D ✓"
+    }
+  }
+}

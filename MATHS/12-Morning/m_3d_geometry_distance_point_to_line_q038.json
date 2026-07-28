@@ -1,0 +1,59 @@
+{
+  "filename_suggestion": "m_3d_geometry_distance_point_to_line_q038.json",
+  "input": "The distance of the point having position vector i - 2j - 6k from the straight line passing through the point (2,-3,-4) and parallel to the vector 6i + 3j - 4k is\n\nOptions:\nA. sqrt(340/61)\nB. 341/61\nC. sqrt(341)/61\nD. sqrt(341/61)",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Compute shortest distance between a point and a line in 3D.",
+      "given_information": {
+        "point_P": "(1,-2,-6)",
+        "point_on_line_A": "(2,-3,-4)",
+        "direction_vector_b": "(6,3,-4)",
+        "to_find": "distance from P to line"
+      },
+      "key_observation": "Use distance formula based on cross product magnitude."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Vector form of line",
+        "Cross product",
+        "Point-line distance in 3D"
+      ],
+      "key_formulas": {
+        "distance": "d = |(P-A) x b| / |b|"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Form vectors P-A and b, compute cross product norm and divide by |b|.",
+      "logical_steps": [
+        "Step 1: Compute P-A",
+        "Step 2: Compute (P-A) x b",
+        "Step 3: Compute magnitudes",
+        "Step 4: Evaluate distance",
+        "Step 5: Match option"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_vectors": {
+        "P_minus_A": "(-1,1,-2)",
+        "b": "(6,3,-4)"
+      },
+      "step_2_cross_product": {
+        "cross": "(-1,1,-2) x (6,3,-4) = (2,-16,-9)"
+      },
+      "step_3_magnitudes": {
+        "cross_norm_sq": "2^2 + (-16)^2 + (-9)^2 = 341",
+        "b_norm_sq": "6^2 + 3^2 + (-4)^2 = 61"
+      },
+      "step_4_distance": {
+        "result": "d = sqrt(341)/sqrt(61) = sqrt(341/61)"
+      },
+      "step_5_match_option": {
+        "matching_option": "D"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "D. sqrt(341/61)",
+      "verification": "Cross-product distance formula gives exactly sqrt(341/61)."
+    }
+  }
+}

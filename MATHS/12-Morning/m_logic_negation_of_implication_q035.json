@@ -1,0 +1,51 @@
+{
+  "filename_suggestion": "m_logic_negation_of_implication_q035.json",
+  "input": "The negation of the statement (p ^ q) -> (~p v r) is\n\nOptions:\nA. p v q v ~r\nB. p ^ q ^ ~r\nC. ~p v q ^ r\nD. ~p v ~q v ~r",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Find the logical negation of an implication involving conjunction and disjunction.",
+      "given_information": {
+        "statement": "(p ^ q) -> (~p v r)",
+        "to_find": "negation"
+      },
+      "key_observation": "Negation of A->B is A ^ ~B."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Implication equivalence",
+        "De Morgan laws"
+      ],
+      "key_formulas": {
+        "negation_implication": "~(A->B)=A^~B",
+        "demorgan": "~(X v Y)=~X ^ ~Y"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Apply negation of implication, then simplify the negated disjunction.",
+      "logical_steps": [
+        "Step 1: Let A=(p^q), B=(~p v r)",
+        "Step 2: Write ~(A->B)=A^~B",
+        "Step 3: Apply De Morgan to ~(~p v r)",
+        "Step 4: Simplify and match option"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_apply_rule": {
+        "expression": "~[(p^q)->(~p v r)] = (p^q) ^ ~(~p v r)"
+      },
+      "step_2_demorgan": {
+        "simplify": "~(~p v r) = p ^ ~r"
+      },
+      "step_3_combine": {
+        "result": "(p^q)^(p^~r) = p^q^~r"
+      },
+      "step_4_match_option": {
+        "matching_option": "B"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "B. p ^ q ^ ~r",
+      "verification": "Using ~ (A->B)=A^~B and De Morgan gives p^q^~r exactly."
+    }
+  }
+}

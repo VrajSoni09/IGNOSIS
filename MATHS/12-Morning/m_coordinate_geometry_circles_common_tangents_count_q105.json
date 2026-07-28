@@ -1,0 +1,68 @@
+{
+  "filename_suggestion": "m_coordinate_geometry_circles_common_tangents_count_q105.json",
+  "input": "Number of common tangents to the circles x² + y² - 6x - 14y + 48 = 0 and x² + y² - 6x = 0 are\n\nOptions:\nA. 0\nB. 1\nC. 4\nD. 2",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Find the centres and radii of both circles, compute the distance between centres, and use it to determine the relative position (disjoint, touching, or overlapping) to count the number of common tangents.",
+      "given_information": {
+        "circle_1": "x² + y² - 6x - 14y + 48 = 0",
+        "circle_2": "x² + y² - 6x = 0",
+        "to_find": "Number of common tangents"
+      },
+      "key_observation": "If d > r₁ + r₂, circles are externally disjoint → 4 common tangents. Compare d with r₁+r₂, |r₁-r₂|."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Standard form: (x-a)²+(y-b)²=r²",
+        "Completing the square to find centre and radius",
+        "Common tangents: 4 if d>r₁+r₂ (external), 3 if d=r₁+r₂, 2 if |r₁-r₂|<d<r₁+r₂, 1 if d=|r₁-r₂|, 0 if d<|r₁-r₂|"
+      ],
+      "key_formulas": {
+        "centre_radius": "(g,f), r=√(g²+f²-c)  for x²+y²+2gx+2fy+c=0"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Convert each circle equation to centre-radius form, compute the distance between centres, compare with r₁+r₂ and |r₁-r₂|.",
+      "logical_steps": [
+        "Step 1: Find C₁ and r₁ from circle 1",
+        "Step 2: Find C₂ and r₂ from circle 2",
+        "Step 3: Compute d = |C₁C₂|",
+        "Step 4: Compare d with r₁+r₂ and |r₁-r₂|",
+        "Step 5: Determine number of common tangents"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_circle_1": {
+        "equation": "x²+y²-6x-14y+48=0",
+        "centre": "C₁ = (3, 7)",
+        "r₁²": "9 + 49 - 48 = 10",
+        "r₁": "√10"
+      },
+      "step_2_circle_2": {
+        "equation": "x²+y²-6x=0",
+        "centre": "C₂ = (3, 0)",
+        "r₂²": "9 + 0 - 0 = 9",
+        "r₂": "3"
+      },
+      "step_3_distance": {
+        "d": "√((3-3)²+(7-0)²) = √(0+49) = 7"
+      },
+      "step_4_compare": {
+        "r₁+r₂": "√10 + 3 ≈ 3.16 + 3 = 6.16",
+        "d_vs_r1_plus_r2": "7 > 6.16  →  d > r₁+r₂",
+        "conclusion": "Circles are externally disjoint"
+      },
+      "step_5_tangent_count": {
+        "rule": "d > r₁+r₂ → 4 common tangents",
+        "answer": "4"
+      },
+      "step_6_match_option": {
+        "matching_option": "C"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "C. 4",
+      "verification": "d=7, r₁+r₂=√10+3≈6.16. Since 7>6.16, circles are external to each other. Two direct and two transverse common tangents exist → total 4 ✓"
+    }
+  }
+}

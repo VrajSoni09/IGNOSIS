@@ -1,0 +1,82 @@
+{
+  "filename_suggestion": "m_calculus_integration_partial_decomposition_find_A_q072.json",
+  "input": "If ∫√((x-7)/(x-9)) dx = A√(x²-16x+63) + log|(x-8) + √(x²-16x+63)| + c, (where c is a constant of integration) then A is\n\nOptions:\nA. -1\nB. 1/2\nC. 1\nD. -1/2",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Evaluate the given integral by algebraic manipulation and identify the constant A by comparing with the given result.",
+      "given_information": {
+        "integral": "∫√((x-7)/(x-9)) dx",
+        "result_form": "A√(x²-16x+63) + log|(x-8) + √(x²-16x+63)| + c",
+        "to_find": "Value of A"
+      },
+      "key_observation": "Rationalise the integrand to get (x-7)/√(x²-16x+63), then express (x-7) as a linear combination of the derivative of (x²-16x+63) and a constant to split the integral into two standard forms."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Rationalisation of surds in integrals",
+        "Expressing numerator as A·f'(x) + B",
+        "Standard integral: ∫f'(x)/√f(x) dx = 2√f(x) + c",
+        "Standard integral: ∫1/√(x²-a²) dx = log|x + √(x²-a²)| + c"
+      ],
+      "key_formulas": {
+        "rationalise": "√((x-7)/(x-9)) = (x-7)/√((x-7)(x-9)) = (x-7)/√(x²-16x+63)",
+        "decompose": "(x-7) = A·d/dx(x²-16x+63) + B = A(2x-16) + B",
+        "integral_sqrt": "∫f'(x)/√f(x) dx = 2√f(x) + c",
+        "integral_1_over_sqrt": "∫1/√((x-8)²-1²) dx = log|(x-8)+√(x²-16x+63)| + c"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Rationalise the integrand, decompose the numerator (x-7) as A·(2x-16)+B, split into two integrals, evaluate each using standard formulas, then compare coefficients with the given answer.",
+      "logical_steps": [
+        "Step 1: Rationalise and simplify the integrand",
+        "Step 2: Express (x-7) = A(2x-16) + B",
+        "Step 3: Compare coefficients to find A and B",
+        "Step 4: Split the integral using A and B",
+        "Step 5: Evaluate both integrals using standard formulas",
+        "Step 6: Compare result with given form and read off A"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_rationalise": {
+        "integrand": "√((x-7)/(x-9))",
+        "multiply_by_√(x-7)/√(x-7)": "= (x-7)/√((x-9)(x-7)) = (x-7)/√(x²-16x+63)"
+      },
+      "step_2_decompose_numerator": {
+        "let": "(x-7) = A·(d/dx)(x²-16x+63) + B = A(2x-16) + B",
+        "expand": "x - 7 = 2Ax - 16A + B"
+      },
+      "step_3_compare_coefficients": {
+        "coefficient_of_x": "2A = 1  →  A = 1/2",
+        "constant_term": "-16A + B = -7  →  -8 + B = -7  →  B = 1"
+      },
+      "step_4_split_integral": {
+        "I": "∫(x-7)/√(x²-16x+63) dx",
+        "split": "= (1/2)∫(2x-16)/√(x²-16x+63) dx + ∫1/√(x²-16x+63) dx",
+        "denote": "= I₁ + I₂"
+      },
+      "step_5a_evaluate_I1": {
+        "I₁": "(1/2)∫(2x-16)/√(x²-16x+63) dx",
+        "standard_form": "∫f'(x)/√f(x) dx = 2√f(x)",
+        "result": "I₁ = (1/2) × 2√(x²-16x+63) = √(x²-16x+63)"
+      },
+      "step_5b_evaluate_I2": {
+        "I₂": "∫1/√(x²-16x+63) dx",
+        "complete_square": "x²-16x+63 = (x-8)²-1",
+        "standard_form": "∫1/√((x-8)²-1²) dx = log|(x-8)+√(x²-16x+63)| + c",
+        "result": "I₂ = log|(x-8) + √(x²-16x+63)| + c"
+      },
+      "step_6_combine_and_compare": {
+        "total": "I = √(x²-16x+63) + log|(x-8)+√(x²-16x+63)| + c",
+        "given_form": "A√(x²-16x+63) + log|(x-8)+√(x²-16x+63)| + c",
+        "compare": "A = 1"
+      },
+      "step_7_match_option": {
+        "matching_option": "C"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "C. 1",
+      "verification": "With A = 1/2 and B = 1 in the decomposition, I₁ gives coefficient 1 for √(x²-16x+63) after the (1/2)×2 cancellation. Combined result matches the given form with A = 1 ✓"
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "filename_suggestion": "m_probability_binomial_variance_condition_q002.json",
+  "input": "In a Binomial distribution with n = 4, if 2P(X = 3) = 3P(X = 2), then the variance is\n\nOptions:\nA. 36/169\nB. 144/169\nC. 9/169\nD. 16/169",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "For X ~ Binomial(n = 4, p), use the given probability relation to find p, then compute variance.",
+      "given_information": {
+        "distribution": "X ~ Binomial(4, p)",
+        "condition": "2P(X = 3) = 3P(X = 2)",
+        "to_find": "Variance = np(1-p)"
+      },
+      "key_observation": "Expand P(X = 3) and P(X = 2) using binomial formula and solve for p."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Binomial probability mass function",
+        "Combination values",
+        "Algebraic simplification",
+        "Variance of binomial distribution"
+      ],
+      "key_formulas": {
+        "binomial_pmf": "P(X = r) = nCr * p^r * (1-p)^(n-r)",
+        "variance": "Var(X) = np(1-p)",
+        "nCr_values": "4C3 = 4, 4C2 = 6"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Write both probabilities, apply the given relation, solve for p, and substitute in variance formula.",
+      "logical_steps": [
+        "Step 1: Write P(X = 3) and P(X = 2)",
+        "Step 2: Use 2P(X = 3) = 3P(X = 2)",
+        "Step 3: Simplify and solve for p",
+        "Step 4: Compute Var(X) = 4p(1-p)",
+        "Step 5: Match with options"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_write_probabilities": {
+        "P_X_3": "P(X=3) = 4C3 * p^3 * (1-p) = 4p^3(1-p)",
+        "P_X_2": "P(X=2) = 4C2 * p^2 * (1-p)^2 = 6p^2(1-p)^2"
+      },
+      "step_2_apply_condition": {
+        "given": "2P(X=3) = 3P(X=2)",
+        "substitute": "2[4p^3(1-p)] = 3[6p^2(1-p)^2]",
+        "simplified": "8p^3(1-p) = 18p^2(1-p)^2"
+      },
+      "step_3_solve_for_p": {
+        "cancel_common_factors": "For 0<p<1, divide by p^2(1-p): 8p = 18(1-p)",
+        "linear_equation": "8p = 18 - 18p",
+        "result": "26p = 18 => p = 9/13"
+      },
+      "step_4_compute_variance": {
+        "formula": "Var(X) = np(1-p) = 4 * (9/13) * (4/13)",
+        "result": "Var(X) = 144/169"
+      },
+      "step_5_match_option": {
+        "matching_option": "B"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "B. 144/169",
+      "verification": "Using p = 9/13 gives P(X=3)/P(X=2) = [4p^3(1-p)]/[6p^2(1-p)^2] = (2/3)*p/(1-p) = (2/3)*(9/4) = 3/2, so 2P(X=3)=3P(X=2) is satisfied."
+    }
+  }
+}

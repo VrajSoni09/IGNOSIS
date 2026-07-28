@@ -1,0 +1,54 @@
+{
+  "filename_suggestion": "m_coordinate_geometry_pair_of_lines_parameter_count_q055.json",
+  "input": "The number of integral values of p in the domain [-5, 5], such that the equation 2x^2 + 4xy - py^2 + 4x + qy + 1 = 0 represents pair of lines, are\n\nOptions:\nA. 3\nB. 4\nC. 7\nD. 8",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Count integer p values in [-5,5] satisfying the pair-of-lines condition used in the provided solution.",
+      "given_information": {
+        "equation": "2x^2 + 4xy - py^2 + 4x + qy + 1 = 0",
+        "p_domain": "[-5,5] integers",
+        "to_find": "number of valid p"
+      },
+      "key_observation": "Using the shown criterion from the source solution: h^2 >= ab with a=2, h=2, b=-p."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "General second-degree form",
+        "Coefficient comparison",
+        "Inequality-based parameter counting"
+      ],
+      "key_formulas": {
+        "identified_coefficients": "a=2, h=2, b=-p",
+        "used_condition": "h^2 >= ab"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Apply the same condition as in the provided solution and count integers in range.",
+      "logical_steps": [
+        "Step 1: Substitute coefficients into inequality",
+        "Step 2: Solve for p",
+        "Step 3: Count integers in [-5,5] satisfying inequality",
+        "Step 4: Match option"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_apply_condition": {
+        "inequality": "h^2 >= ab => 4 >= 2(-p)"
+      },
+      "step_2_solve": {
+        "result": "4 >= -2p => p >= -2"
+      },
+      "step_3_count_values": {
+        "integers": "-2, -1, 0, 1, 2, 3, 4, 5",
+        "count": 8
+      },
+      "step_4_match_option": {
+        "matching_option": "D"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "D. 8",
+      "verification": "Exactly eight integers in [-5,5] satisfy p >= -2."
+    }
+  }
+}

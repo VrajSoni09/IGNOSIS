@@ -1,0 +1,71 @@
+{
+  "filename_suggestion": "m_vectors_coplanar_vector_projection_condition_q088.json",
+  "input": "If ā = î + 2ĵ + k̂, b̄ = î - ĵ + k̂, c̄ = î + ĵ - k̂, then a vector in the plane of ā and b̄, whose projection on c̄ is 1/√3, is\n\nOptions:\nA. î + ĵ - 2k̂\nB. 3î + ĵ - 3k̂\nC. 4î - ĵ + 4k̂\nD. 2î + 3ĵ - k̂",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Find the vector r̄ lying in the plane of ā and b̄ (i.e., r̄ = ā + mb̄) such that its scalar projection on c̄ equals 1/√3.",
+      "given_information": {
+        "ā": "î + 2ĵ + k̂",
+        "b̄": "î - ĵ + k̂",
+        "c̄": "î + ĵ - k̂",
+        "projection_condition": "projection of r̄ on c̄ = 1/√3",
+        "to_find": "r̄ = ā + mb̄ for some scalar m"
+      },
+      "key_observation": "Any vector in the plane of ā and b̄ can be written as r̄ = ā + mb̄. The scalar projection on c̄ is (r̄·c̄)/|c̄|. Setting this equal to ±1/√3 gives a linear equation in m."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Linear combination of two vectors in their plane",
+        "Scalar projection formula: proj = (r̄·c̄)/|c̄|",
+        "Dot product computation"
+      ],
+      "key_formulas": {
+        "coplanar_vector": "r̄ = ā + mb̄",
+        "projection": "(r̄·c̄)/|c̄| = ±1/√3",
+        "|c̄|": "√(1+1+1) = √3"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Write r̄ = ā + mb̄ in component form, compute r̄·c̄, set (r̄·c̄)/√3 = ±1/√3, solve for m, find r̄ and match with options.",
+      "logical_steps": [
+        "Step 1: Express r̄ = ā + mb̄ in components",
+        "Step 2: Compute r̄·c̄",
+        "Step 3: Set r̄·c̄/|c̄| = ±1/√3 and solve for m",
+        "Step 4: Substitute each value of m to find r̄",
+        "Step 5: Match with given options"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_express_r": {
+        "r̄": "ā + mb̄ = (î+2ĵ+k̂) + m(î-ĵ+k̂)",
+        "components": "= (1+m)î + (2-m)ĵ + (1+m)k̂"
+      },
+      "step_2_dot_product_with_c": {
+        "c̄": "(1, 1, -1)",
+        "r̄·c̄": "(1+m)(1) + (2-m)(1) + (1+m)(-1)",
+        "expand": "= 1+m + 2-m - 1-m",
+        "simplify": "= 2 - m"
+      },
+      "step_3_apply_projection_condition": {
+        "|c̄|": "√3",
+        "projection": "(2-m)/√3 = ±1/√3",
+        "equation": "2 - m = ±1"
+      },
+      "step_4_solve_for_m": {
+        "case1": "2 - m = 1  →  m = 1",
+        "case2": "2 - m = -1  →  m = 3"
+      },
+      "step_5_find_vectors": {
+        "for_m_1": "r̄ = (2)î + (1)ĵ + (2)k̂ = 2î + ĵ + 2k̂  (not in options)",
+        "for_m_3": "r̄ = (4)î + (-1)ĵ + (4)k̂ = 4î - ĵ + 4k̂  ← matches option C"
+      },
+      "step_6_match_option": {
+        "matching_option": "C"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "C. 4î - ĵ + 4k̂",
+      "verification": "r̄ = 4î-ĵ+4k̂. r̄·c̄ = 4(1)+(-1)(1)+4(-1) = 4-1-4 = -1. Projection = -1/√3, |projection| = 1/√3 ✓. Also r̄ = ā+3b̄: (1+3)=4, (2-3)=-1, (1+3)=4 ✓"
+    }
+  }
+}

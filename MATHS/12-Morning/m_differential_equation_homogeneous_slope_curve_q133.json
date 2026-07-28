@@ -1,0 +1,74 @@
+{
+  "filename_suggestion": "m_differential_equation_homogeneous_slope_curve_q133.json",
+  "input": "A curve passes through the point (1, π/6). Let the slope of the curve at each point (x, y) be y/x + sec(y/x), x > 0, then, the equation of the curve is\n\nOptions:\nA. sin(y/x) = log(x) + 1/2\nB. cosec(y/x) = log(x) + 2\nC. sec(2y/x) = log(x) + 2\nD. cos(2y/x) = log(x) + 1/2",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Solve the homogeneous differential equation dy/dx = y/x + sec(y/x) passing through (1, π/6).",
+      "given_information": {
+        "de": "dy/dx = y/x + sec(y/x)",
+        "initial_condition": "Passes through (x=1, y=π/6)",
+        "to_find": "Equation of the curve"
+      },
+      "key_observation": "This is a homogeneous DE in y/x. Substitute y = vx, then dy/dx = v + x(dv/dx). The v terms cancel, leading to a simple separable DE."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Homogeneous differential equation substitution: y = vx",
+        "Derivative: dy/dx = v + x dv/dx",
+        "Separation of variables: cos v dv = (1/x) dx",
+        "Integrating factor/standard integrals: ∫ cos v dv = sin v"
+      ],
+      "key_formulas": {
+        "substitution": "v + x dv/dx = v + sec v",
+        "separated": "1/sec v dv = 1/x dx  ⇒  cos v dv = (1/x) dx",
+        "general_solution": "sin v = log x + c  ⇒  sin(y/x) = log x + c"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Substitute y = vx, simplify to cos v dv = (1/x) dx, integrate to find sin(y/x) = log x + c, and use point (1, π/6) to find c.",
+      "logical_steps": [
+        "Step 1: Put y = vx ⇒ dy/dx = v + x dv/dx",
+        "Step 2: Equate v + x dv/dx = v + sec v",
+        "Step 3: Cancel v: x dv/dx = sec v ⇒ cos v dv = (1/x) dx",
+        "Step 4: Integrate: sin v = log x + c ⇒ sin(y/x) = log x + c",
+        "Step 5: Substitute (1, π/6): sin(π/6) = log 1 + c ⇒ 1/2 = 0 + c ⇒ c = 1/2",
+        "Step 6: Write solution sin(y/x) = log x + 1/2 and match option"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_substitution": {
+        "let": "y = vx",
+        "dy_dx": "v + x (dv/dx)"
+      },
+      "step_2_equate_and_cancel": {
+        "equation": "v + x (dv/dx) = v + sec v",
+        "cancel_v": "x (dv/dx) = sec v"
+      },
+      "step_3_separate_variables": {
+        "separated": "(1 / sec v) dv = (1 / x) dx",
+        "identity": "cos v dv = (1 / x) dx"
+      },
+      "step_4_integrate": {
+        "LHS": "∫ cos v dv = sin v",
+        "RHS": "∫ (1/x) dx = log x + c",
+        "implicit_solution": "sin(y/x) = log x + c"
+      },
+      "step_5_initial_condition": {
+        "x": "1",
+        "y": "π/6",
+        "substitute": "sin(π/6) = log 1 + c",
+        "value": "1/2 = 0 + c  ⇒  c = 1/2"
+      },
+      "step_6_final_curve": {
+        "equation": "sin(y/x) = log x + 1/2"
+      },
+      "step_7_match_option": {
+        "matching_option": "A"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "A. sin(y/x) = log(x) + 1/2",
+      "verification": "At x=1, y=π/6: sin(π/6) = 1/2, log(1) + 1/2 = 1/2 ✓. Differentiating sin(y/x) = log x + 1/2: cos(y/x)·(x dy/dx - y)/x² = 1/x ⇒ x dy/dx - y = x/cos(y/x) = x sec(y/x) ⇒ dy/dx = y/x + sec(y/x) ✓"
+    }
+  }
+}

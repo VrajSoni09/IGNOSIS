@@ -1,0 +1,73 @@
+{
+  "filename_suggestion": "m_trigonometry_triangle_double_side_angle_difference_q071.json",
+  "input": "If one side of a triangle is double the other and the angles opposite to these sides differ by 60°, then the triangle is\n\nOptions:\nA. obtuse angled\nB. right angled\nC. acute angled\nD. isosceles",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "In triangle ABC, one side is double another. The angles opposite to these sides differ by 60°. Determine the nature of the triangle.",
+      "given_information": {
+        "condition_1": "a = 2b  (one side is double the other)",
+        "condition_2": "A - B = 60°  (angles opposite these sides differ by 60°)",
+        "to_find": "Nature of the triangle (acute/right/obtuse/isosceles)"
+      },
+      "key_observation": "Use the sine rule to relate angles and sides. Set up A = 60° + B and use sin A/a = sin B/b with a = 2b to find angle B, then determine A."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Sine rule for triangles",
+        "Compound angle formula for sin",
+        "Sum of angles in a triangle"
+      ],
+      "key_formulas": {
+        "sine_rule": "sin A / a = sin B / b = sin C / c",
+        "compound_angle": "sin(60° + B) = sin 60° cos B + cos 60° sin B",
+        "values": "sin 60° = √3/2,  cos 60° = 1/2",
+        "tan_inverse": "tan B = 1/√3  ⟹  B = 30°"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Use sine rule with a = 2b and A = 60° + B, expand sin(60° + B), simplify to get tan B, find B, then A = B + 60°, and determine triangle type.",
+      "logical_steps": [
+        "Step 1: Set up a = 2b and A = 60° + B",
+        "Step 2: Apply sine rule: sin A / (2b) = sin B / b",
+        "Step 3: Simplify to get sin(60° + B) = 2 sin B",
+        "Step 4: Expand using compound angle formula",
+        "Step 5: Solve for tan B and find B",
+        "Step 6: Compute A and determine triangle type"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_setup": {
+        "given": "a = 2b  and  A - B = 60°",
+        "so": "A = 60° + B"
+      },
+      "step_2_apply_sine_rule": {
+        "sine_rule": "sin A / a = sin B / b",
+        "substitute": "sin(60° + B) / (2b) = sin B / b",
+        "simplify": "sin(60° + B) / 2 = sin B"
+      },
+      "step_3_rearrange": {
+        "equation": "sin(60° + B) = 2 sin B"
+      },
+      "step_4_expand_compound_angle": {
+        "expansion": "sin B · cos 60° + cos B · sin 60° = 2 sin B",
+        "substitute_values": "(1/2) sin B + (√3/2) cos B = 2 sin B"
+      },
+      "step_5_solve_for_tan_B": {
+        "rearrange": "(√3/2) cos B = 2 sin B - (1/2) sin B = (3/2) sin B",
+        "divide": "tan B = (√3/2) / (3/2) = √3/3 = 1/√3",
+        "result": "B = 30°"
+      },
+      "step_6_find_A_and_classify": {
+        "A": "A = 60° + B = 60° + 30° = 90°",
+        "conclusion": "Since A = 90°, the triangle is right angled"
+      },
+      "step_7_match_option": {
+        "matching_option": "B"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "B. right angled",
+      "verification": "With B = 30°, A = 90°, C = 60°. Sine rule: a/sin 90° = b/sin 30° → a/1 = b/(1/2) → a = 2b ✓. A - B = 90° - 30° = 60° ✓. Triangle has a right angle at A."
+    }
+  }
+}

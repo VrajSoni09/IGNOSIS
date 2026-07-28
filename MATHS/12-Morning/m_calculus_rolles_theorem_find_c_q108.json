@@ -1,0 +1,65 @@
+{
+  "filename_suggestion": "m_calculus_rolles_theorem_find_c_q108.json",
+  "input": "Value of c satisfying the conditions and conclusions of Rolle's theorem for the function f(x) = x√(x+6), x ∈ [-6, 0] is\n\nOptions:\nA. -4\nB. 4\nC. 3\nD. -3",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Find the value c ∈ (-6, 0) such that f'(c) = 0 for f(x) = x√(x+6) on [-6, 0].",
+      "given_information": {
+        "function": "f(x) = x√(x+6)",
+        "interval": "[-6, 0]",
+        "to_find": "c ∈ (-6, 0) satisfying f'(c) = 0"
+      },
+      "key_observation": "f(-6) = 0 and f(0) = 0, f is continuous on [-6,0] and differentiable on (-6,0). Rolle's theorem guarantees there exists c ∈ (-6,0) where f'(c) = 0."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Rolle's Theorem: If f continuous on [a,b], diff on (a,b), and f(a)=f(b), then ∃ c∈(a,b) s.t. f'(c)=0",
+        "Product rule for differentiation: (uv)' = u'v + uv'",
+        "Solving algebraic equations involving square roots"
+      ],
+      "key_formulas": {
+        "product_rule": "f'(x) = 1 · √(x+6) + x · 1/(2√(x+6))",
+        "simplified_derivative": "f'(x) = [2(x+6) + x] / [2√(x+6)] = (3x + 12) / [2√(x+6)]"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Differentiate f(x) using the product rule, set f'(c) = 0, and solve for c.",
+      "logical_steps": [
+        "Step 1: Compute f'(x) using product rule",
+        "Step 2: Simplify f'(x) to a single fraction",
+        "Step 3: Set f'(c) = 0",
+        "Step 4: Solve 3c + 12 = 0",
+        "Step 5: Verify c ∈ (-6, 0) and match option"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_differentiate": {
+        "f_x": "x √(x+6)",
+        "f_prime": "1 · √(x+6) + x · (1 / (2√(x+6)))"
+      },
+      "step_2_simplify": {
+        "common_denominator": "(2(x+6) + x) / (2√(x+6))",
+        "result": "(3x + 12) / (2√(x+6))"
+      },
+      "step_3_apply_rolles": {
+        "condition": "f'(c) = 0",
+        "equation": "(3c + 12) / (2√(c+6)) = 0"
+      },
+      "step_4_solve": {
+        "numerator_zero": "3c + 12 = 0",
+        "c_value": "3c = -12 ⇒ c = -4"
+      },
+      "step_5_check_interval": {
+        "c": "-4",
+        "in_interval": "-4 ∈ (-6, 0) ✓"
+      },
+      "step_6_match_option": {
+        "matching_option": "A"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "A. -4",
+      "verification": "f'(-4) = (3(-4)+12)/(2√2) = 0/2√2 = 0. -4 lies in (-6, 0), so c = -4 satisfies Rolle's theorem ✓"
+    }
+  }
+}

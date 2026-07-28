@@ -1,0 +1,71 @@
+{
+  "filename_suggestion": "m_calculus_related_rates_ladder_sliding_wall_q083.json",
+  "input": "A ladder of length 17 m rests with one end against a vertical wall and the other on the level ground. If the lower end slips away at the rate 1 m/sec, then when it is 8 m away from the wall, its upper end is coming down at the rate of\n\nOptions:\nA. 5/8 m/sec.\nB. 8/15 m/sec.\nC. -3/15 m/sec.\nD. 15/8 m/sec.",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "A 17 m ladder leans against a wall. The base slides away at 1 m/sec. Find the rate at which the top slides down when the base is 8 m from the wall.",
+      "given_information": {
+        "ladder_length": "AC = 17 m",
+        "dy/dt": "1 m/sec  (base moving away from wall)",
+        "y_at_instant": "BC = y = 8 m",
+        "to_find": "|dx/dt| when y = 8 m"
+      },
+      "key_observation": "Use Pythagoras: x² + y² = 17² = 289. Differentiate implicitly with respect to t to relate dx/dt and dy/dt. First find x when y = 8."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Pythagoras theorem for right-angled triangle",
+        "Implicit differentiation with respect to time",
+        "Related rates"
+      ],
+      "key_formulas": {
+        "pythagoras": "x² + y² = 17² = 289",
+        "related_rates": "2x·(dx/dt) + 2y·(dy/dt) = 0",
+        "solve_x": "x = √(289 - y²)"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Use x² + y² = 289, find x when y = 8, then differentiate implicitly to find dx/dt.",
+      "logical_steps": [
+        "Step 1: Set up the Pythagoras relation x² + y² = 289",
+        "Step 2: Find x when y = 8",
+        "Step 3: Differentiate x² + y² = 289 with respect to t",
+        "Step 4: Substitute x = 15, y = 8, dy/dt = 1 and solve for dx/dt",
+        "Step 5: Interpret the sign and match option"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_pythagoras": {
+        "relation": "AB² + BC² = AC²",
+        "equation": "x² + y² = 17² = 289"
+      },
+      "step_2_find_x_when_y_8": {
+        "y": "8 m",
+        "x²": "289 - 64 = 225",
+        "x": "√225 = 15 m"
+      },
+      "step_3_differentiate_wrt_t": {
+        "derivative": "2x·(dx/dt) + 2y·(dy/dt) = 0",
+        "simplify": "x·(dx/dt) = -y·(dy/dt)"
+      },
+      "step_4_substitute": {
+        "x": "15",
+        "y": "8",
+        "dy/dt": "1 m/sec",
+        "equation": "15·(dx/dt) = -8·1 = -8",
+        "result": "dx/dt = -8/15 m/sec"
+      },
+      "step_5_interpret": {
+        "negative_sign": "The negative sign indicates x is decreasing, i.e., the upper end is coming down",
+        "rate_of_descent": "|dx/dt| = 8/15 m/sec"
+      },
+      "step_6_match_option": {
+        "matching_option": "B"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "B. 8/15 m/sec.",
+      "verification": "x = 15, y = 8: x² + y² = 225 + 64 = 289 = 17² ✓. From 15(dx/dt) = -8(1): dx/dt = -8/15 m/sec, so the top descends at 8/15 m/sec ✓"
+    }
+  }
+}

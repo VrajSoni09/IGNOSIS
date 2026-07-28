@@ -1,0 +1,62 @@
+{
+  "filename_suggestion": "m_logic_statement_equivalence_conditional_demorgan_q143.json",
+  "input": "The statement pattern p → ~ (p ∧ ~ q) is equivalent to\n\nOptions:\nA. q\nB. (~ p) ∨ q\nC. (~ p) ∧ q\nD. (~ p) ∨ (~ q)",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Simplify the logical statement pattern p → ~(p ∧ ~q) using logical equivalence rules.",
+      "given_information": {
+        "statement": "p → ~(p ∧ ~q)",
+        "to_find": "Equivalent statement pattern"
+      },
+      "key_observation": "Use conditional law p → r ≡ ~p ∨ r, then De Morgan's laws and absorption/idempotent laws to simplify."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Conditional law: p → r ≡ ~p ∨ r",
+        "De Morgan's law: ~(A ∧ B) ≡ ~A ∨ ~B",
+        "Double negation: ~~q ≡ q",
+        "Associative & Idempotent laws: ~p ∨ ~p ≡ ~p"
+      ],
+      "key_formulas": {
+        "conditional": "p → ~(p ∧ ~q) ≡ ~p ∨ ~(p ∧ ~q)",
+        "demorgan": "~(p ∧ ~q) ≡ ~p ∨ ~~q ≡ ~p ∨ q",
+        "simplify": "~p ∨ (~p ∨ q) ≡ (~p ∨ ~p) ∨ q ≡ ~p ∨ q"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Apply conditional law, then De Morgan's law, and simplify using associative and idempotent laws.",
+      "logical_steps": [
+        "Step 1: Rewrite p → ~(p ∧ ~q) as ~p ∨ ~(p ∧ ~q) using conditional law",
+        "Step 2: Apply De Morgan's law to ~(p ∧ ~q) to get ~p ∨ q",
+        "Step 3: Combine: ~p ∨ (~p ∨ q)",
+        "Step 4: Use associative law: (~p ∨ ~p) ∨ q",
+        "Step 5: Use idempotent law: ~p ∨ q",
+        "Step 6: Match option B"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_conditional_law": {
+        "original": "p → ~(p ∧ ~q)",
+        "equivalent": "~p ∨ ~(p ∧ ~q)"
+      },
+      "step_2_demorgan_law": {
+        "expression": "~(p ∧ ~q)",
+        "demorgan": "~p ∨ ~~q = ~p ∨ q"
+      },
+      "step_3_combine": {
+        "combined": "~p ∨ (~p ∨ q)"
+      },
+      "step_4_associative_and_idempotent": {
+        "associative": "(~p ∨ ~p) ∨ q",
+        "idempotent": "~p ∨ q"
+      },
+      "step_5_match_option": {
+        "matching_option": "B"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "B. (~ p) ∨ q",
+      "verification": "p → ~(p ∧ ~q) ≡ p → (~p ∨ q) ≡ ~p ∨ (~p ∨ q) ≡ ~p ∨ q. Equivalent to (~p) ∨ q ✓"
+    }
+  }
+}

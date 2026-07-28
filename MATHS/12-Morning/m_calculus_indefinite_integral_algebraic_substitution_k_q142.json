@@ -1,0 +1,69 @@
+{
+  "filename_suggestion": "m_calculus_indefinite_integral_algebraic_substitution_k_q142.json",
+  "input": "If ∫ dx/(x √(1-x³)) = k log( (√(1-x³) - 1) / (√(1-x³) + 1) ) + c, (where c is a constant of integration), then value of k is\n\nOptions:\nA. 2/3\nB. -2/3\nC. 1/3\nD. -1/3",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Evaluate the indefinite integral ∫ dx/(x √(1-x³)) to find the constant coefficient k in the log expression.",
+      "given_information": {
+        "integral": "I = ∫ dx/(x √(1-x³))",
+        "result_form": "k log( (√(1-x³) - 1) / (√(1-x³) + 1) ) + c",
+        "to_find": "k"
+      },
+      "key_observation": "Multiply numerator and denominator by x² to get ∫ x² dx / (x³ √(1-x³)). Substitute 1 - x³ = t² so that -3x² dx = 2t dt."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Algebraic substitution: 1 - x³ = t²",
+        "Derivative: -3x² dx = 2t dt ⇒ x² dx = -2t dt / 3",
+        "Standard log integral formula: ∫ dt / (t² - 1) = (1/2) log |(t - 1) / (t + 1)| + c"
+      ],
+      "key_formulas": {
+        "substitution": "1 - x³ = t²  ⇒  x³ = 1 - t², x² dx = (-2/3) t dt",
+        "integral_form": "∫ (-2/3 t dt) / ((1 - t²) t) = (2/3) ∫ dt / (t² - 1)",
+        "log_integration": "(2/3) · (1/2) log |(t - 1)/(t + 1)| + c = (1/3) log |(√(1-x³) - 1) / (√(1-x³) + 1)| + c"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Rewrite integrand as x²/(x³ √(1-x³)), substitute t = √(1-x³), evaluate the resulting standard integral, and compare coefficients to find k.",
+      "logical_steps": [
+        "Step 1: Multiply top and bottom by x²: I = ∫ x² dx / (x³ √(1-x³))",
+        "Step 2: Let 1 - x³ = t² ⇒ x³ = 1 - t² and x² dx = (-2/3) t dt",
+        "Step 3: Substitute: I = ∫ [(-2/3) t dt] / [(1 - t²) t] = (2/3) ∫ dt / (t² - 1)",
+        "Step 4: Integrate using formula (1/2) log |(t-1)/(t+1)|",
+        "Step 5: Multiply constants: (2/3) * (1/2) = 1/3",
+        "Step 6: Substitute back t = √(1-x³) and deduce k = 1/3, matching option C"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_rewrite_integral": {
+        "I": "∫ x² dx / (x³ √(1 - x³))"
+      },
+      "step_2_substitution": {
+        "let": "1 - x³ = t²",
+        "x_cubed": "x³ = 1 - t²",
+        "differential": "-3x² dx = 2t dt  ⇒  x² dx = (-2/3) t dt"
+      },
+      "step_3_substitute_into_integral": {
+        "I": "∫ [(-2/3) t dt] / [(1 - t²) t]",
+        "cancel_t": "∫ (-2/3) / (1 - t²) dt",
+        "rearrange_denominator": "= (2/3) ∫ 1 / (t² - 1) dt"
+      },
+      "step_4_standard_integration": {
+        "formula": "∫ 1 / (t² - 1) dt = (1/2) log |(t - 1) / (t + 1)|",
+        "apply": "I = (2/3) · (1/2) log |(t - 1) / (t + 1)| + c = (1/3) log |(t - 1) / (t + 1)| + c"
+      },
+      "step_5_substitute_back": {
+        "t": "√(1 - x³)",
+        "I": "(1/3) log |(√(1 - x³) - 1) / (√(1 - x³) + 1)| + c"
+      },
+      "step_6_find_k": {
+        "k_value": "k = 1/3",
+        "matching_option": "C"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "C. 1/3",
+      "verification": "After substitution 1-x³ = t², integral equals (2/3) ∫ dt/(t²-1) = (1/3) log|(t-1)/(t+1)| + c. Comparing with k log(...) gives k = 1/3 ✓"
+    }
+  }
+}

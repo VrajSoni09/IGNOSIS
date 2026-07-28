@@ -1,0 +1,63 @@
+{
+  "filename_suggestion": "m_complex_numbers_cube_root_algebraic_expression_q141.json",
+  "input": "If z = x + iy and z^(1/3) = p + iq, where x, y, p, q ∈ R and i = √-1, then value of (x/p + y/q) is\n\nOptions:\nA. p² - q²\nB. 4(p² - q²)\nC. p² + q²\nD. 4(p² + q²)",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Given z^(1/3) = p + iq for complex z = x + iy, find the value of (x/p + y/q) in terms of p and q.",
+      "given_information": {
+        "z": "x + iy",
+        "z_cube_root": "z^(1/3) = p + iq",
+        "to_find": "x/p + y/q"
+      },
+      "key_observation": "Cube both sides of z^(1/3) = p + iq to get z = (p + iq)³, expand using (a + b)³, equate real and imaginary parts to find x and y, then divide by p and q respectively."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Cubing complex numbers: (p + iq)³ = p³ + 3p²(iq) + 3p(iq)² + (iq)³",
+        "Equating real and imaginary parts of complex numbers",
+        "Algebraic simplification"
+      ],
+      "key_formulas": {
+        "cube_expansion": "(p + iq)³ = (p³ - 3pq²) + i(3p²q - q³)",
+        "real_part": "x = p³ - 3pq²  ⇒  x/p = p² - 3q²",
+        "imaginary_part": "y = 3p²q - q³  ⇒  y/q = 3p² - q²"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Cube both sides, separate real and imaginary components to get x and y in terms of p and q, form x/p and y/q, and add them.",
+      "logical_steps": [
+        "Step 1: Write x + iy = (p + iq)³ = p³ + 3p²(iq) - 3pq² - iq³",
+        "Step 2: Group real and imaginary: x + iy = (p³ - 3pq²) + i(3p²q - q³)",
+        "Step 3: Equate real: x = p(p² - 3q²) ⇒ x/p = p² - 3q²",
+        "Step 4: Equate imaginary: y = q(3p² - q²) ⇒ y/q = 3p² - q²",
+        "Step 5: Add x/p + y/q = (p² - 3q²) + (3p² - q²) = 4p² - 4q² = 4(p² - q²)",
+        "Step 6: Match option B"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_cube_both_sides": {
+        "z": "(p + iq)³",
+        "expand": "p³ + 3p²(iq) + 3p(iq)² + (iq)³ = p³ + 3p²q i - 3pq² - q³ i"
+      },
+      "step_2_equate_components": {
+        "real_x": "x = p³ - 3pq²",
+        "imag_y": "y = 3p²q - q³"
+      },
+      "step_3_divide_by_variables": {
+        "x_over_p": "x / p = p² - 3q²",
+        "y_over_q": "y / q = 3p² - q²"
+      },
+      "step_4_sum": {
+        "sum_expression": "x/p + y/q = (p² - 3q²) + (3p² - q²)",
+        "combine": "= 4p² - 4q² = 4(p² - q²)"
+      },
+      "step_5_match_option": {
+        "matching_option": "B"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "B. 4(p² - q²)",
+      "verification": "x/p = p² - 3q², y/q = 3p² - q². Sum = 4p² - 4q² = 4(p² - q²) ✓"
+    }
+  }
+}

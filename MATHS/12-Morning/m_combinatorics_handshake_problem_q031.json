@@ -1,0 +1,56 @@
+{
+  "filename_suggestion": "m_combinatorics_handshake_problem_q031.json",
+  "input": "If at the end of certain meeting, everyone had shaken hands with everyone else, it was found that 45 handshakes were exchanged, then the number of members present at the meeting are\n\nOptions:\nA. 10\nB. 15\nC. 20\nD. 21",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Find number of people n when total pairwise handshakes is 45.",
+      "given_information": {
+        "total_handshakes": "45",
+        "to_find": "n"
+      },
+      "key_observation": "Each handshake is an unordered pair, so count is nC2."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Combinations",
+        "Quadratic equation"
+      ],
+      "key_formulas": {
+        "handshake_formula": "nC2 = n(n-1)/2"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Set nC2 = 45 and solve quadratic for n.",
+      "logical_steps": [
+        "Step 1: Write equation n(n-1)/2 = 45",
+        "Step 2: Convert to quadratic",
+        "Step 3: Solve roots",
+        "Step 4: Keep positive valid root",
+        "Step 5: Match option"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_equation": {
+        "form": "n(n-1)/2 = 45"
+      },
+      "step_2_quadratic": {
+        "simplify": "n(n-1)=90",
+        "equation": "n^2 - n - 90 = 0"
+      },
+      "step_3_roots": {
+        "factorization": "(n-10)(n+9)=0",
+        "values": "n=10 or n=-9"
+      },
+      "step_4_valid_value": {
+        "selection": "n=10"
+      },
+      "step_5_match_option": {
+        "matching_option": "A"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "A. 10",
+      "verification": "10C2 = 45, so the count matches exactly."
+    }
+  }
+}

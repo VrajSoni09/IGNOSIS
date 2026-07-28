@@ -1,0 +1,76 @@
+{
+  "filename_suggestion": "m_3d_geometry_image_of_point_in_plane_q084.json",
+  "input": "Let P be a plane passing through the points (2, 1, 0), (4, 1, 1) and (5, 0, 1) and R be the point (2, 1, 6). Then image of R in the plane P is\n\nOptions:\nA. (6, 5, 2)\nB. (4, 3, 2)\nC. (6, 5, -2)\nD. (3, 4, -2)",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Find the equation of plane P through three given points, then compute the image (reflection) of point R(2,1,6) in that plane.",
+      "given_information": {
+        "points_on_plane": "(2,1,0), (4,1,1), (5,0,1)",
+        "R": "(2, 1, 6)",
+        "to_find": "Image R' of R in plane P"
+      },
+      "key_observation": "First find the plane equation using the three-point determinant form. Then use the reflection formula: R' = R + 2t·n̂, where t is determined by substituting R into the plane equation and n is the normal vector."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Equation of plane through three points using determinant",
+        "Normal vector of a plane",
+        "Image of a point in a plane: R' = R - 2[(ax₀+by₀+cz₀+d)/(a²+b²+c²)]·(a,b,c)",
+        "Foot of perpendicular from a point to a plane"
+      ],
+      "key_formulas": {
+        "plane_3_points": "|x-x₁  y-y₁  z-z₁; x₂-x₁  y₂-y₁  z₂-z₁; x₃-x₁  y₃-y₁  z₃-z₁| = 0",
+        "image_formula": "R' = (x₀ + 2t·a, y₀ + 2t·b, z₀ + 2t·c) where t = -(ax₀+by₀+cz₀+d)/(a²+b²+c²)"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Write the 3×3 determinant for the plane through the three points, expand to get the plane equation. Then apply the image formula with R(2,1,6) and the plane's normal coefficients.",
+      "logical_steps": [
+        "Step 1: Set up the determinant for the plane through (2,1,0), (4,1,1), (5,0,1)",
+        "Step 2: Expand and simplify to get the plane equation",
+        "Step 3: Compute ax₀+by₀+cz₀+d for R(2,1,6)",
+        "Step 4: Compute t = -(ax₀+by₀+cz₀+d)/(a²+b²+c²)",
+        "Step 5: Find image R' = (x₀+2ta, y₀+2tb, z₀+2tc)",
+        "Step 6: Match with options"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_determinant_for_plane": {
+        "using_point_2_1_0": "|x-2  y-1  z-0|",
+        "row_2": "|4-2  1-1  1-0| = |2  0  1|",
+        "row_3": "|5-2  0-1  1-0| = |3  -1  1|",
+        "determinant": "(x-2)(0·1-1·(-1)) - (y-1)(2·1-1·3) + z(2·(-1)-0·3)"
+      },
+      "step_2_expand_determinant": {
+        "first_term": "(x-2)(0+1) = x-2",
+        "second_term": "-(y-1)(2-3) = -(y-1)(-1) = y-1",
+        "third_term": "z(-2-0) = -2z",
+        "equation": "x - 2 + y - 1 - 2z = 0",
+        "plane": "x + y - 2z = 3"
+      },
+      "step_3_substitute_R_into_plane": {
+        "R": "(2, 1, 6)",
+        "compute": "2 + 1 - 2(6) - 3 = 3 - 12 - 3 = -12",
+        "value": "ax₀+by₀+cz₀+d = -12"
+      },
+      "step_4_compute_t": {
+        "a_b_c": "(1, 1, -2)",
+        "a²+b²+c²": "1 + 1 + 4 = 6",
+        "t": "-(-12)/6 = 12/6 = 2"
+      },
+      "step_5_find_image": {
+        "x'": "2 + 2(2)(1) = 2 + 4 = 6",
+        "y'": "1 + 2(2)(1) = 1 + 4 = 5",
+        "z'": "6 + 2(2)(-2) = 6 - 8 = -2",
+        "R'": "(6, 5, -2)"
+      },
+      "step_6_match_option": {
+        "matching_option": "C"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "C. (6, 5, -2)",
+      "verification": "Foot of perpendicular = midpoint of R and R' = ((2+6)/2, (1+5)/2, (6-2)/2) = (4, 3, 2). Check (4,3,2) on plane: 4+3-2(2) = 3 ✓. Also R' = (6,5,-2): 6+5-2(-2) = 15 ≠ 3, confirming R' is NOT on plane but is the correct reflection ✓"
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "filename_suggestion": "m_probability_discrete_pdf_to_cdf_q057.json",
+  "input": "The p.d.f. of a discrete random variable is defined as f(x) = kx^2, 0 <= x <= 6 and 0 otherwise. Then the value of F(4) (c.d.f.) is\n\nOptions:\nA. 30/91\nB. 30/97\nC. 15/47\nD. 15/97",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Given a discrete PMF of form kx^2 on x=0,1,2,...,6, find F(4)=P(X<=4).",
+      "given_information": {
+        "pmf": "P(X=x)=kx^2 for x in {0,1,2,3,4,5,6}",
+        "to_find": "F(4)"
+      },
+      "key_observation": "First use total probability 1 to find k, then sum probabilities from 0 to 4."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "PMF normalization",
+        "CDF as cumulative sum"
+      ],
+      "key_formulas": {
+        "normalization": "sum_{x=0}^6 kx^2 = 1",
+        "cdf": "F(4)=sum_{x=0}^4 P(X=x)"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Compute k from normalization, then compute cumulative sum to x=4.",
+      "logical_steps": [
+        "Step 1: Solve for k using sum x^2 from 0 to 6",
+        "Step 2: Write F(4)=k(0^2+1^2+2^2+3^2+4^2)",
+        "Step 3: Simplify fraction",
+        "Step 4: Match option"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_find_k": {
+        "sum": "0^2+1^2+2^2+3^2+4^2+5^2+6^2 = 91",
+        "k": "1/91"
+      },
+      "step_2_compute_F4": {
+        "numerator_sum": "0^2+1^2+2^2+3^2+4^2 = 30",
+        "value": "F(4)=30*(1/91)=30/91"
+      },
+      "step_3_match_option": {
+        "matching_option": "A"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "A. 30/91",
+      "verification": "PMF sums to 1 with k=1/91 and cumulative up to 4 gives 30/91."
+    }
+  }
+}

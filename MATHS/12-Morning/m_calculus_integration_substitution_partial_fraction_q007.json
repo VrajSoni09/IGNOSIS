@@ -1,0 +1,62 @@
+{
+  "filename_suggestion": "m_calculus_integration_substitution_partial_fraction_q007.json",
+  "input": "\u222b (x+1)/(x(1+xe^x)^2) dx =\n\nOptions:\nA. log|xe^x/(1+xe^x)| + c\nB. log|xe^x/(1+xe^x)| - 1/(1+xe^x) + c\nC. log|1+xe^x| + 1/(1+xe^x) + c\nD. log|xe^x/(1+xe^x)| + 1/(1+xe^x) + c",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Evaluate the indefinite integral and choose the correct option.",
+      "given_information": {
+        "integral": "I = \u222b (x+1)/(x(1+xe^x)^2) dx",
+        "to_find": "Closed-form antiderivative"
+      },
+      "key_observation": "Using t = xe^x turns the integral into a rational form in t."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Substitution",
+        "Partial fractions",
+        "Standard logarithmic integrals"
+      ],
+      "key_formulas": {
+        "substitution": "t = xe^x => dt = e^x(x+1)dx",
+        "rational_integral": "\u222b dt/[t(1+t)^2]"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Multiply and divide by e^x, substitute t = xe^x, then decompose into partial fractions.",
+      "logical_steps": [
+        "Step 1: Rewrite integrand to use dt = e^x(x+1)dx",
+        "Step 2: Substitute t = xe^x",
+        "Step 3: Perform partial fraction decomposition",
+        "Step 4: Integrate term-by-term",
+        "Step 5: Back-substitute t = xe^x"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_rewrite": {
+        "expression": "I = \u222b [e^x(x+1)]/[e^x x(1+xe^x)^2] dx"
+      },
+      "step_2_substitute": {
+        "let": "t = xe^x",
+        "dt": "dt = e^x(x+1)dx",
+        "transformed_integral": "I = \u222b dt/[t(1+t)^2]"
+      },
+      "step_3_partial_fractions": {
+        "decomposition": "1/[t(1+t)^2] = 1/t - 1/(1+t) - 1/(1+t)^2"
+      },
+      "step_4_integrate": {
+        "integration": "I = \u222b(1/t)dt - \u222b(1/(1+t))dt - \u222b(1/(1+t)^2)dt",
+        "result_in_t": "I = log|t| - log|1+t| + 1/(1+t) + c"
+      },
+      "step_5_back_substitute": {
+        "result_in_x": "I = log|xe^x/(1+xe^x)| + 1/(1+xe^x) + c"
+      },
+      "step_6_match_option": {
+        "matching_option": "D"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "D. log|xe^x/(1+xe^x)| + 1/(1+xe^x) + c",
+      "verification": "Differentiating the result returns the given integrand after simplification."
+    }
+  }
+}

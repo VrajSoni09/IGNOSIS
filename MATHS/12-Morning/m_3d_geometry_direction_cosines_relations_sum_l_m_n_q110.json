@@ -1,0 +1,77 @@
+{
+  "filename_suggestion": "m_3d_geometry_direction_cosines_relations_sum_l_m_n_q110.json",
+  "input": "If the direction cosines l, m, n of two lines are connected by relations l - 5m + 3n = 0 and 7l² + 5m² - 3n² = 0, then value of l + m + n is\n\nOptions:\nA. 2/√6 or 6/√14\nB. 1/√6 or 5/√14\nC. 2/√6 or 5/√14\nD. 1/√6 or 6/√14",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Find the direction cosines (l, m, n) of lines satisfying l - 5m + 3n = 0 and 7l² + 5m² - 3n² = 0, and calculate the possible values of l + m + n for each line.",
+      "given_information": {
+        "relation_1": "l - 5m + 3n = 0",
+        "relation_2": "7l² + 5m² - 3n² = 0",
+        "direction_cosine_property": "l² + m² + n² = 1",
+        "to_find": "Possible values of l + m + n"
+      },
+      "key_observation": "Express l from the linear equation as l = 5m - 3n and substitute into the quadratic equation to get a quadratic relation between m and n."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Direction cosines identity: l² + m² + n² = 1",
+        "Simultaneous equations in l, m, n",
+        "Factoring quadratic homogenous equations in two variables"
+      ],
+      "key_formulas": {
+        "l_expr": "l = 5m - 3n",
+        "quadratic_substitution": "7(5m - 3n)² + 5m² - 3n² = 0",
+        "normalization": "l = k·a, m = k·b, n = k·c where k = 1/√(a²+b²+c²)"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Substitute l = 5m - 3n into the quadratic equation, factor to find relations between m and n, obtain direction ratios for both lines, normalize to find direction cosines, and sum l + m + n.",
+      "logical_steps": [
+        "Step 1: Express l = 5m - 3n and substitute into 7l² + 5m² - 3n² = 0",
+        "Step 2: Simplify to get 180m² - 210mn + 60n² = 0 ⇒ 6m² - 7mn + 2n² = 0",
+        "Step 3: Factor quadratic: (3m - 2n)(2m - n) = 0 ⇒ 3m = 2n or 2m = n",
+        "Step 4: Case 1 (3m = 2n): find direction ratios, normalize, compute l + m + n",
+        "Step 5: Case 2 (2m = n): find direction ratios, normalize, compute l + m + n",
+        "Step 6: Match with options"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_quadratic_expansion": {
+        "substitute": "7(5m - 3n)² + 5m² - 3n² = 0",
+        "expand": "7(25m² - 30mn + 9n²) + 5m² - 3n² = 0",
+        "combine": "175m² - 210mn + 63n² + 5m² - 3n² = 0",
+        "result": "180m² - 210mn + 60n² = 0"
+      },
+      "step_2_divide_and_factor": {
+        "divide_by_30": "6m² - 7mn + 2n² = 0",
+        "factored": "(3m - 2n)(2m - n) = 0"
+      },
+      "step_3_case_1": {
+        "relation": "3m = 2n ⇒ m/2 = n/3",
+        "find_l": "l = 5m - 3n = 5(2n/3) - 3n = 10n/3 - 9n/3 = n/3",
+        "ratios": "l : m : n = 1/3 : 2/3 : 1 = 1 : 2 : 3",
+        "magnitude": "√(1² + 2² + 3²) = √14",
+        "direction_cosines": "l = 1/√14, m = 2/√14, n = 3/√14",
+        "sum": "l + m + n = (1 + 2 + 3)/√14 = 6/√14"
+      },
+      "step_4_case_2": {
+        "relation": "2m = n ⇒ n = 2m",
+        "find_l": "l = 5m - 3(2m) = 5m - 6m = -m",
+        "ratios": "l : m : n = -1 : 1 : 2",
+        "magnitude": "√((-1)² + 1² + 2²) = √6",
+        "direction_cosines": "l = -1/√6, m = 1/√6, n = 2/√6",
+        "sum": "l + m + n = (-1 + 1 + 2)/√6 = 2/√6"
+      },
+      "step_5_summary": {
+        "possible_values": "2/√6 or 6/√14"
+      },
+      "step_6_match_option": {
+        "matching_option": "A"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "A. 2/√6 or 6/√14",
+      "verification": "For line 1 ratios (1,2,3): 1 - 5(2) + 3(3) = 1-10+9 = 0 ✓ and 7(1)² + 5(2)² - 3(3)² = 7+20-27 = 0 ✓. Sum = 6/√14. For line 2 ratios (-1,1,2): -1 - 5(1) + 3(2) = -1-5+6 = 0 ✓ and 7(-1)² + 5(1)² - 3(2)² = 7+5-12 = 0 ✓. Sum = 2/√6. Answer matches option A ✓"
+    }
+  }
+}

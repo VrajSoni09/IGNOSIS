@@ -1,0 +1,65 @@
+{
+  "filename_suggestion": "m_trigonometry_triangle_remaining_angles_difference_q014.json",
+  "input": "Two sides of a triangle are sqrt(3) + 1 and sqrt(3) - 1 and the included angle is 60 degrees, then the difference of the remaining angles is\n\nOptions:\nA. 30 degrees\nB. 45 degrees\nC. 60 degrees\nD. 90 degrees",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Given two sides and included angle, determine the difference between the other two angles.",
+      "given_information": {
+        "a": "sqrt(3) + 1",
+        "b": "sqrt(3) - 1",
+        "included_angle_C": "60 degrees",
+        "to_find": "|A - B|"
+      },
+      "key_observation": "Find third side by cosine rule, then one remaining angle by sine rule."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Cosine rule",
+        "Sine rule",
+        "Angle sum of triangle"
+      ],
+      "key_formulas": {
+        "cosine_rule": "c^2 = a^2 + b^2 - 2ab cos C",
+        "sine_rule": "a/sin A = b/sin B = c/sin C",
+        "angle_sum": "A + B + C = 180 degrees"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Compute c, then obtain one angle and use sum to get the other, finally take difference.",
+      "logical_steps": [
+        "Step 1: Use cosine rule to find c",
+        "Step 2: Use sine rule to find B",
+        "Step 3: Compute A from angle sum",
+        "Step 4: Evaluate |A-B|",
+        "Step 5: Match option"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_find_third_side": {
+        "calculation": "c^2 = (sqrt(3)+1)^2 + (sqrt(3)-1)^2 - 2(sqrt(3)+1)(sqrt(3)-1)(1/2)",
+        "simplify": "c^2 = 6",
+        "c": "sqrt(6)"
+      },
+      "step_2_find_angle_B": {
+        "sine_rule_form": "sin B / b = sin C / c",
+        "substitute": "sin B = (sqrt(3)-1)*(sin 60)/sqrt(6)",
+        "simplify": "sin B = (sqrt(3)-1)/(2sqrt(2)) = sin 15 degrees",
+        "B": "15 degrees"
+      },
+      "step_3_find_angle_A": {
+        "equation": "A = 180 - 60 - 15",
+        "A": "105 degrees"
+      },
+      "step_4_difference": {
+        "|A-B|": "|105 - 15| = 90 degrees"
+      },
+      "step_5_match_option": {
+        "matching_option": "D"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "D. 90 degrees",
+      "verification": "Computed remaining angles are 105 degrees and 15 degrees, so their difference is 90 degrees."
+    }
+  }
+}

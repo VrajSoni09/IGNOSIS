@@ -1,0 +1,66 @@
+{
+  "filename_suggestion": "m_calculus_integral_partial_fractions_difference_of_squares_q081.json",
+  "input": "∫ 1/(7-6x-x²) dx =\n\nOptions:\nA. (1/4) log((7+x)/(1-x)) + c, where c is a constant of integration.\nB. (1/8) log((7+x)/(1-x)) + c, where c is a constant of integration.\nC. (1/16) log((7+x)/(1-x)) + c, where c is a constant of integration.\nD. (1/32) log((7+x)/(1-x)) + c, where c is a constant of integration.",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Evaluate the integral ∫ 1/(7-6x-x²) dx by rewriting the denominator in the form a² - u² and applying the standard logarithmic integral formula.",
+      "given_information": {
+        "integral": "∫ 1/(7-6x-x²) dx",
+        "to_find": "Closed form with constant of integration c"
+      },
+      "key_observation": "Complete the square in the denominator: 7-6x-x² = 16-(x+3)² = 4²-(x+3)². This is of the form a²-u² with a=4, u=x+3, enabling the standard partial-fractions formula."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Completing the square",
+        "Standard integral: ∫ 1/(a²-u²) du = (1/2a) log|(a+u)/(a-u)| + c",
+        "Substitution u = x+3"
+      ],
+      "key_formulas": {
+        "complete_square": "7-6x-x² = -(x²+6x-7) = 16-(x+3)²",
+        "standard_form": "∫ 1/(a²-u²) du = (1/2a) log|(a+u)/(a-u)| + c",
+        "with_a_4": "a = 4, u = x+3"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Complete the square in the denominator to recognise 4²-(x+3)², apply the standard integral formula with a=4 and u=x+3, then simplify the logarithm argument.",
+      "logical_steps": [
+        "Step 1: Rewrite denominator 7-6x-x² by completing the square",
+        "Step 2: Express as 4²-(x+3)²",
+        "Step 3: Identify a=4 and u=x+3",
+        "Step 4: Apply standard formula ∫1/(a²-u²)du = (1/2a)log|(a+u)/(a-u)|",
+        "Step 5: Substitute back and simplify the log argument",
+        "Step 6: Match with options"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_rewrite_denominator": {
+        "denominator": "7 - 6x - x²",
+        "factor_negative": "-(x² + 6x - 7)",
+        "complete_square": "-(x² + 6x + 9 - 16) = -(x+3)² + 16 = 16 - (x+3)²"
+      },
+      "step_2_identify_form": {
+        "a": "4",
+        "u": "x + 3",
+        "form": "4² - (x+3)²"
+      },
+      "step_3_apply_standard_formula": {
+        "integral": "∫ 1/(4²-(x+3)²) dx",
+        "formula": "(1/(2·4)) log|(4+(x+3))/(4-(x+3))| + c",
+        "coefficient": "1/8"
+      },
+      "step_4_simplify_log_argument": {
+        "numerator_of_fraction": "4 + (x+3) = x + 7 = 7 + x",
+        "denominator_of_fraction": "4 - (x+3) = 4 - x - 3 = 1 - x",
+        "result": "(1/8) log|(7+x)/(1-x)| + c"
+      },
+      "step_5_match_option": {
+        "matching_option": "B"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "B. (1/8) log((7+x)/(1-x)) + c",
+      "verification": "d/dx[(1/8)log|(7+x)/(1-x)|] = (1/8)[1/(7+x) + 1/(1-x)] = (1/8)·(1-x+7+x)/((7+x)(1-x)) = (1/8)·8/(7-6x-x²) = 1/(7-6x-x²) ✓"
+    }
+  }
+}

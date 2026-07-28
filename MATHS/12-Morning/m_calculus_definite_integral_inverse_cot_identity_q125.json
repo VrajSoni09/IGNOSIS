@@ -1,0 +1,57 @@
+{
+  "filename_suggestion": "m_calculus_definite_integral_inverse_cot_identity_q125.json",
+  "input": "∫_{-1}^3 (cot⁻¹(x / (x²+1)) + cot⁻¹((x²+1) / x)) dx =\n\nOptions:\nA. (π/4)\nB. π\nC. (π/2)\nD. (2π)",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Evaluate the definite integral ∫_{-1}^3 (cot⁻¹(x / (x²+1)) + cot⁻¹((x²+1) / x)) dx.",
+      "given_information": {
+        "integral": "I = ∫_{-1}^3 [cot⁻¹(x / (x²+1)) + cot⁻¹((x²+1) / x)] dx",
+        "to_find": "Exact value of integral"
+      },
+      "key_observation": "Use inverse trigonometric identity: cot⁻¹(1/u) = tan⁻¹(u) for u > 0 (or note that cot⁻¹(a) + cot⁻¹(1/a) simplifies, but simpler: cot⁻¹(x/(x²+1)) = tan⁻¹((x²+1)/x) for (x²+1)/x > 0, giving tan⁻¹t + cot⁻¹t = π/2)."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Inverse trig identity: cot⁻¹(x) = tan⁻¹(1/x)",
+        "Complementary inverse trig identity: tan⁻¹(u) + cot⁻¹(u) = π/2",
+        "Integral of constant: ∫_a^b c dx = c(b - a)"
+      ],
+      "key_formulas": {
+        "cot_to_tan": "cot⁻¹(x/(x²+1)) = tan⁻¹((x²+1)/x)",
+        "tan_plus_cot": "tan⁻¹(u) + cot⁻¹(u) = π/2",
+        "constant_integral": "∫_{-1}^3 (π/2) dx = (π/2)(3 - (-1)) = 2π"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Convert the first cot⁻¹ term into tan⁻¹, combine with the second term using tan⁻¹u + cot⁻¹u = π/2, and integrate the resulting constant over [-1, 3].",
+      "logical_steps": [
+        "Step 1: Rewrite cot⁻¹(x / (x²+1)) as tan⁻¹((x²+1) / x)",
+        "Step 2: Recognize the integrand as tan⁻¹(u) + cot⁻¹(u) where u = (x²+1)/x",
+        "Step 3: Simplify integrand to π/2",
+        "Step 4: Compute integral: ∫_{-1}^3 (π/2) dx = (π/2) · (3 - (-1)) = (π/2) · 4 = 2π",
+        "Step 5: Match option"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_convert_cot_inv": {
+        "term1": "cot⁻¹(x / (x²+1)) = tan⁻¹((x²+1) / x)"
+      },
+      "step_2_apply_identity": {
+        "integrand": "tan⁻¹((x²+1) / x) + cot⁻¹((x²+1) / x)",
+        "identity": "tan⁻¹(u) + cot⁻¹(u) = π/2",
+        "simplified_integrand": "π/2"
+      },
+      "step_3_evaluate_integral": {
+        "I": "∫_{-1}^3 (π/2) dx",
+        "result": "(π/2) · [x]_{-1}^3 = (π/2) · (3 - (-1)) = (π/2) · 4 = 2π"
+      },
+      "step_4_match_option": {
+        "matching_option": "D"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "D. (2π)",
+      "verification": "The integrand simplifies to π/2 almost everywhere. Integrating constant π/2 from x = -1 to x = 3 yields (π/2) * (3 - (-1)) = (π/2) * 4 = 2π ✓"
+    }
+  }
+}

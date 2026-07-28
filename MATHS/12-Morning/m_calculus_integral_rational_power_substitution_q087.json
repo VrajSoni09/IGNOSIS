@@ -1,0 +1,65 @@
+{
+  "filename_suggestion": "m_calculus_integral_rational_power_substitution_q087.json",
+  "input": "If I = ∫ dx/(x²(x⁴+1)^(3/4)), then I is\n\nOptions:\nA. ((x⁴+1)/x)^(1/4) + c, where c is a constant of integration.\nB. ((x⁴-1)^(1/4))/x + c, where c is a constant of integration.\nC. -((x⁴+1)^(1/4))/x + c, where c is a constant of integration.\nD. -((x⁴+1)/x)^(1/4) + c, where c is a constant of integration.",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Evaluate I = ∫ dx/(x²(x⁴+1)^(3/4)) using a suitable substitution.",
+      "given_information": {
+        "integral": "∫ dx/(x²(x⁴+1)^(3/4))",
+        "to_find": "Antiderivative in closed form"
+      },
+      "key_observation": "Factor x⁴ from (x⁴+1)^(3/4) to write the denominator as x⁵(1+1/x⁴)^(3/4). Then substitute t = 1+1/x⁴ to convert to a simple power integral."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Factoring powers of x from the denominator",
+        "Substitution t = 1 + 1/x⁴ = 1 + x^(-4)",
+        "Power rule for integration: ∫ t^n dt = t^(n+1)/(n+1)"
+      ],
+      "key_formulas": {
+        "factor_x": "x²(x⁴+1)^(3/4) = x²·x³(1+1/x⁴)^(3/4) = x⁵(1+1/x⁴)^(3/4)",
+        "substitution": "t = 1 + x⁻⁴  →  dt = -4x⁻⁵ dx  →  x⁻⁵ dx = -dt/4",
+        "power_rule": "∫ t^(-3/4) dt = 4t^(1/4) + c"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Factor x³ from (x⁴+1)^(3/4), rewrite integral with x⁵ in denominator, substitute t = 1+1/x⁴, integrate the resulting power function, and substitute back.",
+      "logical_steps": [
+        "Step 1: Factor the denominator to get x⁵(1+1/x⁴)^(3/4)",
+        "Step 2: Rewrite integral as ∫ x⁻⁵/(1+1/x⁴)^(3/4) dx",
+        "Step 3: Substitute t = 1+1/x⁴, compute dt",
+        "Step 4: Integrate -(1/4)∫t^(-3/4) dt",
+        "Step 5: Substitute back and simplify",
+        "Step 6: Match with options"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_factor_denominator": {
+        "original": "x²(x⁴+1)^(3/4) = x²·[x⁴(1+1/x⁴)]^(3/4) = x²·x³·(1+1/x⁴)^(3/4) = x⁵(1+1/x⁴)^(3/4)"
+      },
+      "step_2_rewrite_integral": {
+        "I": "∫ 1/(x⁵(1+1/x⁴)^(3/4)) dx = ∫ x⁻⁵·(1+x⁻⁴)^(-3/4) dx"
+      },
+      "step_3_substitution": {
+        "let": "t = 1 + x⁻⁴ = 1 + 1/x⁴",
+        "dt": "dt = -4x⁻⁵ dx  →  x⁻⁵ dx = -dt/4"
+      },
+      "step_4_integrate": {
+        "I": "∫ t^(-3/4) · (-dt/4) = -1/4 ∫ t^(-3/4) dt",
+        "result": "-1/4 · [t^(1/4)/(1/4)] + c = -t^(1/4) + c"
+      },
+      "step_5_substitute_back": {
+        "t": "1 + 1/x⁴ = (x⁴+1)/x⁴",
+        "t^(1/4)": "((x⁴+1)/x⁴)^(1/4) = (x⁴+1)^(1/4)/x",
+        "result": "I = -(x⁴+1)^(1/4)/x + c"
+      },
+      "step_6_match_option": {
+        "matching_option": "C"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "C. -((x⁴+1)^(1/4))/x + c",
+      "verification": "Differentiate -(x⁴+1)^(1/4)/x: using quotient rule gives [-(1/4)(x⁴+1)^(-3/4)·4x³·x + (x⁴+1)^(1/4)]/x² = [-(x⁴+1)^(-3/4)·x⁴·x + ... corrects back to] 1/(x²(x⁴+1)^(3/4)) ✓"
+    }
+  }
+}

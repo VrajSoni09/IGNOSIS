@@ -1,0 +1,70 @@
+{
+  "filename_suggestion": "m_logic_compound_statement_equivalence_laws_q069.json",
+  "input": "The logical statement [~(~p ∨ q) ∨ (p ∧ r)] ∧ (~q ∧ r) is equivalent to\n\nOptions:\nA. (p ∧ r) ∧ ~q\nB. (p ∧ ~q) ∨ r\nC. ~p ∨ r\nD. ~p ∧ r",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Simplify the compound logical statement [~(~p ∨ q) ∨ (p ∧ r)] ∧ (~q ∧ r) to its equivalent form using standard logical laws.",
+      "given_information": {
+        "statement": "[~(~p ∨ q) ∨ (p ∧ r)] ∧ (~q ∧ r)",
+        "to_find": "Equivalent simplified form"
+      },
+      "key_observation": "Apply De Morgan's law to simplify ~(~p ∨ q) = p ∧ ~q, then use distributive, associative, and absorption laws step by step."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "De Morgan's laws",
+        "Distributive law for logic",
+        "Associative law",
+        "Absorption law",
+        "Commutative law"
+      ],
+      "key_formulas": {
+        "de_morgan": "~(A ∨ B) = ~A ∧ ~B  and  ~(A ∧ B) = ~A ∨ ~B",
+        "distributive": "A ∧ (B ∨ C) = (A ∧ B) ∨ (A ∧ C)",
+        "absorption": "(A ∨ B) ∧ (A ∧ B) = A ∧ B  (the conjunction absorbs)",
+        "associative": "A ∧ (B ∧ C) = (A ∧ B) ∧ C"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Simplify inside-out: first apply De Morgan's law to ~(~p ∨ q), then use distributive law, then associative law, then absorption, and finally commutative law.",
+      "logical_steps": [
+        "Step 1: Apply De Morgan's law to ~(~p ∨ q)",
+        "Step 2: Expand [·] using distributive law with (~q ∧ r)",
+        "Step 3: Apply associative law to regroup",
+        "Step 4: Apply absorption law",
+        "Step 5: Apply commutative law to match option"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_demorgan_on_inner_negation": {
+        "original": "~(~p ∨ q)",
+        "by_demorgan": "~~p ∧ ~q = p ∧ ~q",
+        "rewritten_statement": "[(p ∧ ~q) ∨ (p ∧ r)] ∧ (~q ∧ r)"
+      },
+      "step_2_distributive_law": {
+        "factor_out_p": "(p ∧ ~q) ∨ (p ∧ r) = p ∧ (~q ∨ r)",
+        "full_expression": "p ∧ (~q ∨ r) ∧ (~q ∧ r)"
+      },
+      "step_3_associative_law": {
+        "regroup": "p ∧ [(~q ∨ r) ∧ (~q ∧ r)]"
+      },
+      "step_4_absorption_law": {
+        "inner_bracket": "(~q ∨ r) ∧ (~q ∧ r)",
+        "reasoning": "~q ∧ r implies both ~q and r, which satisfies ~q ∨ r; so (X ∨ Y) ∧ (X ∧ Y) = X ∧ Y where X=~q, Y=r",
+        "result": "~q ∧ r",
+        "full_expression": "p ∧ (~q ∧ r)"
+      },
+      "step_5_commutative_rearrangement": {
+        "expression": "p ∧ ~q ∧ r = (p ∧ r) ∧ ~q",
+        "final_result": "(p ∧ r) ∧ ~q"
+      },
+      "step_6_match_option": {
+        "matching_option": "A"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "A. (p ∧ r) ∧ ~q",
+      "verification": "De Morgan: ~(~p∨q) = p∧~q. Distributive: (p∧~q)∨(p∧r) = p∧(~q∨r). Then p∧(~q∨r)∧(~q∧r) = p∧(~q∧r) by absorption. Reordering gives (p∧r)∧~q ✓"
+    }
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "filename_suggestion": "m_combinatorics_committee_selection_constraints_q051.json",
+  "input": "A group consists of 8 boys and 5 girls, then the number of committees of 5 persons that can be formed, if committee consists of at least 2 girls and at most 2 boys, are\n\nOptions:\nA. 300\nB. 320\nC. 321\nD. 322",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Count 5-member committees from 8 boys and 5 girls with at least 2 girls and at most 2 boys.",
+      "given_information": {
+        "boys": 8,
+        "girls": 5,
+        "committee_size": 5,
+        "conditions": "girls >= 2 and boys <= 2"
+      },
+      "key_observation": "Possible (girls, boys) splits are (5,0), (4,1), and (3,2)."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Combinations",
+        "Case-wise counting",
+        "Addition principle"
+      ],
+      "key_formulas": {
+        "combination": "nCr counts selections without order"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Count valid committees for each allowed split of girls and boys, then add.",
+      "logical_steps": [
+        "Step 1: Enumerate valid splits",
+        "Step 2: Compute combinations for each split",
+        "Step 3: Sum all cases",
+        "Step 4: Match option"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_case_5_girls_0_boys": {
+        "count": "5C5 * 8C0 = 1"
+      },
+      "step_2_case_4_girls_1_boy": {
+        "count": "5C4 * 8C1 = 5 * 8 = 40"
+      },
+      "step_3_case_3_girls_2_boys": {
+        "count": "5C3 * 8C2 = 10 * 28 = 280"
+      },
+      "step_4_total": {
+        "sum": "1 + 40 + 280 = 321"
+      },
+      "step_5_match_option": {
+        "matching_option": "C"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "C. 321",
+      "verification": "All valid compositions are counted once and only once."
+    }
+  }
+}

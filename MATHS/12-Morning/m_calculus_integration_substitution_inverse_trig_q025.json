@@ -1,0 +1,64 @@
+{
+  "filename_suggestion": "m_calculus_integration_substitution_inverse_trig_q025.json",
+  "input": "Integral of [e^(tan^-1 x)/(1+x^2)] * [(sec^-1(sqrt(1+x^2)))^2 + cos^-1((1-x^2)/(1+x^2))] dx, x>0 is\n\nOptions:\nA. (tan^-1 x)^2 e^(tan^-1 x) + c\nB. (tan^-1 x)e^(tan^-1 x) + c\nC. (tan^-1 x)e^(2tan^-1 x) + c\nD. (tan^-1 x)^2 e^(2tan^-1 x) + c",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Evaluate the integral containing e^(tan^-1 x)/(1+x^2) multiplied by inverse-trigonometric expressions.",
+      "given_information": {
+        "integrand": "[e^(tan^-1 x)/(1+x^2)] * [(sec^-1(sqrt(1+x^2)))^2 + cos^-1((1-x^2)/(1+x^2))]",
+        "condition": "x > 0",
+        "to_find": "antiderivative"
+      },
+      "key_observation": "Use substitution t = tan^-1 x; then sec^-1(sqrt(1+x^2)) becomes t and cos^-1((1-x^2)/(1+x^2)) becomes 2t."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Substitution",
+        "Inverse trigonometric identities",
+        "Integration of e^t times polynomial"
+      ],
+      "key_formulas": {
+        "substitution": "t = tan^-1 x => dt = dx/(1+x^2)",
+        "identity_1": "sec(t) = sqrt(1+tan^2 t) => sec^-1(sqrt(1+x^2)) = t for x>0",
+        "identity_2": "cos(2t) = (1-tan^2 t)/(1+tan^2 t) => cos^-1((1-x^2)/(1+x^2)) = 2t"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Substitute t = tan^-1 x, simplify bracket to t^2 + 2t, integrate e^t(t^2+2t) dt.",
+      "logical_steps": [
+        "Step 1: Apply t = tan^-1 x",
+        "Step 2: Transform inverse-trig terms",
+        "Step 3: Reduce integral to e^t(t^2+2t)",
+        "Step 4: Integrate in t",
+        "Step 5: Back-substitute and match option"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_substitute": {
+        "let": "t = tan^-1 x",
+        "dt": "dt = dx/(1+x^2)",
+        "factor": "e^(tan^-1 x)/(1+x^2) dx = e^t dt"
+      },
+      "step_2_transform_bracket": {
+        "first_term": "(sec^-1(sqrt(1+x^2)))^2 = t^2",
+        "second_term": "cos^-1((1-x^2)/(1+x^2)) = 2t",
+        "sum": "t^2 + 2t"
+      },
+      "step_3_new_integral": {
+        "expression": "I = integral e^t(t^2 + 2t) dt"
+      },
+      "step_4_integrate": {
+        "observation": "d/dt[t^2 e^t] = e^t(t^2 + 2t)",
+        "result": "I = t^2 e^t + c"
+      },
+      "step_5_back_substitute": {
+        "final": "I = (tan^-1 x)^2 e^(tan^-1 x) + c",
+        "matching_option": "A"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "A. (tan^-1 x)^2 e^(tan^-1 x) + c",
+      "verification": "Differentiating (tan^-1 x)^2 e^(tan^-1 x) reproduces e^(tan^-1 x)/(1+x^2)*(t^2+2t), matching the transformed integrand."
+    }
+  }
+}

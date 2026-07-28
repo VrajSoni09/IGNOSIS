@@ -1,0 +1,52 @@
+{
+  "filename_suggestion": "m_3d_geometry_plane_from_foot_of_perpendicular_q027.json",
+  "input": "The foot of the perpendicular drawn from the origin to the plane is (4, -2, 5), then the Cartesian equation of the plane is\n\nOptions:\nA. 4x - 2y + 5z = 45\nB. -4x + 2y + 5z = 45\nC. 4x - 2y + 5z + 45 = 0\nD. 4x + 2y - 5z + 45 = 0",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Find the equation of a plane whose perpendicular from origin meets the plane at (4,-2,5).",
+      "given_information": {
+        "origin": "(0,0,0)",
+        "foot_point": "(4,-2,5)",
+        "to_find": "Cartesian equation of plane"
+      },
+      "key_observation": "Vector from origin to foot point is normal to the plane."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Normal vector of plane",
+        "Point-normal form"
+      ],
+      "key_formulas": {
+        "normal": "n = (4,-2,5)",
+        "plane_form": "n·(r-r0)=0 or 4x-2y+5z=d"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Use normal vector (4,-2,5), then plug foot point to find constant.",
+      "logical_steps": [
+        "Step 1: Set general plane with normal (4,-2,5)",
+        "Step 2: Substitute point (4,-2,5)",
+        "Step 3: Solve for constant d",
+        "Step 4: Match option"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_plane_with_normal": {
+        "equation": "4x - 2y + 5z = d"
+      },
+      "step_2_substitute_point": {
+        "calculation": "d = 4(4) - 2(-2) + 5(5) = 16 + 4 + 25 = 45"
+      },
+      "step_3_final_equation": {
+        "result": "4x - 2y + 5z = 45"
+      },
+      "step_4_match_option": {
+        "matching_option": "A"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "A. 4x - 2y + 5z = 45",
+      "verification": "The line from origin to (4,-2,5) is normal to this plane and the point satisfies the equation."
+    }
+  }
+}

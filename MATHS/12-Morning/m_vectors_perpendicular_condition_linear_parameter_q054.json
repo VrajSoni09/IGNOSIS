@@ -1,0 +1,53 @@
+{
+  "filename_suggestion": "m_vectors_perpendicular_condition_linear_parameter_q054.json",
+  "input": "If a = 2i + 3j + 2k, b = 2i + j - k and c = i + 3j are such that (a + lambda b) is perpendicular to c, then the value of lambda is\n\nOptions:\nA. 5/11\nB. 11/5\nC. -11/5\nD. -5/11",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Find lambda so that vector (a + lambda b) is perpendicular to c.",
+      "given_information": {
+        "a": "(2,3,2)",
+        "b": "(2,1,-1)",
+        "c": "(1,3,0)",
+        "condition": "(a + lambda b) dot c = 0"
+      },
+      "key_observation": "Perpendicular vectors have zero dot product."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Vector linear combination",
+        "Dot product orthogonality"
+      ],
+      "key_formulas": {
+        "orthogonality": "u dot v = 0"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Form d = a + lambda b and set d dot c = 0.",
+      "logical_steps": [
+        "Step 1: Compute d components",
+        "Step 2: Evaluate d dot c",
+        "Step 3: Solve linear equation in lambda",
+        "Step 4: Match option"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_form_vector": {
+        "d": "a + lambda b = (2+2lambda, 3+lambda, 2-lambda)"
+      },
+      "step_2_perpendicular_condition": {
+        "dot_eqn": "(2+2lambda)*1 + (3+lambda)*3 + (2-lambda)*0 = 0"
+      },
+      "step_3_solve": {
+        "simplify": "2 + 2lambda + 9 + 3lambda = 0 => 5lambda + 11 = 0",
+        "lambda": "-11/5"
+      },
+      "step_4_match_option": {
+        "matching_option": "C"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "C. -11/5",
+      "verification": "Substituting lambda = -11/5 makes the dot product with c equal to zero."
+    }
+  }
+}

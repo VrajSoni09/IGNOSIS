@@ -1,0 +1,74 @@
+{
+  "filename_suggestion": "m_complex_numbers_locus_of_z_unit_modulus_q070.json",
+  "input": "If w = z/(z - (1/3)i) and |w| = 1, i = √(-1), then z lies on\n\nOptions:\nA. circle.\nB. line.\nC. parabola.\nD. ellipse.",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Given a complex expression w in terms of z, and the constraint |w| = 1, find the geometric locus of z in the Argand plane.",
+      "given_information": {
+        "w": "z / (z - (1/3)i)",
+        "|w|": "1",
+        "i": "√(-1)",
+        "to_find": "Geometric locus of z"
+      },
+      "key_observation": "|w| = 1 means |numerator| = |denominator|. Simplify the expression, take moduli, let z = a + ib, then equate and simplify to identify the curve."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Modulus of a complex number",
+        "Modulus property: |z₁/z₂| = |z₁|/|z₂|",
+        "Representing z = a + ib",
+        "Locus interpretation in the Argand plane"
+      ],
+      "key_formulas": {
+        "modulus_fraction": "|z₁/z₂| = |z₁|/|z₂|",
+        "modulus_of_complex": "|a + ib| = √(a² + b²)",
+        "locus": "A linear equation in a and b represents a straight line"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Clear the fraction by multiplying numerator and denominator by 3, apply |w|=1 to get |3z| = |3z - i|, let z = a + ib, expand, simplify and identify the locus.",
+      "logical_steps": [
+        "Step 1: Multiply numerator and denominator by 3 to clear the fraction",
+        "Step 2: Apply |w| = 1 to get |3z| = |3z - i|",
+        "Step 3: Let z = a + ib and write both moduli",
+        "Step 4: Square both sides and expand",
+        "Step 5: Simplify and identify the geometric figure"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_simplify_w": {
+        "original": "w = z / (z - (1/3)i)",
+        "multiply_by_3_over_3": "w = 3z / (3z - i)"
+      },
+      "step_2_apply_modulus_condition": {
+        "|w|": "1",
+        "result": "|3z| / |3z - i| = 1",
+        "so": "|3z| = |3z - i|"
+      },
+      "step_3_let_z_equals_a_plus_ib": {
+        "z": "a + ib",
+        "3z": "3a + 3bi",
+        "|3z|": "√(9a² + 9b²) = 3√(a² + b²)",
+        "3z - i": "3a + (3b - 1)i",
+        "|3z - i|": "√(9a² + (3b - 1)²)"
+      },
+      "step_4_equate_and_square": {
+        "equation": "3√(a² + b²) = √(9a² + (3b-1)²)",
+        "square_both_sides": "9(a² + b²) = 9a² + (3b-1)²",
+        "expand_rhs": "9a² + 9b² = 9a² + 9b² - 6b + 1"
+      },
+      "step_5_simplify": {
+        "cancel_common": "0 = -6b + 1",
+        "result": "6b = 1  →  b = 1/6",
+        "interpretation": "Im(z) = 1/6, which is a horizontal straight line in the Argand plane"
+      },
+      "step_6_match_option": {
+        "matching_option": "B"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "B. line.",
+      "verification": "The condition |3z| = |3z - i| with z = a + ib yields 6b = 1, i.e., b = 1/6 = constant. This is a straight horizontal line Im(z) = 1/6 in the Argand plane, independent of Re(z) = a. ✓"
+    }
+  }
+}

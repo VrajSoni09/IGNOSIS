@@ -1,0 +1,70 @@
+{
+  "filename_suggestion": "m_lpp_shaded_region_linear_inequalities_q134.json",
+  "input": "For the following shaded area, the linear constraints except x, y ≥ 0 are\n[Image showing region bounded by lines 2x + y = 2, x - y = 1, and x + 2y = 8]\n\nOptions:\nA. 2x + y ≤ 2, x - y ≤ 1, x + 2y ≤ 8\nB. 2x + y ≥ 2, x - y ≤ 1, x + 2y ≤ 8\nC. 2x + y ≥ 2, x - y ≥ 1, x + 2y ≤ 8\nD. 2x + y ≥ 2, x - y ≥ 1, x + 2y ≥ 8",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Identify the set of linear inequalities representing the shaded region formed by the boundary lines 2x + y = 2, x - y = 1, and x + 2y = 8.",
+      "given_information": {
+        "boundary_line_1": "2x + y = 2",
+        "boundary_line_2": "x - y = 1",
+        "boundary_line_3": "x + 2y = 8",
+        "non_negativity": "x, y ≥ 0",
+        "to_find": "Correct system of linear inequalities"
+      },
+      "key_observation": "Test a point inside the shaded region, e.g. (0, 3). For (0, 3): 2(0)+3 = 3 ≥ 2, 0 - 3 = -3 ≤ 1, 0 + 2(3) = 6 ≤ 8. Thus constraints are 2x + y ≥ 2, x - y ≤ 1, x + 2y ≤ 8."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Linear Programming: System of Linear Inequalities",
+        "Half-plane testing using interior test point",
+        "Origin test for half-planes"
+      ],
+      "key_formulas": {
+        "test_point": "(0, 3) lies inside the shaded region",
+        "line1_test": "2(0) + 3 = 3 ≥ 2  ⇒  2x + y ≥ 2",
+        "line2_test": "0 - 3 = -3 ≤ 1  ⇒  x - y ≤ 1",
+        "line3_test": "0 + 2(3) = 6 ≤ 8  ⇒  x + 2y ≤ 8"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Select a test point clearly within the shaded region (such as (0, 3) on the y-axis) and evaluate its position relative to each of the three boundary lines.",
+      "logical_steps": [
+        "Step 1: Identify test point (0, 3) in shaded area",
+        "Step 2: Substitute (0, 3) into 2x + y: 3 ≥ 2 ⇒ 2x + y ≥ 2",
+        "Step 3: Substitute (0, 3) into x - y: -3 ≤ 1 ⇒ x - y ≤ 1",
+        "Step 4: Substitute (0, 3) into x + 2y: 6 ≤ 8 ⇒ x + 2y ≤ 8",
+        "Step 5: Combine inequalities and match option B"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_test_point": {
+        "chosen_point": "(0, 3)"
+      },
+      "step_2_evaluate_line_1": {
+        "line": "2x + y = 2",
+        "value": "2(0) + 3 = 3",
+        "inequality": "3 ≥ 2  ⇒  2x + y ≥ 2"
+      },
+      "step_3_evaluate_line_2": {
+        "line": "x - y = 1",
+        "value": "0 - 3 = -3",
+        "inequality": "-3 ≤ 1  ⇒  x - y ≤ 1"
+      },
+      "step_4_evaluate_line_3": {
+        "line": "x + 2y = 8",
+        "value": "0 + 2(3) = 6",
+        "inequality": "6 ≤ 8  ⇒  x + 2y ≤ 8"
+      },
+      "step_5_summary": {
+        "system": "2x + y ≥ 2, x - y ≤ 1, x + 2y ≤ 8"
+      },
+      "step_6_match_option": {
+        "matching_option": "B"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "B. 2x + y ≥ 2, x - y ≤ 1, x + 2y ≤ 8",
+      "verification": "Point (1, 2) is inside the shaded region: 2(1)+2 = 4 ≥ 2 ✓; 1 - 2 = -1 ≤ 1 ✓; 1 + 2(2) = 5 ≤ 8 ✓. Matches Option B ✓"
+    }
+  }
+}

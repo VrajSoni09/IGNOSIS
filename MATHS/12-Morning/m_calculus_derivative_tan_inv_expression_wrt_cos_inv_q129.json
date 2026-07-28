@@ -1,0 +1,67 @@
+{
+  "filename_suggestion": "m_calculus_derivative_tan_inv_expression_wrt_cos_inv_q129.json",
+  "input": "Derivative of tan⁻¹( (√(1+x²) - √(1-x²)) / (√(1+x²) + √(1-x²)) ) w.r.t. cos⁻¹(x²) is\n\nOptions:\nA. -1/2\nB. -1\nC. 1/2\nD. 1",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Find dy/dz where y = tan⁻¹( (√(1+x²) - √(1-x²)) / (√(1+x²) + √(1-x²)) ) and z = cos⁻¹(x²).",
+      "given_information": {
+        "y": "tan⁻¹( (√(1+x²) - √(1-x²)) / (√(1+x²) + √(1-x²)) )",
+        "z": "cos⁻¹(x²)",
+        "to_find": "dy/dz"
+      },
+      "key_observation": "Substitute x² = cos(2θ). Then z = 2θ, so θ = z/2. Simplifying y gives y = π/4 - θ = π/4 - z/2. Thus dy/dz = -1/2 directly."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Parametric differentiation / derivative of one function w.r.t another",
+        "Trigonometric substitution: x² = cos(2θ)",
+        "Identities: √(1 + cos 2θ) = √2 cos θ, √(1 - cos 2θ) = √2 sin θ",
+        "tan⁻¹((cos θ - sin θ)/(cos θ + sin θ)) = tan⁻¹(tan(π/4 - θ)) = π/4 - θ"
+      ],
+      "key_formulas": {
+        "substitution": "x² = cos(2θ) ⇒ z = cos⁻¹(x²) = 2θ ⇒ θ = z/2",
+        "y_simplified": "y = tan⁻¹((1 - tan θ)/(1 + tan θ)) = π/4 - θ = π/4 - z/2",
+        "derivative": "dy/dz = d/dz(π/4 - z/2) = -1/2"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Substitute x² = cos(2θ) into both y and z expressions, simplify y to a linear function of z, and differentiate directly.",
+      "logical_steps": [
+        "Step 1: Set x² = cos(2θ), which gives z = cos⁻¹(cos 2θ) = 2θ",
+        "Step 2: Simplify √(1+x²) = √2 cos θ and √(1-x²) = √2 sin θ",
+        "Step 3: Substitute into y: tan⁻¹((√2 cos θ - √2 sin θ)/(√2 cos θ + √2 sin θ))",
+        "Step 4: Divide numerator and denominator by √2 cos θ: tan⁻¹((1 - tan θ)/(1 + tan θ)) = π/4 - θ",
+        "Step 5: Replace θ = z/2: y = π/4 - z/2",
+        "Step 6: Compute dy/dz = -1/2 and match option"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_substitute_x_sq": {
+        "x_squared": "cos(2θ)",
+        "z": "cos⁻¹(cos 2θ) = 2θ  ⇒  θ = z/2"
+      },
+      "step_2_simplify_radicals": {
+        "sqrt_1_plus_x_sq": "√(1 + cos 2θ) = √(2 cos² θ) = √2 cos θ",
+        "sqrt_1_minus_x_sq": "√(1 - cos 2θ) = √(2 sin² θ) = √2 sin θ"
+      },
+      "step_3_simplify_y": {
+        "fraction": "(√2 cos θ - √2 sin θ) / (√2 cos θ + √2 sin θ) = (cos θ - sin θ) / (cos θ + sin θ)",
+        "divide_by_cos": "= (1 - tan θ) / (1 + tan θ) = tan(π/4 - θ)",
+        "y_expression": "y = tan⁻¹(tan(π/4 - θ)) = π/4 - θ"
+      },
+      "step_4_express_y_in_terms_of_z": {
+        "substitute_theta": "y = π/4 - z/2"
+      },
+      "step_5_differentiate": {
+        "dy_dz": "d/dz (π/4 - z/2) = -1/2"
+      },
+      "step_6_match_option": {
+        "matching_option": "A"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "A. -1/2",
+      "verification": "Since y = π/4 - z/2, dy/dz is simply -1/2 ✓"
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "filename_suggestion": "m_inverse_trigonometry_identity_quadratic_form_q040.json",
+  "input": "If cos^-1(x) - cos^-1(y/3) = alpha, where -1 <= x <= 1, -3 <= y <= 3, and x <= y/3, then for all x,y, 9x^2 - 6xy cos(alpha) + y^2 is equal to\n\nOptions:\nA. sin^2(alpha)\nB. 3 sin^2(alpha)\nC. 9 sin^2(alpha)\nD. (4/9) sin^2(alpha)",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Use the inverse-cos difference relation to simplify the quadratic expression in x and y.",
+      "given_information": {
+        "relation": "cos^-1(x) - cos^-1(y/3) = alpha",
+        "to_find": "value of 9x^2 - 6xy cos(alpha) + y^2"
+      },
+      "key_observation": "Take cosine on both sides and use cos(A-B) identity."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Inverse trigonometric substitution",
+        "cos(A-B) identity",
+        "Algebraic rearrangement"
+      ],
+      "key_formulas": {
+        "cos_difference": "cos(A-B)=cos A cos B + sin A sin B",
+        "sin_from_cos": "sin(cos^-1 t)=sqrt(1-t^2)"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Let A=cos^-1(x), B=cos^-1(y/3), expand cos(A-B), isolate radical term, square and simplify.",
+      "logical_steps": [
+        "Step 1: Write cos(alpha) using A-B identity",
+        "Step 2: Substitute cos A, cos B, sin A, sin B",
+        "Step 3: Rearrange and square",
+        "Step 4: Simplify to target expression",
+        "Step 5: Match option"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_set_A_B": {
+        "A": "cos^-1(x)",
+        "B": "cos^-1(y/3)",
+        "equation": "cos(alpha)=cos(A-B)"
+      },
+      "step_2_expand": {
+        "result": "cos(alpha)=x(y/3)+sqrt(1-x^2)*sqrt(1-y^2/9)",
+        "scaled": "3cos(alpha)=xy+sqrt(1-x^2)*sqrt(9-y^2)"
+      },
+      "step_3_rearrange_square": {
+        "rearrange": "xy-3cos(alpha) = -sqrt(1-x^2)*sqrt(9-y^2)",
+        "square": "x^2y^2 - 6xycos(alpha) + 9cos^2(alpha) = (1-x^2)(9-y^2)"
+      },
+      "step_4_simplify": {
+        "expand_rhs": "9 - y^2 - 9x^2 + x^2y^2",
+        "cancel": "9x^2 - 6xycos(alpha) + y^2 = 9 - 9cos^2(alpha)",
+        "final": "9x^2 - 6xycos(alpha) + y^2 = 9sin^2(alpha)"
+      },
+      "step_5_match_option": {
+        "matching_option": "C"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "C. 9 sin^2(alpha)",
+      "verification": "Direct identity manipulation leads exactly to 9sin^2(alpha), independent of x and y after simplification."
+    }
+  }
+}

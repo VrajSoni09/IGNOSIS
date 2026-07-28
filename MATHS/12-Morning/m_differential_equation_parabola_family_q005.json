@@ -1,0 +1,57 @@
+{
+  "filename_suggestion": "m_differential_equation_parabola_family_q005.json",
+  "input": "The differential equation of all parabolas, whose axes are parallel to Y-axis, is\n\nOptions:\nA. y3 = 1\nB. y3 = 0\nC. y3 = -1\nD. y.y3 + y1 = 0",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Find the differential equation representing the family of all parabolas whose axis is parallel to the y-axis.",
+      "given_information": {
+        "family": "Parabolas with axis parallel to y-axis",
+        "to_find": "differential equation of the family"
+      },
+      "key_observation": "Start from the general parabola form with axis parallel to y-axis and eliminate constants by differentiation."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "General equation of a parabola",
+        "Elimination of arbitrary constants",
+        "Successive differentiation"
+      ],
+      "key_formulas": {
+        "general_parabola": "(x - h)² = 4a(y - k)",
+        "first_derivative": "2(x - h) = 4a(dy/dx)",
+        "third_derivative_goal": "Differentiate enough times to remove h, k, a"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Differentiate the general parabola equation repeatedly and eliminate parameters.",
+      "logical_steps": [
+        "Step 1: Write (x - h)² = 4a(y - k)",
+        "Step 2: Differentiate once",
+        "Step 3: Differentiate twice",
+        "Step 4: Differentiate thrice",
+        "Step 5: Identify final differential equation"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_general_form": {
+        "equation": "(x - h)² = 4a(y - k)"
+      },
+      "step_2_first_differentiation": {
+        "result": "2(x - h) = 4a y'"
+      },
+      "step_3_second_differentiation": {
+        "result": "2 = 4a y''"
+      },
+      "step_4_third_differentiation": {
+        "result": "0 = 4a y'''"
+      },
+      "step_5_conclude": {
+        "final_equation": "y''' = 0"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "B. y3 = 0",
+      "verification": "The third derivative vanishes for every parabola of the form (x-h)² = 4a(y-k), so the family equation is y''' = 0."
+    }
+  }
+}

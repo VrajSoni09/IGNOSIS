@@ -1,0 +1,84 @@
+{
+  "filename_suggestion": "m_calculus_derivative_inverse_trigonometric_q150.json",
+  "input": "If y = √((1-sin⁻¹(x))/(1+sin⁻¹(x))), then dy/dx at x = 0 and y = 1 is\n\nOptions:\nA. -2\nB. -1\nC. 1\nD. 2",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Find the derivative dy/dx of the given function at the specific point (x = 0, y = 1).",
+      "given_information": {
+        "function": "y = √((1-sin⁻¹(x))/(1+sin⁻¹(x)))",
+        "point": "x = 0, y = 1",
+        "to_find": "dy/dx at this point"
+      },
+      "key_observation": "Use logarithmic differentiation to simplify the complex radical expression."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Logarithmic differentiation",
+        "Chain rule",
+        "Inverse trigonometric derivatives",
+        "Quotient rule",
+        "Chain rule application"
+      ],
+      "key_formulas": {
+        "d(sin⁻¹(x))/dx": "1/√(1-x²)",
+        "logarithmic_diff": "If y = f(x), then ln(y) gives easier differentiation",
+        "chain_rule": "dy/dx = y · d(ln y)/dx"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Use logarithmic differentiation to break down the function into simpler components.",
+      "logical_steps": [
+        "Step 1: Take natural logarithm of both sides",
+        "Step 2: Apply logarithm properties to simplify",
+        "Step 3: Differentiate both sides with respect to x",
+        "Step 4: Solve for dy/dx",
+        "Step 5: Evaluate at x = 0"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_take_logarithm": {
+        "function": "y = √((1-sin⁻¹(x))/(1+sin⁻¹(x)))",
+        "log_both_sides": "ln(y) = ln[√((1-sin⁻¹(x))/(1+sin⁻¹(x)))]"
+      },
+      "step_2_simplify_logarithm": {
+        "sqrt_property": "ln(y) = (1/2) ln((1-sin⁻¹(x))/(1+sin⁻¹(x)))",
+        "quotient_property": "ln(y) = (1/2)[ln(1-sin⁻¹(x)) - ln(1+sin⁻¹(x))]"
+      },
+      "step_3_differentiate_both_sides": {
+        "left_side": "d(ln y)/dx = (1/y) · dy/dx"
+      },
+      "step_4_differentiate_right_side": {
+        "d/dx": "d/dx[(1/2)ln(1-sin⁻¹(x)) - (1/2)ln(1+sin⁻¹(x))]",
+        "chain_rule": "(1/2) · 1/(1-sin⁻¹(x)) · (-1/√(1-x²)) - (1/2) · 1/(1+sin⁻¹(x)) · (1/√(1-x²))"
+      },
+      "step_5_combine_fractions": {
+        "expression": "(1/2√(1-x²)) · [-(1/(1-sin⁻¹(x))) - 1/(1+sin⁻¹(x))]",
+        "find_common_denominator": "(1/2√(1-x²)) · [-(1+sin⁻¹(x)) - (1-sin⁻¹(x))]/[(1-sin⁻¹(x))(1+sin⁻¹(x))]",
+        "numerator": "-(1+sin⁻¹(x)) - (1-sin⁻¹(x)) = -2"
+      },
+      "step_6_simplify": {
+        "expression": "(1/y) · dy/dx = (1/2√(1-x²)) · (-2)/[(1-sin⁻¹(x))(1+sin⁻¹(x))]",
+        "result": "(1/y) · dy/dx = (-1/(√(1-x²)[(1-sin⁻¹(x))(1+sin⁻¹(x))]))"
+      },
+      "step_7_solve_for_dy_dx": {
+        "from_above": "dy/dx = y · (-1/(√(1-x²)[(1-sin⁻¹(x))(1+sin⁻¹(x))]))"
+      },
+      "step_8_evaluate_at_x_0": {
+        "at_x_0": "sin⁻¹(0) = 0",
+        "y_at_0": "y = √((1-0)/(1+0)) = √1 = 1",
+        "√(1-0²)": "√1 = 1"
+      },
+      "step_9_denominator_at_x_0": {
+        "(1-sin⁻¹(0))(1+sin⁻¹(0))": "(1-0)(1+0) = 1"
+      },
+      "step_10_final_evaluation": {
+        "substitute": "dy/dx|ₓ₌₀ = 1 · (-1/(1 · 1))",
+        "result": "dy/dx|ₓ₌₀ = -1"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "B. -1",
+      "verification": "At x = 0, y = 1, and all terms evaluate consistently to give dy/dx = -1"
+    }
+  }
+}

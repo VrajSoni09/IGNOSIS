@@ -1,0 +1,57 @@
+{
+  "filename_suggestion": "m_coordinate_geometry_distance_between_parallel_lines_q029.json",
+  "input": "If the distance between the parallel lines given by the equation x^2 + 4xy + py^2 + 3x + qy - 4 = 0 is lambda, then lambda^2 =\n\nOptions:\nA. 5\nB. sqrt(5)\nC. 25\nD. 9/5",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Interpret the quadratic as pair of parallel lines and compute their separation.",
+      "given_information": {
+        "pair_equation": "x^2 + 4xy + py^2 + 3x + qy - 4 = 0",
+        "to_find": "lambda^2"
+      },
+      "key_observation": "From the provided solved form, it reduces to (x+2y)^2 + 3(x+2y) - 4 = 0, giving two parallel lines in x+2y."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Factorization of quadratic in linear form",
+        "Distance between parallel lines"
+      ],
+      "key_formulas": {
+        "factor_form": "(x+2y+4)(x+2y-1)=0",
+        "distance_formula": "distance between ax+by+c1=0 and ax+by+c2=0 is |c1-c2|/sqrt(a^2+b^2)"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Factor into two lines, compute distance, then square it.",
+      "logical_steps": [
+        "Step 1: Rewrite as quadratic in (x+2y)",
+        "Step 2: Factor to get two line equations",
+        "Step 3: Apply parallel-line distance formula",
+        "Step 4: Compute lambda^2",
+        "Step 5: Match option"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_rewrite_and_factor": {
+        "form": "(x+2y)^2 + 3(x+2y) - 4 = 0",
+        "factor": "(x+2y+4)(x+2y-1)=0"
+      },
+      "step_2_lines": {
+        "line_1": "x + 2y + 4 = 0",
+        "line_2": "x + 2y - 1 = 0"
+      },
+      "step_3_distance": {
+        "calculation": "lambda = |4 - (-1)|/sqrt(1^2 + 2^2) = 5/sqrt(5) = sqrt(5)"
+      },
+      "step_4_square": {
+        "result": "lambda^2 = 5"
+      },
+      "step_5_match_option": {
+        "matching_option": "A"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "A. 5",
+      "verification": "Parallel lines differ only in constant terms and their separation is sqrt(5), so square is 5."
+    }
+  }
+}

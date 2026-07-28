@@ -1,0 +1,55 @@
+{
+  "filename_suggestion": "m_probability_binomial_variance_from_single_probability_q053.json",
+  "input": "For a binomial variate X with n = 6 if P(X = 4) = 135/2^12, then its variance is\n\nOptions:\nA. 8/9\nB. 1/4\nC. 4\nD. 9/8",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Use given binomial probability to determine p and then compute variance npq.",
+      "given_information": {
+        "n": 6,
+        "P_X_4": "135/2^12",
+        "to_find": "variance"
+      },
+      "key_observation": "P(X=4)=6C4 p^4 q^2 gives an equation in p and q."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Binomial PMF",
+        "Relation q=1-p",
+        "Variance of binomial distribution"
+      ],
+      "key_formulas": {
+        "pmf": "P(X=r)=nCr p^r q^(n-r)",
+        "variance": "Var(X)=npq"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Set up PMF at r=4, solve for p, then compute 6pq.",
+      "logical_steps": [
+        "Step 1: Write equation from P(X=4)",
+        "Step 2: Simplify to get p and q",
+        "Step 3: Compute variance npq",
+        "Step 4: Match option"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_use_pmf": {
+        "equation": "6C4 p^4 q^2 = 135/2^12",
+        "simplify": "15 p^4 q^2 = 135/4096 => p^4 q^2 = 9/4096"
+      },
+      "step_2_extract_p_and_q": {
+        "rewrite": "(p^2 q)^2 = 9/4096 => p^2 q = 3/64",
+        "valid_solution": "p = 1/4, q = 3/4"
+      },
+      "step_3_variance": {
+        "calculation": "Var(X) = npq = 6*(1/4)*(3/4) = 18/16 = 9/8"
+      },
+      "step_4_match_option": {
+        "matching_option": "D"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "D. 9/8",
+      "verification": "Substituting p=1/4, q=3/4 reproduces the given probability and gives variance 9/8."
+    }
+  }
+}

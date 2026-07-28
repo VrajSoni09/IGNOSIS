@@ -1,0 +1,75 @@
+{
+  "filename_suggestion": "m_vectors_vector_projection_AB_on_CD_q062.json",
+  "input": "The vector projection of AB on CD, where A ≡ (2, -3, 0), B ≡ (1, -4, -2), C ≡ (4, 6, 8) and D ≡ (7, 0, 10), is\n\nOptions:\nA. (1/49)(3î - 6ĵ + 2k̂)\nB. (1/8)(-î - ĵ - 2k̂)\nC. -(1/49)(3î - 6ĵ + 2k̂)\nD. -(1/8)(-î - ĵ - 2k̂)",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Find the vector projection of vector AB onto vector CD given four points A, B, C, D in 3D space.",
+      "given_information": {
+        "A": "(2, -3, 0)",
+        "B": "(1, -4, -2)",
+        "C": "(4, 6, 8)",
+        "D": "(7, 0, 10)",
+        "to_find": "Vector projection of AB onto CD"
+      },
+      "key_observation": "Vector projection of u onto v is given by (u · v / |v|²) × v. First compute the vectors AB and CD, then apply the formula."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Vector between two points",
+        "Dot product",
+        "Magnitude squared of a vector",
+        "Vector projection formula"
+      ],
+      "key_formulas": {
+        "position_vector": "AB = B - A",
+        "vector_projection": "proj_v(u) = (u · v / |v|²) × v",
+        "dot_product": "u · v = u₁v₁ + u₂v₂ + u₃v₃",
+        "magnitude_squared": "|v|² = v₁² + v₂² + v₃²"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Compute AB and CD as position vectors, take their dot product, divide by |CD|², and scale CD.",
+      "logical_steps": [
+        "Step 1: Compute AB = B - A",
+        "Step 2: Compute CD = D - C",
+        "Step 3: Compute dot product AB · CD",
+        "Step 4: Compute |CD|²",
+        "Step 5: Apply vector projection formula",
+        "Step 6: Match with options"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_compute_AB": {
+        "A": "(2, -3, 0)",
+        "B": "(1, -4, -2)",
+        "AB": "B - A = (1-2, -4-(-3), -2-0) = (-1, -1, -2)"
+      },
+      "step_2_compute_CD": {
+        "C": "(4, 6, 8)",
+        "D": "(7, 0, 10)",
+        "CD": "D - C = (7-4, 0-6, 10-8) = (3, -6, 2)"
+      },
+      "step_3_compute_dot_product": {
+        "AB": "(-1, -1, -2)",
+        "CD": "(3, -6, 2)",
+        "AB_dot_CD": "(-1)(3) + (-1)(-6) + (-2)(2) = -3 + 6 - 4 = -1"
+      },
+      "step_4_compute_magnitude_squared": {
+        "CD": "(3, -6, 2)",
+        "|CD|²": "3² + (-6)² + 2² = 9 + 36 + 4 = 49"
+      },
+      "step_5_apply_projection_formula": {
+        "formula": "proj_CD(AB) = (AB · CD / |CD|²) × CD",
+        "scalar": "-1 / 49",
+        "result": "(-1/49)(3î - 6ĵ + 2k̂) = -(1/49)(3î - 6ĵ + 2k̂)"
+      },
+      "step_6_match_option": {
+        "matching_option": "C"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "C. -(1/49)(3î - 6ĵ + 2k̂)",
+      "verification": "AB · CD = -1, |CD|² = 49. Scalar factor = -1/49. Multiplying by CD = (3, -6, 2) gives -(1/49)(3î - 6ĵ + 2k̂), matching option C."
+    }
+  }
+}

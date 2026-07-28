@@ -1,0 +1,60 @@
+{
+  "filename_suggestion": "m_calculus_implicit_differentiation_symmetric_relation_q019.json",
+  "input": "If x^2 + y^2 = t + 1/t and x^4 + y^4 = t^2 + 1/t^2, then dy/dx is equal to\n\nOptions:\nA. y/x\nB. -y/x\nC. x/y\nD. -x/y",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Use the two given relations to eliminate t and then compute dy/dx.",
+      "given_information": {
+        "equation_1": "x^2 + y^2 = t + 1/t",
+        "equation_2": "x^4 + y^4 = t^2 + 1/t^2",
+        "to_find": "dy/dx"
+      },
+      "key_observation": "Square the first equation and compare with the second to derive a simple relation between x and y."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Algebraic manipulation",
+        "Implicit differentiation"
+      ],
+      "key_formulas": {
+        "square_identity": "(x^2+y^2)^2 = x^4 + y^4 + 2x^2y^2",
+        "rhs_identity": "(t + 1/t)^2 = t^2 + 1/t^2 + 2"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Square equation 1, substitute equation 2, get x^2y^2=1, then differentiate implicitly.",
+      "logical_steps": [
+        "Step 1: Square x^2+y^2=t+1/t",
+        "Step 2: Use x^4+y^4=t^2+1/t^2 to simplify",
+        "Step 3: Obtain x^2y^2=1",
+        "Step 4: Differentiate with respect to x",
+        "Step 5: Solve for dy/dx and match option"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_square_first_equation": {
+        "lhs": "x^4 + y^4 + 2x^2y^2",
+        "rhs": "t^2 + 1/t^2 + 2"
+      },
+      "step_2_substitute_second_equation": {
+        "using": "x^4 + y^4 = t^2 + 1/t^2",
+        "result": "2x^2y^2 = 2"
+      },
+      "step_3_simplify": {
+        "relation": "x^2y^2 = 1"
+      },
+      "step_4_differentiate": {
+        "differentiate_both_sides": "d/dx(x^2y^2)=0",
+        "expanded": "2xy^2 + 2x^2y(dy/dx) = 0"
+      },
+      "step_5_solve_for_dy_dx": {
+        "expression": "dy/dx = - (2xy^2)/(2x^2y) = -y/x",
+        "matching_option": "B"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "B. -y/x",
+      "verification": "Implicit differentiation of x^2y^2=1 directly yields dy/dx = -y/x."
+    }
+  }
+}

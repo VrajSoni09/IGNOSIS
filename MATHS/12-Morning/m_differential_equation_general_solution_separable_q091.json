@@ -1,0 +1,68 @@
+{
+  "filename_suggestion": "m_differential_equation_general_solution_separable_q091.json",
+  "input": "General solution of the differential equation cos x(1 + cos y)dx - sin y(1 + sin x)dy = 0 is\n\nOptions:\nA. (1 + cos x)(1 + sin y) = c\nB. 1 + sin x + cos y = c\nC. (1 + sin x)(1 + cos y) = c\nD. 1 + sin x · cos y = c",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Find the general solution of the given separable differential equation by separating variables and integrating both sides.",
+      "given_information": {
+        "equation": "cos x(1 + cos y)dx - sin y(1 + sin x)dy = 0",
+        "to_find": "General solution"
+      },
+      "key_observation": "Rearrange to separate x and y: cos x/(1+sin x) dx = sin y/(1+cos y) dy. Each side can be integrated directly since numerator is derivative of denominator (up to sign)."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Separation of variables",
+        "Integration of f'(x)/f(x) form: ∫f'/f dx = log|f| + c",
+        "Logarithm laws for combining log terms"
+      ],
+      "key_formulas": {
+        "d_sin_x": "d/dx(1+sin x) = cos x",
+        "d_cos_y": "d/dy(1+cos y) = -sin y",
+        "integral_form": "∫cos x/(1+sin x) dx = log|1+sin x| + c",
+        "integral_RHS": "∫sin y/(1+cos y) dy = -log|1+cos y| + c"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Separate variables, integrate both sides recognising each as a log|f| form, combine using log laws to get the product form of the solution.",
+      "logical_steps": [
+        "Step 1: Rearrange to separate x and y terms",
+        "Step 2: Integrate the left side ∫cos x/(1+sin x) dx",
+        "Step 3: Integrate the right side ∫sin y/(1+cos y) dy",
+        "Step 4: Combine log terms",
+        "Step 5: Exponentiate to get the general solution"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_separate": {
+        "rearrange": "cos x(1+cos y) dx = sin y(1+sin x) dy",
+        "separate": "cos x/(1+sin x) dx = sin y/(1+cos y) dy"
+      },
+      "step_2_integrate_LHS": {
+        "integral": "∫cos x/(1+sin x) dx",
+        "note": "d/dx(1+sin x) = cos x → numerator is derivative of denominator",
+        "result": "log|1+sin x| + c₁"
+      },
+      "step_3_integrate_RHS": {
+        "integral": "∫sin y/(1+cos y) dy",
+        "note": "d/dy(1+cos y) = -sin y → sin y = -d/dy(1+cos y)",
+        "result": "-log|1+cos y| + c₂"
+      },
+      "step_4_combine": {
+        "equation": "log|1+sin x| = -log|1+cos y| + log|c|",
+        "rearrange": "log|1+sin x| + log|1+cos y| = log|c|",
+        "log_product": "log|(1+sin x)(1+cos y)| = log|c|"
+      },
+      "step_5_solution": {
+        "result": "(1+sin x)(1+cos y) = c"
+      },
+      "step_6_match_option": {
+        "matching_option": "C"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "C. (1 + sin x)(1 + cos y) = c",
+      "verification": "Differentiating (1+sin x)(1+cos y)=c: (1+cos y)cos x dx + (1+sin x)(-sin y) dy = 0 → cos x(1+cos y) dx - sin y(1+sin x) dy = 0 ✓"
+    }
+  }
+}

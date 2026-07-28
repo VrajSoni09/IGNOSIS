@@ -1,0 +1,64 @@
+{
+  "filename_suggestion": "m_functions_composite_inverse_evaluate_q099.json",
+  "input": "f : R → R; g : R → R are two functions such that f(x) = 2x - 3, g(x) = x³ + 5, then (fog)⁻¹(-9) is\n\nOptions:\nA. -2\nB. 2\nC. -√2\nD. √2",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Find the composition fog, derive its inverse function (fog)⁻¹, and evaluate it at x = -9.",
+      "given_information": {
+        "f(x)": "2x - 3",
+        "g(x)": "x³ + 5",
+        "to_find": "(fog)⁻¹(-9)"
+      },
+      "key_observation": "First find fog(x) = f(g(x)), then find the inverse function by solving y = fog(x) for x in terms of y, and finally evaluate at y = -9."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Composition of functions: (fog)(x) = f(g(x))",
+        "Finding inverse: solve y = h(x) for x",
+        "Cube root of negative numbers: ∛(-8) = -2"
+      ],
+      "key_formulas": {
+        "fog": "f(g(x)) = 2(x³+5) - 3 = 2x³ + 7",
+        "inverse": "y = 2x³+7  →  x = ((y-7)/2)^(1/3)",
+        "(fog)⁻¹(y)": "((y-7)/2)^(1/3)"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Compute fog(x), express the inverse algebraically, substitute y = -9, and evaluate the cube root.",
+      "logical_steps": [
+        "Step 1: Compute fog(x) = f(g(x))",
+        "Step 2: Let y = fog(x) and solve for x",
+        "Step 3: Write (fog)⁻¹(y) = x in terms of y",
+        "Step 4: Substitute y = -9 and evaluate",
+        "Step 5: Match with options"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_compute_fog": {
+        "fog(x)": "f(g(x)) = f(x³+5)",
+        "expand": "= 2(x³+5) - 3 = 2x³ + 10 - 3",
+        "result": "fog(x) = 2x³ + 7"
+      },
+      "step_2_find_inverse": {
+        "let": "y = 2x³ + 7",
+        "solve": "y - 7 = 2x³  →  x³ = (y-7)/2",
+        "x": "x = ((y-7)/2)^(1/3)"
+      },
+      "step_3_inverse_function": {
+        "(fog)⁻¹(y)": "((y-7)/2)^(1/3)"
+      },
+      "step_4_evaluate_at_minus_9": {
+        "y": "-9",
+        "compute": "((-9-7)/2)^(1/3) = (-16/2)^(1/3) = (-8)^(1/3)",
+        "result": "∛(-8) = -2"
+      },
+      "step_5_match_option": {
+        "matching_option": "A"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "A. -2",
+      "verification": "fog(-2) = 2(-2)³+7 = 2(-8)+7 = -16+7 = -9 ✓. So (fog)⁻¹(-9) = -2 ✓"
+    }
+  }
+}

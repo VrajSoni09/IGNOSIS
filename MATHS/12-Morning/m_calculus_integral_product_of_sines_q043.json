@@ -1,0 +1,51 @@
+{
+  "filename_suggestion": "m_calculus_integral_product_of_sines_q043.json",
+  "input": "Integral 1/[sin(x-a) sin x] dx =\n\nOptions:\nA. sin(a) log(sin(x-a)cosec x) + c\nB. cosec(a) log(sin(x-a)cosec x) + c\nC. -sin(a) log(sin(x-a)sin x) + c\nD. -cosec(a) log(sin(x-a)sin x) + c",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Evaluate the integral involving product of two sine factors in denominator.",
+      "given_information": {
+        "integral": "I = integral dx/[sin(x-a)sin x]",
+        "to_find": "antiderivative"
+      },
+      "key_observation": "Use identity sin x - sin(x-a) = 2cos((2x-a)/2)sin(a/2), or direct decomposition using cot terms."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Trigonometric decomposition",
+        "Logarithmic integrals"
+      ],
+      "key_formulas": {
+        "useful_form": "1/[sin(x-a)sin x] = csc(a)[cot(x-a)-cot x]"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Rewrite integrand as difference of cotangents, then integrate termwise.",
+      "logical_steps": [
+        "Step 1: Apply csc(a)[cot(x-a)-cot x] identity",
+        "Step 2: Integrate cot terms",
+        "Step 3: Combine logs",
+        "Step 4: Match option"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_rewrite": {
+        "identity": "1/[sin(x-a)sin x] = csc(a)[cot(x-a)-cot x]"
+      },
+      "step_2_integrate": {
+        "integral": "I = csc(a) integral [cot(x-a)-cot x] dx",
+        "result": "I = csc(a)[log|sin(x-a)|-log|sin x|] + c"
+      },
+      "step_3_simplify": {
+        "combined": "I = csc(a) log|sin(x-a)cosec x| + c"
+      },
+      "step_4_match_option": {
+        "matching_option": "B"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "B. cosec(a) log(sin(x-a)cosec x) + c",
+      "verification": "Differentiation returns csc(a)[cot(x-a)-cot x] which equals the original integrand."
+    }
+  }
+}

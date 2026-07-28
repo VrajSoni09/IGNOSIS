@@ -1,0 +1,61 @@
+{
+  "filename_suggestion": "m_optimization_open_tank_min_surface_area_q056.json",
+  "input": "An open metallic tank is to be constructed, with a square base and vertical sides, having volume 500 cubic meter. Then the dimensions of the tank, for minimum area of the sheet metal used in its construction, are\n\nOptions:\nA. 5 m, 5 m, 10 m\nB. 10 m, 10 m, 5 m\nC. 2 m, 2 m, 8 m\nD. 15 m, 15 m, 5 m",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Minimize sheet-metal area for an open-top tank with square base and fixed volume 500 m^3.",
+      "given_information": {
+        "base": "square of side x",
+        "height": "y",
+        "volume": "x^2 y = 500"
+      },
+      "key_observation": "For open tank, area is base plus four side faces: S = x^2 + 4xy."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Constraint substitution",
+        "Single-variable optimization",
+        "Second derivative test"
+      ],
+      "key_formulas": {
+        "volume_constraint": "y = 500/x^2",
+        "surface_area": "S(x) = x^2 + 2000/x"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Express S in terms of x, differentiate, find critical point, verify minimum, then compute y.",
+      "logical_steps": [
+        "Step 1: Use y = 500/x^2",
+        "Step 2: Write S(x)",
+        "Step 3: Set dS/dx = 0",
+        "Step 4: Use second derivative to confirm minimum",
+        "Step 5: Compute dimensions and match option"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_substitute_constraint": {
+        "S_x": "S = x^2 + 4x(500/x^2) = x^2 + 2000/x"
+      },
+      "step_2_differentiate": {
+        "dS_dx": "2x - 2000/x^2"
+      },
+      "step_3_critical_point": {
+        "equation": "2x - 2000/x^2 = 0",
+        "solve": "2x^3 = 2000 => x^3 = 1000 => x = 10"
+      },
+      "step_4_minimum_check": {
+        "d2S_dx2": "2 + 4000/x^3",
+        "at_x_10": "2 + 4 > 0, so minimum"
+      },
+      "step_5_find_height_and_match": {
+        "y": "500/10^2 = 5",
+        "dimensions": "10 m, 10 m, 5 m",
+        "matching_option": "B"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "B. 10 m, 10 m, 5 m",
+      "verification": "These satisfy volume 500 and minimize open-tank area by derivative test."
+    }
+  }
+}

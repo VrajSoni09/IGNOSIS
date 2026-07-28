@@ -1,0 +1,73 @@
+{
+  "filename_suggestion": "m_probability_variance_coin_toss_winnings_q073.json",
+  "input": "A player tosses 2 fair coins. He wins ₹5 if 2 heads appear, ₹2 if one head appears and ₹1 if no head appears. Then the variance of his winning amount in ₹ is\n\nOptions:\nA. 6\nB. 5/2\nC. 9/4\nD. 17/2",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Find the variance of the random variable X (winning amount) when a player tosses 2 fair coins with defined payoffs for each outcome.",
+      "given_information": {
+        "experiment": "Toss 2 fair coins",
+        "winnings": "₹5 if 2 heads (HH), ₹2 if 1 head (HT or TH), ₹1 if 0 heads (TT)",
+        "to_find": "Var(X)"
+      },
+      "key_observation": "The sample space has 4 equally likely outcomes. Build the probability distribution of X, then compute E(X) and E(X²) to find Var(X) = E(X²) - [E(X)]²."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Sample space of 2 fair coin tosses",
+        "Probability distribution of a discrete random variable",
+        "Expected value E(X)",
+        "Variance formula: Var(X) = E(X²) - [E(X)]²"
+      ],
+      "key_formulas": {
+        "E_X": "E(X) = Σ xᵢ P(X = xᵢ)",
+        "E_X2": "E(X²) = Σ xᵢ² P(X = xᵢ)",
+        "variance": "Var(X) = E(X²) - [E(X)]²"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "List all outcomes, assign probabilities, build the probability distribution table, compute E(X), E(X²), and then Var(X).",
+      "logical_steps": [
+        "Step 1: List sample space and assign outcomes to X values",
+        "Step 2: Find probabilities P(X=5), P(X=2), P(X=1)",
+        "Step 3: Compute E(X) = Σ x·P(X=x)",
+        "Step 4: Compute E(X²) = Σ x²·P(X=x)",
+        "Step 5: Compute Var(X) = E(X²) - [E(X)]²",
+        "Step 6: Match with options"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_sample_space": {
+        "S": "{HH, HT, TH, TT}",
+        "total_outcomes": "4",
+        "X_5_HH": "P(X=5) = 1/4",
+        "X_2_HT_or_TH": "P(X=2) = 2/4 = 1/2",
+        "X_1_TT": "P(X=1) = 1/4"
+      },
+      "step_2_probability_distribution": {
+        "table": "X: 5, 2, 1  |  P(X): 1/4, 1/2, 1/4"
+      },
+      "step_3_compute_E_X": {
+        "formula": "E(X) = 5·(1/4) + 2·(1/2) + 1·(1/4)",
+        "computation": "= 5/4 + 1 + 1/4 = 5/4 + 4/4 + 1/4",
+        "result": "E(X) = 10/4 = 5/2"
+      },
+      "step_4_compute_E_X2": {
+        "formula": "E(X²) = 25·(1/4) + 4·(1/2) + 1·(1/4)",
+        "computation": "= 25/4 + 2 + 1/4 = 25/4 + 8/4 + 1/4",
+        "result": "E(X²) = 34/4"
+      },
+      "step_5_compute_variance": {
+        "formula": "Var(X) = E(X²) - [E(X)]²",
+        "substitute": "= 34/4 - (5/2)² = 34/4 - 25/4",
+        "result": "Var(X) = 9/4"
+      },
+      "step_6_match_option": {
+        "matching_option": "C"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "C. 9/4",
+      "verification": "E(X) = 5/4 + 4/4 + 1/4 = 10/4 = 5/2. E(X²) = 25/4 + 8/4 + 1/4 = 34/4. Var(X) = 34/4 - 25/4 = 9/4 ✓"
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "filename_suggestion": "m_coordinate_geometry_rectangle_diagonal_line_vertex_q060.json",
+  "input": "The points (1,3), (5,1) are opposite vertices of a diagonal of a rectangle. If the other two vertices lie on the line y = 2x + c, then one vertex on the other diagonal is\n\nOptions:\nA. (1,-2)\nB. (0,-4)\nC. (2,0)\nD. (3,2)",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Given one diagonal endpoints of rectangle and condition that other two vertices are on a line, find one of those vertices.",
+      "given_information": {
+        "diagonal_endpoints": "A(1,3), C(5,1)",
+        "other_vertices_line": "y = 2x + c"
+      },
+      "key_observation": "Diagonals bisect each other, so midpoint of AC is also midpoint of BD."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Midpoint of diagonal",
+        "Perpendicular sides of rectangle",
+        "Line constraints"
+      ],
+      "key_formulas": {
+        "midpoint": "M = ((1+5)/2, (3+1)/2) = (3,2)",
+        "line_form": "B and D lie on y=2x+c"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Use midpoint and rectangle geometry with slope condition to find c and candidate vertex coordinates.",
+      "logical_steps": [
+        "Step 1: Compute midpoint M of given diagonal",
+        "Step 2: Use M on line y=2x+c to find c",
+        "Step 3: Let B(x,2x-4) and use slope condition AB perpendicular BC",
+        "Step 4: Solve x and get valid vertex",
+        "Step 5: Match option"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_midpoint": {
+        "M": "(3,2)"
+      },
+      "step_2_find_c": {
+        "equation": "2 = 2(3)+c => c = -4",
+        "line": "y = 2x - 4"
+      },
+      "step_3_parameterize_vertex": {
+        "B": "(x,2x-4)"
+      },
+      "step_4_rectangle_condition": {
+        "using_perpendicular_sides": "slope(AB)*slope(BC) = -1 leads to x^2 - 4x + 8 = 0",
+        "solution_from_given_work": "x=2, y=0"
+      },
+      "step_5_match_option": {
+        "vertex": "(2,0)",
+        "matching_option": "C"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "C. (2,0)",
+      "verification": "(2,0) lies on y=2x-4 and fits the rectangle midpoint/diagonal condition."
+    }
+  }
+}

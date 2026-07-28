@@ -1,0 +1,70 @@
+{
+  "filename_suggestion": "m_3d_geometry_median_equally_inclined_find_lambda_mu_q097.json",
+  "input": "ABC is a triangle in a plane with vertices A(2, 3, 5), B(-1, 3, 2) and C(λ, 5, μ). If median through A is equally inclined to the co-ordinate axes, then value of λ + μ is\n\nOptions:\nA. 17\nB. 10\nC. 7\nD. 3",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Find the midpoint D of BC (the foot of the median from A), write the direction vector AD, and apply the condition that AD makes equal angles with all three coordinate axes to find λ and μ, then compute λ + μ.",
+      "given_information": {
+        "A": "(2, 3, 5)",
+        "B": "(-1, 3, 2)",
+        "C": "(λ, 5, μ)",
+        "condition": "Median AD is equally inclined to all three coordinate axes",
+        "to_find": "λ + μ"
+      },
+      "key_observation": "A line equally inclined to all coordinate axes has equal direction ratios (a, a, a), i.e., all three components of its direction vector are equal."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Midpoint formula in 3D",
+        "Direction vector of a line segment",
+        "Equal inclination to axes means all direction ratios are equal"
+      ],
+      "key_formulas": {
+        "midpoint": "D = ((x₁+x₂)/2, (y₁+y₂)/2, (z₁+z₂)/2)",
+        "direction_vector": "AD = D - A",
+        "equal_inclination": "All components of AD must be equal"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Find D = midpoint of BC, compute AD = D - A in terms of λ and μ, set all three components equal, solve for λ and μ, then add them.",
+      "logical_steps": [
+        "Step 1: Find D = midpoint of B(-1,3,2) and C(λ,5,μ)",
+        "Step 2: Compute direction vector AD = D - A",
+        "Step 3: Set all three components of AD equal",
+        "Step 4: Solve for λ and μ",
+        "Step 5: Compute λ + μ"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_midpoint_D": {
+        "D_x": "(-1+λ)/2",
+        "D_y": "(3+5)/2 = 4",
+        "D_z": "(2+μ)/2",
+        "D": "((λ-1)/2, 4, (μ+2)/2)"
+      },
+      "step_2_direction_AD": {
+        "AD_x": "(λ-1)/2 - 2 = (λ-5)/2",
+        "AD_y": "4 - 3 = 1",
+        "AD_z": "(μ+2)/2 - 5 = (μ-8)/2",
+        "AD": "((λ-5)/2, 1, (μ-8)/2)"
+      },
+      "step_3_equal_direction_ratios": {
+        "condition": "(λ-5)/2 = 1 = (μ-8)/2"
+      },
+      "step_4_solve": {
+        "from_x": "(λ-5)/2 = 1  →  λ-5 = 2  →  λ = 7",
+        "from_z": "(μ-8)/2 = 1  →  μ-8 = 2  →  μ = 10"
+      },
+      "step_5_sum": {
+        "λ_plus_μ": "7 + 10 = 17"
+      },
+      "step_6_match_option": {
+        "matching_option": "A"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "A. 17",
+      "verification": "D = ((7-1)/2, 4, (10+2)/2) = (3, 4, 6). AD = (3-2, 4-3, 6-5) = (1, 1, 1). All components equal → equally inclined to axes ✓. λ+μ = 7+10 = 17 ✓"
+    }
+  }
+}

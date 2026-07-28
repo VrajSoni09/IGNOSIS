@@ -1,0 +1,62 @@
+{
+  "filename_suggestion": "m_trigonometry_triangle_sides_progression_half_angles_q131.json",
+  "input": "If in △ABC, with usual notations, a · cos²(C/2) + c · cos²(A/2) = 3b/2, then\n\nOptions:\nA. a, b, c are in G.P.\nB. a, b, c are in H.P.\nC. a, b, c are in A.P.\nD. a, b, c are in Arithmetico Geometric Progression",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Determine the relation among side lengths a, b, c of △ABC given a cos²(C/2) + c cos²(A/2) = 3b/2.",
+      "given_information": {
+        "relation": "a cos²(C/2) + c cos²(A/2) = 3b/2",
+        "to_find": "Progression type of a, b, c"
+      },
+      "key_observation": "Use half-angle formula cos²(X/2) = (1 + cos X)/2, then simplify using projection formula b = a cos C + c cos A."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Half-angle formula: cos²(θ/2) = (1 + cos θ)/2",
+        "Projection formula in triangles: b = a cos C + c cos A",
+        "Arithmetic Progression (A.P.): a + c = 2b"
+      ],
+      "key_formulas": {
+        "half_angle_C": "cos²(C/2) = (1 + cos C)/2",
+        "half_angle_A": "cos²(A/2) = (1 + cos A)/2",
+        "projection_b": "a cos C + c cos A = b"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Replace cos²(C/2) and cos²(A/2) with half-angle identities, multiply by 2, apply the projection formula for b, and check if a + c = 2b.",
+      "logical_steps": [
+        "Step 1: Write a(1 + cos C)/2 + c(1 + cos A)/2 = 3b/2",
+        "Step 2: Multiply by 2: a(1 + cos C) + c(1 + cos A) = 3b",
+        "Step 3: Expand: a + a cos C + c + c cos A = 3b",
+        "Step 4: Group (a cos C + c cos A) and replace with b: a + c + b = 3b",
+        "Step 5: Subtract b: a + c = 2b",
+        "Step 6: Conclude a, b, c are in A.P. and match option"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_substitute_half_angles": {
+        "equation": "a · [(1 + cos C)/2] + c · [(1 + cos A)/2] = 3b/2"
+      },
+      "step_2_multiply_2": {
+        "equation": "a(1 + cos C) + c(1 + cos A) = 3b"
+      },
+      "step_3_expand": {
+        "LHS": "a + a cos C + c + c cos A = (a + c) + (a cos C + c cos A)"
+      },
+      "step_4_apply_projection": {
+        "projection_law": "a cos C + c cos A = b",
+        "equation": "a + c + b = 3b"
+      },
+      "step_5_simplify_AP": {
+        "result": "a + c = 2b"
+      },
+      "step_6_match_option": {
+        "matching_option": "C"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "C. a, b, c are in A.P.",
+      "verification": "a + c = 2b is the defining condition for a, b, c to be in Arithmetic Progression (A.P.) ✓"
+    }
+  }
+}

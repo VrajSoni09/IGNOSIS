@@ -1,0 +1,66 @@
+{
+  "filename_suggestion": "m_calculus_normal_to_rectangular_hyperbola_sign_condition_q092.json",
+  "input": "If the line ax + by + c = 0 is a normal to the curve xy = 1, then\n\nOptions:\nA. a > 0, b > 0\nB. a > 0, b < 0\nC. a < 0, b < 0\nD. a = 0, b = 0",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Determine the sign conditions on a and b for the line ax + by + c = 0 to be a normal to the rectangular hyperbola xy = 1.",
+      "given_information": {
+        "line": "ax + by + c = 0",
+        "curve": "xy = 1",
+        "to_find": "Signs of a and b"
+      },
+      "key_observation": "Find the slope of the normal to xy=1 at a general point, equate to the slope of the given line, and determine the sign constraint on a and b."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Differentiation of implicit curve xy = 1",
+        "Slope of tangent and normal at a point",
+        "Slope of a line ax + by + c = 0 is -a/b",
+        "Normal slope = -1/(tangent slope)"
+      ],
+      "key_formulas": {
+        "y": "1/x  →  y' = -1/x²",
+        "tangent_slope": "-1/x²",
+        "normal_slope": "x²  (always positive)",
+        "line_slope": "-a/b"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Find y' from xy=1, compute the slope of the normal as x², equate to -a/b (slope of line), and determine sign conditions.",
+      "logical_steps": [
+        "Step 1: Write y = 1/x and differentiate to find dy/dx",
+        "Step 2: Slope of tangent = -1/x²; slope of normal = x²",
+        "Step 3: Equate normal slope to line slope: x² = -a/b",
+        "Step 4: Since x² > 0, conclude -a/b > 0, i.e., a and b have opposite signs",
+        "Step 5: Identify which pair of signs matches an option"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_differentiate": {
+        "curve": "xy = 1  →  y = 1/x",
+        "dy/dx": "-1/x²"
+      },
+      "step_2_normal_slope": {
+        "tangent_slope": "-1/x²",
+        "normal_slope": "x²  (negative reciprocal of tangent slope)"
+      },
+      "step_3_equate_to_line_slope": {
+        "line_slope": "-a/b",
+        "equation": "x² = -a/b"
+      },
+      "step_4_sign_analysis": {
+        "constraint": "x² > 0 always  →  -a/b > 0  →  a/b < 0",
+        "meaning": "a and b must have opposite signs",
+        "valid_cases": "Either (a > 0, b < 0) or (a < 0, b > 0)"
+      },
+      "step_5_match_option": {
+        "note": "Option B: a > 0, b < 0 satisfies a/b < 0",
+        "matching_option": "B"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "B. a > 0, b < 0",
+      "verification": "With a > 0 and b < 0: slope of line = -a/b = -positive/negative = positive. This equals x² > 0, which is the slope of the normal to xy=1 ✓"
+    }
+  }
+}

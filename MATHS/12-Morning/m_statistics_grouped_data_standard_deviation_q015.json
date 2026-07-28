@@ -1,0 +1,66 @@
+{
+  "filename_suggestion": "m_statistics_grouped_data_standard_deviation_q015.json",
+  "input": "The standard deviation of the following distribution is\n\nClass intervals: 0-6, 6-12, 12-18\nFrequencies: 2, 4, 6\n\nOptions:\nA. 5sqrt(2)\nB. sqrt(5)\nC. 2sqrt(5)\nD. 20",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Find standard deviation for grouped data using class marks and frequencies.",
+      "given_information": {
+        "class_intervals": "0-6, 6-12, 12-18",
+        "frequencies": "2, 4, 6",
+        "to_find": "Standard deviation"
+      },
+      "key_observation": "Use class midpoints xi and the formula variance = (sum fi xi^2)/N - ((sum fi xi)/N)^2."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Grouped frequency distribution",
+        "Class marks",
+        "Variance and standard deviation"
+      ],
+      "key_formulas": {
+        "class_mark": "xi = (lower + upper)/2",
+        "mean": "xbar = (sum fi xi)/N",
+        "variance": "sigma^2 = (sum fi xi^2)/N - (xbar)^2",
+        "standard_deviation": "sigma = sqrt(sigma^2)"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Create midpoint table, compute required sums, then evaluate variance and standard deviation.",
+      "logical_steps": [
+        "Step 1: Find midpoints xi",
+        "Step 2: Compute fi*xi and fi*xi^2",
+        "Step 3: Sum columns and total frequency N",
+        "Step 4: Apply variance formula",
+        "Step 5: Take square root and match option"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_midpoints": {
+        "0-6": "xi = 3",
+        "6-12": "xi = 9",
+        "12-18": "xi = 15"
+      },
+      "step_2_table_values": {
+        "fi_xi": "2*3=6, 4*9=36, 6*15=90",
+        "fi_xi2": "2*9=18, 4*81=324, 6*225=1350"
+      },
+      "step_3_sums": {
+        "N": "2+4+6 = 12",
+        "sum_fi_xi": "6+36+90 = 132",
+        "sum_fi_xi2": "18+324+1350 = 1692"
+      },
+      "step_4_variance": {
+        "formula_substitution": "sigma^2 = 1692/12 - (132/12)^2",
+        "calculation": "sigma^2 = 141 - 121 = 20"
+      },
+      "step_5_standard_deviation": {
+        "sigma": "sqrt(20) = 2sqrt(5)",
+        "matching_option": "C"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "C. 2sqrt(5)",
+      "verification": "Using grouped-data variance formula gives sigma^2=20, so sigma=2sqrt(5)."
+    }
+  }
+}

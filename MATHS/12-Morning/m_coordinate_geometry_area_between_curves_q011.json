@@ -1,0 +1,62 @@
+{
+  "filename_suggestion": "m_coordinate_geometry_area_between_curves_q011.json",
+  "input": "The area (in sq. units) of the region A = {(x, y) | y^2/2 <= x <= y + 4} is\n\nOptions:\nA. 30\nB. 53/3\nC. 16\nD. 18",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Find the area of the region bounded by x = y^2/2 and x = y + 4.",
+      "given_information": {
+        "left_curve": "x = y^2/2",
+        "right_curve": "x = y + 4",
+        "to_find": "Area between curves"
+      },
+      "key_observation": "Since x is given as functions of y, integrate (right - left) with respect to y between intersection points."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Intersection of curves",
+        "Area between two curves in x as functions of y",
+        "Definite integration"
+      ],
+      "key_formulas": {
+        "intersection": "Set y^2/2 = y + 4",
+        "area_formula": "Area = integral[(x_right - x_left) dy]"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Find y-limits from intersections, then integrate (y+4 - y^2/2).",
+      "logical_steps": [
+        "Step 1: Solve y^2/2 = y + 4 for intersection y-values",
+        "Step 2: Determine x_right and x_left",
+        "Step 3: Set up area integral",
+        "Step 4: Evaluate and simplify",
+        "Step 5: Match option"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_find_intersections": {
+        "equation": "y^2/2 = y + 4",
+        "simplify": "y^2 - 2y - 8 = 0",
+        "roots": "y = 4, -2"
+      },
+      "step_2_set_integral": {
+        "right_minus_left": "(y + 4) - y^2/2",
+        "integral": "Area = integral from -2 to 4 of [(y + 4) - y^2/2] dy"
+      },
+      "step_3_integrate": {
+        "antiderivative": "y^2/2 + 4y - y^3/6"
+      },
+      "step_4_evaluate_limits": {
+        "at_4": "8 + 16 - 64/6 = 40/3",
+        "at_-2": "2 - 8 + 8/6 = -14/3",
+        "difference": "40/3 - (-14/3) = 54/3 = 18"
+      },
+      "step_5_match_option": {
+        "matching_option": "D"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "D. 18",
+      "verification": "The intersection limits and integrand order are correct, giving total area 18."
+    }
+  }
+}

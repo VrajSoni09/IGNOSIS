@@ -1,0 +1,63 @@
+{
+  "filename_suggestion": "m_vectors_angle_between_unit_vectors_perpendicular_combinations_q147.json",
+  "input": "If ā and b̄ are two unit vectors such that ā + 2b̄ and 5ā - 4b̄ are perpendicular to each other, then the angle between ā and b̄ is\n\nOptions:\nA. (π/4)\nB. (π/3)\nC. cos⁻¹(1/3)\nD. cos⁻¹(2/7)",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Find the angle θ between unit vectors ā and b̄ given that (ā + 2b̄) ⊥ (5ā - 4b̄).",
+      "given_information": {
+        "unit_vectors": "|ā| = |b̄| = 1",
+        "perpendicular_condition": "(ā + 2b̄) · (5ā - 4b̄) = 0",
+        "to_find": "Angle θ between ā and b̄"
+      },
+      "key_observation": "Expand the dot product (ā + 2b̄) · (5ā - 4b̄) = 0, substitute |ā| = 1 and |b̄| = 1, and solve for cos θ."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Perpendicularity condition: u ⊥ v ⇒ u · v = 0",
+        "Dot product expansion: (ā + 2b̄) · (5ā - 4b̄) = 5|ā|² - 4(ā · b̄) + 10(b̄ · ā) - 8|b̄|²",
+        "Dot product definition: ā · b̄ = |ā||b̄| cos θ = cos θ"
+      ],
+      "key_formulas": {
+        "expansion": "5|ā|² + 6(ā · b̄) - 8|b̄|² = 0",
+        "substitute_unit": "5(1) + 6 cos θ - 8(1) = 0  ⇒  6 cos θ = 3  ⇒  cos θ = 1/2"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Expand the dot product equation, set to 0, use unit vector magnitudes to find cos θ, then find θ = π/3.",
+      "logical_steps": [
+        "Step 1: Expand (ā + 2b̄) · (5ā - 4b̄) = 5|ā|² + 6(ā · b̄) - 8|b̄|² = 0",
+        "Step 2: Substitute |ā| = 1, |b̄| = 1: 5(1) + 6(ā · b̄) - 8(1) = 0",
+        "Step 3: Simplify: 6(ā · b̄) - 3 = 0 ⇒ ā · b̄ = 1/2",
+        "Step 4: Since |ā||b̄| = 1, cos θ = 1/2",
+        "Step 5: θ = π/3",
+        "Step 6: Match option B"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_dot_product": {
+        "equation": "(ā + 2b̄) · (5ā - 4b̄) = 0"
+      },
+      "step_2_expand": {
+        "terms": "5(ā · ā) - 4(ā · b̄) + 10(b̄ · ā) - 8(b̄ · b̄) = 0",
+        "simplify": "5|ā|² + 6(ā · b̄) - 8|b̄|² = 0"
+      },
+      "step_3_substitute_magnitudes": {
+        "a_mag": "|ā| = 1",
+        "b_mag": "|b̄| = 1",
+        "equation": "5(1) + 6 cos θ - 8(1) = 0"
+      },
+      "step_4_solve_theta": {
+        "6_cos_theta": "6 cos θ = 3",
+        "cos_theta": "cos θ = 1/2",
+        "theta": "θ = π/3"
+      },
+      "step_5_match_option": {
+        "matching_option": "B"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "B. (π/3)",
+      "verification": "5|ā|² - 8|b̄|² + 6ā·b̄ = 5 - 8 + 6(1/2) = -3 + 3 = 0 ✓. Angle θ = π/3 ✓"
+    }
+  }
+}

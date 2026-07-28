@@ -1,0 +1,51 @@
+{
+  "filename_suggestion": "m_probability_variance_three_fair_coins_q042.json",
+  "input": "Three fair coins numbered 1 and 0 are tossed simultaneously. Then variance Var(X) of the probability distribution of random variable X, where X is the sum of numbers on the uppermost faces, is\n\nOptions:\nA. 0.7\nB. 0.75\nC. 0.65\nD. 0.62",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Find variance of the sum of three independent Bernoulli(1/2) outcomes.",
+      "given_information": {
+        "trials": "3 fair 0-1 coins",
+        "random_variable": "X = sum of top-face numbers",
+        "to_find": "Var(X)"
+      },
+      "key_observation": "X follows Binomial(n=3, p=1/2)."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Binomial distribution",
+        "Expectation and variance"
+      ],
+      "key_formulas": {
+        "binomial_variance": "Var(X)=np(1-p)",
+        "with_values": "n=3, p=1/2"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Use binomial model directly (or table) and compute variance.",
+      "logical_steps": [
+        "Step 1: Identify distribution of X",
+        "Step 2: Apply Var(X)=npq",
+        "Step 3: Simplify and match option"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_distribution": {
+        "model": "X ~ Binomial(3, 1/2)"
+      },
+      "step_2_variance": {
+        "calculation": "Var(X)=3*(1/2)*(1/2)=3/4"
+      },
+      "step_3_decimal": {
+        "value": "3/4 = 0.75"
+      },
+      "step_4_match_option": {
+        "matching_option": "B"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "B. 0.75",
+      "verification": "Equivalent PMF {1,3,3,1}/8 gives E(X)=3/2 and E(X^2)=3, so variance is 3-(3/2)^2=3/4."
+    }
+  }
+}

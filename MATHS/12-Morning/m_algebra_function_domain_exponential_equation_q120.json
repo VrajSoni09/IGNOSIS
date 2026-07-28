@@ -1,0 +1,57 @@
+{
+  "filename_suggestion": "m_algebra_function_domain_exponential_equation_q120.json",
+  "input": "The domain of the function given by 2ˣ + 2ʸ = 2 is\n\nOptions:\nA. 0 < x ≤ 1\nB. 0 ≤ x ≤ 1\nC. -∞ < x ≤ 0\nD. -∞ < x < 1",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Find the domain of x for which y is defined as a real function from the relation 2ˣ + 2ʸ = 2.",
+      "given_information": {
+        "relation": "2ˣ + 2ʸ = 2",
+        "to_find": "Domain of x"
+      },
+      "key_observation": "Express y explicitly in terms of x: 2ʸ = 2 - 2ˣ ⇒ y = log₂(2 - 2ˣ). For y to be a real number, we must have 2 - 2ˣ > 0."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Expressing y as a function of x",
+        "Domain of logarithm: log_a(u) requires u > 0",
+        "Solving exponential inequalities"
+      ],
+      "key_formulas": {
+        "log_condition": "2 - 2ˣ > 0",
+        "inequality": "2ˣ < 2 = 2¹  ⇒  x < 1"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Isolate 2ʸ, apply the condition that 2ʸ > 0 for all real y (or log domain argument), solve the resulting exponential inequality for x.",
+      "logical_steps": [
+        "Step 1: Write 2ʸ = 2 - 2ˣ",
+        "Step 2: State requirement 2ʸ > 0 ⇒ 2 - 2ˣ > 0",
+        "Step 3: Solve 2ˣ < 2 ⇒ x < 1",
+        "Step 4: Express in interval form: -∞ < x < 1",
+        "Step 5: Match option"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_isolate_y": {
+        "2_y": "2ʸ = 2 - 2ˣ",
+        "y": "y = log₂(2 - 2ˣ)"
+      },
+      "step_2_domain_condition": {
+        "log_domain": "2 - 2ˣ > 0",
+        "exponential_inequality": "2ˣ < 2"
+      },
+      "step_3_solve_x": {
+        "2_x_less_than_2_1": "2ˣ < 2¹",
+        "strictly_increasing_base_2": "x < 1",
+        "interval_notation": "-∞ < x < 1"
+      },
+      "step_4_match_option": {
+        "matching_option": "D"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "D. -∞ < x < 1",
+      "verification": "For x = 0: 2⁰ + 2ʸ = 2 ⇒ 1 + 2ʸ = 2 ⇒ 2ʸ = 1 ⇒ y = 0 (valid real y). For x → -∞: 2ˣ → 0 ⇒ 2ʸ → 2 ⇒ y → 1. For x = 1: 2¹ + 2ʸ = 2 ⇒ 2ʸ = 0 (impossible for real y). Thus x ∈ (-∞, 1) ✓"
+    }
+  }
+}

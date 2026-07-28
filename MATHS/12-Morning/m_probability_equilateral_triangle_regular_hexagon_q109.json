@@ -1,0 +1,57 @@
+{
+  "filename_suggestion": "m_probability_equilateral_triangle_regular_hexagon_q109.json",
+  "input": "Three of six vertices of a regular hexagon are chosen at random. The probability that the triangle with these three vertices is equilateral, equals ________.\n\nOptions:\nA. 1/2\nB. 1/5\nC. 1/10\nD. 1/20",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "From the 6 vertices of a regular hexagon, 3 vertices are chosen at random to form a triangle. Find the probability that the resulting triangle is equilateral.",
+      "given_information": {
+        "polygon": "Regular hexagon (6 vertices)",
+        "chosen_vertices": "3",
+        "to_find": "Probability of forming an equilateral triangle"
+      },
+      "key_observation": "The total number of triangles formed by choosing 3 out of 6 vertices is ⁶C₃ = 20. An equilateral triangle in a hexagon is formed by taking every alternate vertex. There are exactly 2 such sets of alternate vertices."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Combinations: Total outcomes n(S) = ⁿCᵣ",
+        "Classical Probability: P(E) = n(E) / n(S)",
+        "Geometry of regular hexagon: Alternate vertices form equilateral triangles"
+      ],
+      "key_formulas": {
+        "n_S": "⁶C₃ = (6 × 5 × 4) / (3 × 2 × 1) = 20",
+        "n_E": "2 (Vertices {1, 3, 5} and {2, 4, 6})",
+        "P_E": "n(E) / n(S) = 2 / 20 = 1 / 10"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Calculate total number of triangles ⁶C₃, count the number of equilateral triangles formed by alternate vertices, and compute the ratio.",
+      "logical_steps": [
+        "Step 1: Calculate total sample space size n(S) = ⁶C₃",
+        "Step 2: Identify favorable cases n(E) (triangles with alternate vertices)",
+        "Step 3: Calculate probability P = n(E) / n(S)",
+        "Step 4: Simplify fraction and match option"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_sample_space": {
+        "n_S": "⁶C₃ = 20"
+      },
+      "step_2_favorable_events": {
+        "hexagon_vertices": "Label vertices consecutively 1, 2, 3, 4, 5, 6",
+        "equilateral_set_1": "Vertices {1, 3, 5}",
+        "equilateral_set_2": "Vertices {2, 4, 6}",
+        "n_E": "2"
+      },
+      "step_3_probability": {
+        "P": "n(E) / n(S) = 2 / 20 = 1 / 10"
+      },
+      "step_4_match_option": {
+        "matching_option": "C"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "C. 1/10",
+      "verification": "Total triangles ⁶C₃ = 20. Equilateral triangles require side length = √3 · side of hexagon, which connects alternate vertices. There are exactly 2 such triangles ({1,3,5} and {2,4,6}). Probability = 2/20 = 1/10 ✓"
+    }
+  }
+}

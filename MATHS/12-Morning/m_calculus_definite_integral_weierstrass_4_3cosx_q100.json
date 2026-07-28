@@ -1,0 +1,71 @@
+{
+  "filename_suggestion": "m_calculus_definite_integral_weierstrass_4_3cosx_q100.json",
+  "input": "∫₀^π dx/(4+3cos x) =\n\nOptions:\nA. 2π/7\nB. π/√7\nC. π/(2√7)\nD. π/7",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Evaluate the definite integral ∫₀^π dx/(4+3cos x) using the Weierstrass substitution t = tan(x/2).",
+      "given_information": {
+        "integral": "∫₀^π dx/(4+3cos x)",
+        "to_find": "Exact value"
+      },
+      "key_observation": "The presence of cos x in the denominator suggests the universal substitution t = tan(x/2) to convert to a rational integral in t. The upper limit x = π gives t → ∞."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Weierstrass substitution: t = tan(x/2)",
+        "cos x = (1-t²)/(1+t²), dx = 2dt/(1+t²)",
+        "Standard integral: ∫dt/(a²+t²) = (1/a)tan⁻¹(t/a) + c",
+        "tan⁻¹(∞) = π/2"
+      ],
+      "key_formulas": {
+        "cos_x": "(1-t²)/(1+t²)",
+        "dx": "2/(1+t²) dt",
+        "limits": "x=0 → t=0;  x=π → t=∞",
+        "denominator": "4+3cos x = (7+t²)/(1+t²) after substitution",
+        "standard_integral": "∫₀^∞ dt/(7+t²) = (1/√7)·[π/2]"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Substitute t = tan(x/2), simplify 4+3cos x to (7+t²)/(1+t²), cancel (1+t²) factors, and evaluate the resulting ∫2dt/(7+t²) using the arctan formula.",
+      "logical_steps": [
+        "Step 1: Substitute t = tan(x/2), write cos x and dx",
+        "Step 2: Change limits: x=0→t=0, x=π→t=∞",
+        "Step 3: Simplify denominator 4+3cos x",
+        "Step 4: Cancel (1+t²) to get ∫₀^∞ 2/(7+t²) dt",
+        "Step 5: Apply arctan formula and evaluate at limits"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_substitution": {
+        "t": "tan(x/2)",
+        "cos_x": "(1-t²)/(1+t²)",
+        "dx": "2dt/(1+t²)"
+      },
+      "step_2_limits": {
+        "x_0": "t = 0",
+        "x_pi": "t → ∞"
+      },
+      "step_3_simplify_denominator": {
+        "4_plus_3cosx": "4 + 3(1-t²)/(1+t²) = (4(1+t²)+3(1-t²))/(1+t²) = (4+4t²+3-3t²)/(1+t²) = (7+t²)/(1+t²)"
+      },
+      "step_4_form_integral": {
+        "I": "∫₀^∞ [(1+t²)/(7+t²)] × [2/(1+t²)] dt",
+        "simplify": "= ∫₀^∞ 2/(7+t²) dt"
+      },
+      "step_5_evaluate": {
+        "formula": "∫ dt/(a²+t²) = (1/a)tan⁻¹(t/a),  here a=√7",
+        "I": "2 × [1/√7 · tan⁻¹(t/√7)]₀^∞",
+        "at_infinity": "tan⁻¹(∞) = π/2",
+        "at_0": "tan⁻¹(0) = 0",
+        "result": "2/√7 × π/2 = π/√7"
+      },
+      "step_6_match_option": {
+        "matching_option": "B"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "B. π/√7",
+      "verification": "After substitution the integral reduces to 2∫₀^∞ dt/(7+t²) = 2·(1/√7)·(π/2) = π/√7 ✓"
+    }
+  }
+}

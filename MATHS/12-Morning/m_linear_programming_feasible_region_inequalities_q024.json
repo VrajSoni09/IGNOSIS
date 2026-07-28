@@ -1,0 +1,61 @@
+{
+  "filename_suggestion": "m_linear_programming_feasible_region_inequalities_q024.json",
+  "input": "If feasible region is as shown in the figure, then the related inequalities are\n\nOptions:\nA. 3x + 4y >= 12, y - x >= 0, y <= 3, x >= 0, y >= 0\nB. 3x + 4y <= 12, y - x <= 0, y >= 3, x >= 0, y >= 0\nC. 3x + 4y <= 12, y - x >= 0, y <= 3, x >= 0, y >= 0\nD. 3x + 4y >= 12, y - x <= 0, y >= 3, x >= 0, y >= 0",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Identify inequalities corresponding to the shaded feasible region in the first quadrant.",
+      "given_information": {
+        "boundaries_visible": "line 3x+4y=12, line y=x, line y=3, coordinate axes",
+        "to_find": "correct inequality set"
+      },
+      "key_observation": "Pick the side of each boundary where the shaded region lies."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Half-plane representation of linear inequalities",
+        "Feasible region in first quadrant"
+      ],
+      "key_formulas": {
+        "first_quadrant": "x >= 0, y >= 0",
+        "line_sides": "Use test point or shading orientation to decide <= or >="
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Read each boundary from the graph and assign the inequality direction from the shaded side.",
+      "logical_steps": [
+        "Step 1: Use first-quadrant condition",
+        "Step 2: Determine side of line 3x+4y=12",
+        "Step 3: Determine side of line y=x",
+        "Step 4: Determine side of line y=3",
+        "Step 5: Match with options"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_axes_constraints": {
+        "constraints": "x >= 0, y >= 0"
+      },
+      "step_2_line_3x_plus_4y": {
+        "boundary": "3x + 4y = 12",
+        "shaded_side": "non-origin side",
+        "inequality": "3x + 4y >= 12"
+      },
+      "step_3_line_y_eq_x": {
+        "boundary": "y - x = 0",
+        "shaded_side": "above line y=x",
+        "inequality": "y - x >= 0"
+      },
+      "step_4_line_y_eq_3": {
+        "boundary": "y = 3",
+        "shaded_side": "on or below y=3",
+        "inequality": "y <= 3"
+      },
+      "step_5_match_option": {
+        "matching_option": "A"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "A. 3x + 4y >= 12, y - x >= 0, y <= 3, x >= 0, y >= 0",
+      "verification": "All inequalities describe exactly the shaded triangular feasible region shown."
+    }
+  }
+}

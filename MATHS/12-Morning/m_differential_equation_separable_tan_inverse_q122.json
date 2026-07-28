@@ -1,0 +1,65 @@
+{
+  "filename_suggestion": "m_differential_equation_separable_tan_inverse_q122.json",
+  "input": "The solution of the differential equation dy/dx = (1+y²)/(1+x²) is\n\nOptions:\nA. x + y = c, where c is a constant of integration.\nB. x - y = c(xy), where c is a constant of integration.\nC. x + y = c(1 + xy), where c is a constant of integration.\nD. y - x = c(1 + xy), where c is a constant of integration.",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Find the general solution of the separable differential equation dy/dx = (1+y²)/(1+x²).",
+      "given_information": {
+        "de": "dy/dx = (1+y²)/(1+x²)",
+        "to_find": "General solution in algebraic form"
+      },
+      "key_observation": "Separate variables to get dy/(1+y²) = dx/(1+x²). Integrate both sides to get tan⁻¹y - tan⁻¹x = tan⁻¹c, then use the arctan subtraction formula."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Separation of variables: dy/(1+y²) = dx/(1+x²)",
+        "Standard integral: ∫ 1/(1+t²) dt = tan⁻¹t",
+        "Identity for inverse tangent: tan⁻¹u - tan⁻¹v = tan⁻¹((u-v)/(1+uv))"
+      ],
+      "key_formulas": {
+        "integral_eq": "tan⁻¹y = tan⁻¹x + tan⁻¹c",
+        "rearrange": "tan⁻¹y - tan⁻¹x = tan⁻¹c",
+        "arctan_identity": "tan⁻¹((y-x)/(1+xy)) = tan⁻¹c",
+        "final_form": "(y-x)/(1+xy) = c  ⇒  y - x = c(1+xy)"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Separate variables, integrate both sides to obtain inverse tangent terms, combine using tan⁻¹(A) - tan⁻¹(B) formula, and simplify.",
+      "logical_steps": [
+        "Step 1: Rewrite DE as dy/(1+y²) = dx/(1+x²)",
+        "Step 2: Integrate both sides: tan⁻¹y = tan⁻¹x + tan⁻¹c",
+        "Step 3: Move tan⁻¹x to LHS: tan⁻¹y - tan⁻¹x = tan⁻¹c",
+        "Step 4: Apply identity tan⁻¹((y-x)/(1+xy)) = tan⁻¹c",
+        "Step 5: Take tan of both sides: (y-x)/(1+xy) = c ⇒ y - x = c(1+xy)",
+        "Step 6: Match option"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_separate": {
+        "separated": "1/(1+y²) dy = 1/(1+x²) dx"
+      },
+      "step_2_integrate": {
+        "integration": "∫ 1/(1+y²) dy = ∫ 1/(1+x²) dx + C",
+        "result": "tan⁻¹y = tan⁻¹x + tan⁻¹c"
+      },
+      "step_3_subtract": {
+        "LHS": "tan⁻¹y - tan⁻¹x = tan⁻¹c"
+      },
+      "step_4_identity": {
+        "formula": "tan⁻¹y - tan⁻¹x = tan⁻¹((y-x)/(1+xy))",
+        "equate": "tan⁻¹((y-x)/(1+xy)) = tan⁻¹c"
+      },
+      "step_5_algebraic_form": {
+        "fraction": "(y-x)/(1+xy) = c",
+        "cross_multiply": "y - x = c(1 + xy)"
+      },
+      "step_6_match_option": {
+        "matching_option": "D"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "D. y - x = c(1 + xy)",
+      "verification": "Differentiating y - x = c(1+xy): dy - dx = c(x dy + y dx). Substitute c = (y-x)/(1+xy): (dy - dx)(1+xy) = (y-x)(x dy + y dx) ⇒ dy(1+xy - x(y-x)) = dx(1+xy + y(y-x)) ⇒ dy(1+x²) = dx(1+y²) ⇒ dy/dx = (1+y²)/(1+x²) ✓"
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "filename_suggestion": "m_vectors_scalar_product_with_unit_vector_q045.json",
+  "input": "The scalar product of vector i + j + k with a unit vector along the sum of vectors (2i + 4j - 5k) and (lambda i + 2j + 3k) is equal to 1. Then value of lambda is\n\nOptions:\nA. 1\nB. 2\nC. 3\nD. 4",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Form the required unit vector from the sum of two vectors and use dot product condition to solve for lambda.",
+      "given_information": {
+        "u": "(1,1,1)",
+        "v1": "(2,4,-5)",
+        "v2": "(lambda,2,3)",
+        "condition": "u dot (unit vector along v1+v2) = 1",
+        "to_find": "lambda"
+      },
+      "key_observation": "Let w=v1+v2; then u dot (w/|w|)=1 gives one equation in lambda."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Vector addition",
+        "Unit vector",
+        "Dot product"
+      ],
+      "key_formulas": {
+        "unit_vector": "w_hat = w/|w|",
+        "dot_condition": "u dot w_hat = 1"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Compute w, form equation from dot product with unit vector, solve lambda.",
+      "logical_steps": [
+        "Step 1: Add vectors to get w",
+        "Step 2: Write unit vector w/|w|",
+        "Step 3: Apply u dot (w/|w|)=1",
+        "Step 4: Solve and match option"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_sum_vector": {
+        "w": "(lambda+2, 6, -2)"
+      },
+      "step_2_dot_equation": {
+        "u_dot_w": "(1,1,1) dot (lambda+2,6,-2) = lambda+6",
+        "mod_w": "sqrt((lambda+2)^2 + 6^2 + (-2)^2) = sqrt((lambda+2)^2 + 40)",
+        "equation": "(lambda+6)/sqrt((lambda+2)^2+40)=1"
+      },
+      "step_3_solve": {
+        "square_both_sides": "(lambda+6)^2 = (lambda+2)^2 + 40",
+        "simplify": "lambda^2+12lambda+36 = lambda^2+4lambda+44",
+        "result": "8lambda=8 => lambda=1"
+      },
+      "step_4_match_option": {
+        "matching_option": "A"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "A. 1",
+      "verification": "For lambda=1, dot with the required unit vector equals 1 exactly."
+    }
+  }
+}

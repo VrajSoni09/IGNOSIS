@@ -1,0 +1,57 @@
+{
+  "filename_suggestion": "m_3d_geometry_plane_from_direction_angles_q039.json",
+  "input": "A vector n is inclined to X-axis at 45 degrees, Y-axis at 60 degrees and at an acute angle to Z-axis. If n is normal to a plane passing through the point (-sqrt(2),1,1), then equation of the plane is\n\nOptions:\nA. sqrt(2)x + y + z = 0\nB. x + sqrt(2)y + z = 1\nC. -sqrt(2)x + y + 2z = 5\nD. x + y + sqrt(2)z = 1",
+  "output": {
+    "phase_1_understand_the_problem": {
+      "problem_restatement": "Find plane equation from normal direction angles and a point on the plane.",
+      "given_information": {
+        "alpha": "45 degrees",
+        "beta": "60 degrees",
+        "gamma": "acute",
+        "point": "(-sqrt(2),1,1)",
+        "to_find": "plane equation"
+      },
+      "key_observation": "Direction cosines of the normal are (cos alpha, cos beta, cos gamma)."
+    },
+    "phase_2_identify_relevant_concepts": {
+      "key_concepts": [
+        "Direction cosines",
+        "Plane in point-normal form"
+      ],
+      "key_formulas": {
+        "cosine_relation": "cos^2(alpha)+cos^2(beta)+cos^2(gamma)=1",
+        "point_normal": "l(x-x0)+m(y-y0)+n(z-z0)=0"
+      }
+    },
+    "phase_3_plan_the_approach": {
+      "strategy": "Compute cos(gamma), form normal vector, then apply point-normal equation.",
+      "logical_steps": [
+        "Step 1: Find cos(gamma)",
+        "Step 2: Write normal vector components",
+        "Step 3: Use point-normal form with given point",
+        "Step 4: Simplify and match option"
+      ]
+    },
+    "phase_4_execute_the_solution": {
+      "step_1_direction_cosines": {
+        "cos_alpha": "1/sqrt(2)",
+        "cos_beta": "1/2",
+        "cos_gamma": "sqrt(1-1/2-1/4)=1/2 (positive since acute)"
+      },
+      "step_2_normal_vector": {
+        "normal": "(1/sqrt(2), 1/2, 1/2)"
+      },
+      "step_3_plane_equation": {
+        "point_normal_form": "(1/sqrt(2))(x+sqrt(2)) + (1/2)(y-1) + (1/2)(z-1)=0",
+        "simplified": "sqrt(2)x + y + z = 0"
+      },
+      "step_4_match_option": {
+        "matching_option": "A"
+      }
+    },
+    "phase_5_verify_answer": {
+      "answer": "A. sqrt(2)x + y + z = 0",
+      "verification": "The plane passes through (-sqrt(2),1,1) and has normal with required direction angles."
+    }
+  }
+}
