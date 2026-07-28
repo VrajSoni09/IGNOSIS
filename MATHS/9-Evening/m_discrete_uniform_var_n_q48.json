@@ -1,0 +1,5 @@
+{
+  "input": "A random variable X assumes values 1,2,3,...,n with equal probabilities. If Var(X) = E(X), find n.",
+  "thinking": "For discrete uniform on {1..n}: E[X] = (n+1)/2. Var(X) = (n^2 -1)/12. Set (n^2 -1)/12 = (n+1)/2. Multiply by 12: n^2 -1 = 6(n+1) => n^2 -1 = 6n +6 => n^2 -6n -7 =0 => (n-7)(n+1)=0. n positive integer >1 so n=7.",
+  "output": "7 (Option C)"
+}

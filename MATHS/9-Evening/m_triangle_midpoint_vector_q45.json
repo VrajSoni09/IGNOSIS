@@ -1,0 +1,5 @@
+{
+  "input": "If D, E and F are the mid-points of the sides BC, CA and AB of triangle ABC respectively, then AD + (2/3)BE + (1/3)CF equals what vector expression?",
+  "thinking": "Use position vectors: let A,B,C correspond to vectors a,b,c. Then d = (b+c)/2, e = (c+a)/2, f = (a+b)/2. Compute AD = d - a = (b+c - 2a)/2. BE = e - b = (c+a - 2b)/2. CF = f - c = (a+b - 2c)/2. Now form S = AD + (2/3)BE + (1/3)CF = 1/2[ (b+c-2a) + (2/3)(c+a-2b) + (1/3)(a+b-2c) ]. Combine terms with common denom 3: numerator = 3(b+c-2a) + 2(c+a-2b) + (a+b-2c) = -3a + 0b + 3c = 3(c - a). Divide by 3 gives (c - a). Finally multiply by 1/2 to get (c - a)/2 = (1/2)AC (vector from A to C scaled by 1/2).",
+  "output": "(1/2) AC (Option B)"
+}

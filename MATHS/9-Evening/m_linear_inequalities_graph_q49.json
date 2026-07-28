@@ -1,0 +1,5 @@
+{
+  "input": "The graphical solution set for the system of inequalities x - 2y ≤ 2, 5x + 2y ≥ 10, 4x + 5y ≤ 20, x ≥ 0, y ≥ 0 is given by which figure (options: Fig.1, Fig.2, Fig.3, Fig.4)?",
+  "thinking": "Test sides of each boundary using origin (0,0) where applicable and enforce x,y ≥ 0. For x - 2y ≤ 2: at (0,0) gives 0 ≤ 2 true → feasible region is origin side. For 5x + 2y ≥ 10: at (0,0) gives 0 ≥ 10 false → feasible region is non-origin side. For 4x + 5y ≤ 20: at (0,0) gives 0 ≤ 20 true → origin side. Restrict to x ≥ 0, y ≥ 0 (first quadrant). Intersection of these half-planes in the first quadrant produces the shaded triangular region shown in Fig.3 (feasible region lies on origin side of x-2y=2 and 4x+5y=20, and on non-origin side of 5x+2y=10).",
+  "output": "Fig. 3 (Option D)"
+}
